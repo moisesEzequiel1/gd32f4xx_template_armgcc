@@ -7,6 +7,6 @@ powershell.exe -NoProfile -Command "& '$OPENOCD_WIN_PATH' -c 'bindto 0.0.0.0' -f
 PS_PID=$!
 
 # Atrapar Ctrl+C
-trap "echo 'Ctrl+C recibido, terminando...'; kill $PS_PID; exit" INT
+trap "echo 'Ctrl+C recibido, terminando...'; powershell.exe -Command 'Stop-Process -Name openocd -Force'; exit" INT
 
 wait $PS_PID

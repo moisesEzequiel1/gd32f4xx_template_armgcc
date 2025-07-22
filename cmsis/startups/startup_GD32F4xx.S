@@ -3,7 +3,7 @@
  * @version  V2.00
  * $Revision: 3 $
  * $Date: 20/05/22 7:57p $
- * @brief    CMSIS Cortex-M0 Core Device Startup File for gd32f4xx.s
+ * @brief    CMSIS Cortex-M4 Core Device Startup File for gd32f4xx.s
  *
  * @note
  * SPDX-License-Identifier: Apache-2.0   
