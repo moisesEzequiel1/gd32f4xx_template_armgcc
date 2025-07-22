@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "Debug (Remote GDB Server)",
+            "servertype": "external",
+            "cwd": "${workspaceRoot}",
+            "runToEntryPoint": "main",
+            "executable": "${workspaceRoot}/Build/Base_Makefile_GD32f4xx.elf",
+            "device": "GD32F427VK",
+            "svdFile": "${workspaceRoot}/GD32F4xx.svd",
+            "gdbTarget": "172.20.80.1:3333",  // <- IP correcta
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "armToolchainPath": "/usr/bin",
+            "showDevDebugOutput": "none",
+            "preLaunchCommands": [],
+        }
+    ]
+}
