@@ -56,9 +56,9 @@ HEX_PATH ?= $(WORKSPACE)/Build/$(TARGET).hex
 # }'  if (line) print line"
 
 SRCS += system_gd32f4xx.c startup_GD32F4xx.S main.cpp _syscalls.c
-# SRCS += systick.c 
 
-# SRCS += $(wildcard hal/src/*.c)
+SRCS += ints.c 
+SRCS += $(wildcard hal/src/*.c)
 # library files
 LIBF = 
 # linker file
