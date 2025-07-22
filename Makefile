@@ -55,7 +55,7 @@ HEX_PATH ?= $(WORKSPACE)/Build/$(TARGET).hex
 #             line = ""
 # }'  if (line) print line"
 
-SRCS += system_gd32f4xx.c startup_GD32F4xx.S main.cpp _syscalls.c
+SRCS += system_gd32f4xx.c startup_GD32F4xx.S main.c _syscalls.c
 
 SRCS += ints.c 
 SRCS += $(wildcard hal/src/*.c)
@@ -206,8 +206,7 @@ flash:
 	$(OPENOCD_BIN) \
 		-f $(SCRIPT_INTERFACE) \
 		-f $(SCRIPT_TARGET) \
-		-c "program $(HEX_PATH)" \
-		-c "reset init" \
+		-c "program $(HEX_PATH) verify reset" \
 		-c "shutdown"
 
 
