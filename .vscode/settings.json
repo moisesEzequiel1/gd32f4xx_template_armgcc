@@ -1,3 +1,5 @@
 {
-    "cortex-debug.variableUseNaturalFormat": true
+    "cortex-debug.variableUseNaturalFormat": true,
+    "clangd.path": "/usr/local/bin/clangd-21"
+
 }
