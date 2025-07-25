@@ -84,4 +84,5 @@ void Rcu::SetPllFactors(PLLFactors factors) {
   PLL.bits.PLLP = factors.p_;
   PLL.bits.PLLN = factors.n_;
   PLL.bits.PLLQ = factors.q_;
+  PLL.bits.PLLPSC = factors.psc_;
 }

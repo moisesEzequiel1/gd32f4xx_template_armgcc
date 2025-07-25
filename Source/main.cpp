@@ -10,19 +10,30 @@
  *          doxygen runs by typing "make docs", index page is generated in
  *          Build/doxigen/html/index.html
  */
-#include "MCU/Gpio.hpp"
 #include "bsp.h"
-#include "AnalogInputManager.hpp"
-
-
 #include "Gpio.hpp"
+#include "Rcu.hpp"
 #include "gd32f4xx.h"
 #include "gd32f4xx_rcu.h"
 
 int main() {
 
-    rcu_periph_clock_enable(RCU_GPIOC);
-    rcu_periph_clock_enable(RCU_GPIOA);
+    // rcu_periph_clock_enable(RCU_GPIOC);
+    // rcu_periph_clock_enable(RCU_GPIOA);
+    Rcu& rcu = *reinterpret_cast<Rcu*>(RCU_BASE);
+    rcu.EnableGpioA();
+    rcu.EnableGpioC();
+    rcu.EnablePowerInterface(); 
+
+    rcu.EnableExternalClock();
+    /* Configure the main PLL, PSC = 25, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
+    rcu.ConfigurePll(Rcu::PllClockSource::HXTAL, Rcu::PLLFactors(Rcu::PllFactorP::DIV2, 9, 400, Rcu::PllVcoPrescaler::DIV25));
+    rcu.EnablePll();
+    rcu.SetAhbPrescaler(Rcu::AhbPrescaler::DIV1);
+    rcu.SetApb1Prescaler(Rcu::Apb1Prescaler::DIV1);
+    rcu.SetApb2Prescaler(Rcu::Apb2Prescaler::DIV4);
+    rcu.SetSystemClockSource(Rcu::SystemClockSource::PLLP);
+
 
     Gpio& gpioC = *reinterpret_cast<Gpio*>(GPIO_BASE + 0x00000800U);
     Gpio& gpioA= *reinterpret_cast<Gpio*>(GPIO_BASE + 0x00000000U);

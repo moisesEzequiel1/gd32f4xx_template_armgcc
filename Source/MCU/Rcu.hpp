@@ -16,14 +16,109 @@ public:
     IRC16M = 0, // IRC16M clock selected as PLL source
     HXTAL = 1   // HXTAL clock selected as PLL source
   };
-  
+
+  enum class PllVcoPrescaler : uint8_t {
+    DIV2 = 0b000010,  // CK_PLLSRC / 2
+    DIV3 = 0b000011,  // CK_PLLSRC / 3
+    DIV4 = 0b000100,  // CK_PLLSRC / 4
+    DIV5 = 0b000101,  // CK_PLLSRC / 5
+    DIV6 = 0b000110,  // CK_PLLSRC / 6
+    DIV7 = 0b000111,  // CK_PLLSRC / 7
+    DIV8 = 0b001000,  // CK_PLLSRC / 8
+    DIV9 = 0b001001,  // CK_PLLSRC / 9
+    DIV10 = 0b001010, // CK_PLLSRC / 10
+    DIV11 = 0b001011, // CK_PLLSRC / 11
+    DIV12 = 0b001100, // CK_PLLSRC / 12
+    DIV13 = 0b001101, // CK_PLLSRC / 13
+    DIV14 = 0b001110, // CK_PLLSRC / 14
+    DIV15 = 0b001111, // CK_PLLSRC / 15
+    DIV16 = 0b010000, // CK_PLLSRC / 16
+    DIV17 = 0b010001, // CK_PLLSRC / 17
+    DIV18 = 0b010010, // CK_PLLSRC / 18
+    DIV19 = 0b010011, // CK_PLLSRC / 19
+    DIV20 = 0b010100, // CK_PLLSRC / 20
+    DIV21 = 0b010101, // CK_PLLSRC / 21
+    DIV22 = 0b010110, // CK_PLLSRC / 22
+    DIV23 = 0b010111, // CK_PLLSRC / 23
+    DIV24 = 0b011000, // CK_PLLSRC / 24
+    DIV25 = 0b011001, // CK_PLLSRC / 25
+    DIV26 = 0b011010, // CK_PLLSRC / 26
+    DIV27 = 0b011011, // CK_PLLSRC / 27
+    DIV28 = 0b011100, // CK_PLLSRC / 28
+    DIV29 = 0b011101, // CK_PLLSRC / 29
+    DIV30 = 0b011110, // CK_PLLSRC / 30
+    DIV31 = 0b011111, // CK_PLLSRC / 31
+    DIV32 = 0b100000, // CK_PLLSRC / 32
+    DIV33 = 0b100001, // CK_PLLSRC / 33
+    DIV34 = 0b100010, // CK_PLLSRC / 34
+    DIV35 = 0b100011, // CK_PLLSRC / 35
+    DIV36 = 0b100100, // CK_PLLSRC / 36
+    DIV37 = 0b100101, // CK_PLLSRC / 37
+    DIV38 = 0b100110, // CK_PLLSRC / 38
+    DIV39 = 0b100111, // CK_PLLSRC / 39
+    DIV40 = 0b101000, // CK_PLLSRC / 40
+    DIV41 = 0b101001, // CK_PLLSRC / 41
+    DIV42 = 0b101010, // CK_PLLSRC / 42
+    DIV43 = 0b101011, // CK_PLLSRC / 43
+    DIV44 = 0b101100, // CK_PLLSRC / 44
+    DIV45 = 0b101101, // CK_PLLSRC / 45
+    DIV46 = 0b101110, // CK_PLLSRC / 46
+    DIV47 = 0b101111, // CK_PLLSRC / 47
+    DIV48 = 0b110000, // CK_PLLSRC / 48
+    DIV49 = 0b110001, // CK_PLLSRC / 49
+    DIV50 = 0b110010, // CK_PLLSRC / 50
+    DIV51 = 0b110011, // CK_PLLSRC / 51
+    DIV52 = 0b110100, // CK_PLLSRC / 52
+    DIV53 = 0b110101, // CK_PLLSRC / 53
+    DIV54 = 0b110110, // CK_PLLSRC / 54
+    DIV55 = 0b110111, // CK_PLLSRC / 55
+    DIV56 = 0b111000, // CK_PLLSRC / 56
+    DIV57 = 0b111001, // CK_PLLSRC / 57
+    DIV58 = 0b111010, // CK_PLLSRC / 58
+    DIV59 = 0b111011, // CK_PLLSRC / 59
+    DIV60 = 0b111100, // CK_PLLSRC / 60
+    DIV61 = 0b111101, // CK_PLLSRC / 61
+    DIV62 = 0b111110, // CK_PLLSRC / 62
+    DIV63 = 0b111111  // CK_PLLSRC / 63
+  };
+
+  enum class AhbPrescaler : uint8_t {
+    DIV1 = 0b0000, // AHB clock not divided
+    DIV2 = 0b1000, // AHB clock divided by 2
+    DIV4 = 0b1001, // AHB clock divided by 4
+    DIV8 = 0b1010, // AHB clock divided by 8
+    DIV16 = 0b1011, // AHB clock divided by 16
+    DIV64 = 0b1100, // AHB clock divided by 64
+    DIV128 = 0b1101, // AHB clock divided by 128
+    DIV256 = 0b1110, // AHB clock divided by 256
+    DIV512 = 0b1111 // AHB clock divided by 512
+  };
+  enum class Apb1Prescaler : uint8_t {
+    DIV1 = 0b000, // APB1 clock not divided
+    DIV2 = 0b100, // APB1 clock divided by 2 
+    DIV4 = 0b101, // APB1 clock divided by 4
+    DIV8 = 0b110, // APB1 clock divided by 8  
+    DIV16 = 0b111 // APB1 clock divided by 16
+  };
+  enum class Apb2Prescaler : uint8_t {
+    DIV1 = 0b000, // APB2 clock not divided
+    DIV2 = 0b100, // APB2 clock divided by 2
+    DIV4 = 0b101, // APB2 clock divided by 4
+    DIV8 = 0b110, // APB2 clock divided by 8
+    DIV16 = 0b111 // APB2 clock divided by 16
+  };
+  enum class SystemClockSource : uint8_t {
+    IRC16M = 0, // IRC16M clock selected as system clock
+    HXTAL = 1,  // HXTAL clock selected as system clock
+    PLLP = 2    // PLLP clock selected as system clock
+  };
   struct PLLFactors 
   {
     PllFactorP p_;
     uint8_t q_; // PLLQ output division factor
     uint16_t n_; // PLLN output division factor
-    PllFactors(PllFactorP p, uint8_t q, uint16_t n) 
-      : p_(p), q_(q), n_(n) {}
+    PllVcoPrescaler psc_; // PLL VCO source clock prescaler
+    PLLFactors(PllFactorP p, uint8_t q, uint16_t n, PllVcoPrescaler psc): p_(p), q_(q), n_(n), psc_(psc) {}
   };
 
   void EnableInternal16MHzClock(void);
@@ -80,7 +175,7 @@ private:
 
   union PLL_register {
     struct PLL_bits {
-      uint8_t PLLPSC : 6;        // [0:5] PLL VCO source clock prescaler
+      PllVcoPrescaler PLLPSC : 6;        // [0:5] PLL VCO source clock prescaler
       uint16_t PLLN : 9;         // [6:14] PLL VCO clock multiplication factor
       const uint8_t res2_0 : 1;  // [15] Reserved
       PllFactorP PLLP : 2;       // [16:17] PLLP output division factor
@@ -98,14 +193,14 @@ private:
   union CFG0_register {
     struct CFG0_bits {
       // Byte 0 (bits 0–7)
-      uint8_t SCS : 2;        // [0:1] System clock switch
-      const uint8_t SCSS : 2; // [2:3] System clock switch status
-      uint8_t AHBPSC : 4;     // [4:7] AHB prescaler selection
+      SystemClockSource SCS : 2;        // [0:1] System clock switch
+      const SystemClockSource SCSS : 2; // [2:3] System clock switch status
+      AhbPrescaler AHBPSC : 4;          // [4:7] AHB prescaler selection
 
       // Byte 1 (bits 8–15)
-      const uint8_t res1_0 : 2; // [8:9] Reserved
-      uint8_t APB1PSC : 3;      // [10:12] APB1 prescaler selection
-      uint8_t APB2PSC : 3;      // [13:15] APB2 prescaler selection
+      const uint8_t res1_0 : 2;  // [8:9] Reserved
+      Apb1Prescaler APB1PSC : 3; // [10:12] APB1 prescaler selection
+      Apb2Prescaler APB2PSC : 3; // [13:15] APB2 prescaler selection
 
       // Byte 2 (bits 16–23)
       uint8_t RTCDIV : 5;    // [16:20] RTC clock divider factor
@@ -286,85 +381,78 @@ private:
     struct APB1RST_bits bits;
   };
 
-  union APB2RST_register {
+ union APB2RST_register {
     struct APB2RST_bits {
-      // Byte 0 (bits 0–7)
-      uint8_t TIMER0RST : 1;    // [0] TIMER0 reset
-      uint8_t TIMER7RST : 1;    // [1] TIMER7 reset
-      const uint8_t res0_2 : 2; // [2:3] Reserved
-      uint8_t USART0RST : 1;    // [4] USART0 reset
-      uint8_t USART5RST : 1;    // [5] USART5 reset
-      const uint8_t res0_6 : 2; // [6:7] Reserved
-
-      // Byte 1 (bits 8–15)
-      uint8_t ADCRST : 1;        // [8] ADC reset
-      const uint8_t res1_1 : 2;  // [9:10] Reserved
-      uint8_t SDIORST : 1;       // [11] SDIO reset
-      uint8_t SPI0RST : 1;       // [12] SPI0 reset
-      uint8_t SPI3RST : 1;       // [13] SPI3 reset
-      uint8_t SYSCFGRST : 1;     // [14] SYSCFG reset
-      const uint8_t res1_15 : 1; // [15] Reserved
-
-      // Byte 2 (bits 16–23)
-      uint8_t TIMER8RST : 1;        // [16] TIMER8 reset
-      uint8_t TIMER9RST : 1;        // [17] TIMER9 reset
-      uint8_t TIMER10RST : 1;       // [18] TIMER10 reset
-      const uint8_t res2_19 : 1;    // [19] Reserved
-      uint8_t SPI4RST : 1;          // [20] SPI4 reset
-      uint8_t SPI5RST : 1;          // [21] SPI5 reset
-      const uint8_t res2_22_25 : 4; // [22:25] Reserved
-
-      // Byte 3 (bits 24–31)
-      uint8_t TLIRST : 1;           // [26] TLI reset
-      const uint8_t res3_24_25 : 2; // [24:25] Reserved
-      const uint8_t res3_27_31 : 5; // [27:31] Reserved
+        uint32_t TIMER0RST     : 1;  // [0]
+        uint32_t TIMER7RST     : 1;  // [1]
+        uint32_t res0_2        : 2;  // [2:3] Reserved
+        uint32_t USART0RST     : 1;  // [4]
+        uint32_t USART5RST     : 1;  // [5]
+        uint32_t res0_6        : 2;  // [6:7] Reserved
+        uint32_t ADCRST        : 1;  // [8]
+        uint32_t res1_1        : 2;  // [9:10]
+        uint32_t SDIORST       : 1;  // [11]
+        uint32_t SPI0RST       : 1;  // [12]
+        uint32_t SPI3RST       : 1;  // [13]
+        uint32_t SYSCFGRST     : 1;  // [14]
+        uint32_t res1_15       : 1;  // [15]
+        uint32_t TIMER8RST     : 1;  // [16]
+        uint32_t TIMER9RST     : 1;  // [17]
+        uint32_t TIMER10RST    : 1;  // [18]
+        uint32_t res2_19       : 1;  // [19]
+        uint32_t SPI4RST       : 1;  // [20]
+        uint32_t SPI5RST       : 1;  // [21]
+        uint32_t res2_22_25    : 4;  // [22:25]
+        uint32_t res3_24_25    : 2;  // [26:27] WARNING: tu definición estaba mal numerada
+        uint32_t TLIRST        : 1;  // [28]
+        uint32_t res3_29_31    : 3;  // [29:31]
     } __attribute__((packed));
 
     uint32_t value;
     struct APB2RST_bits bits;
-  };
+};
 
-  union AHB1EN_register {
-    struct AHB1EN_bits {
-      // Byte 0 (bits 0–7)
-      uint8_t PAEN : 1; // [0] GPIO port A clock enable
-      uint8_t PBEN : 1; // [1] GPIO port B clock enable
-      uint8_t PCEN : 1; // [2] GPIO port C clock enable
-      uint8_t PDEN : 1; // [3] GPIO port D clock enable
-      uint8_t PEEN : 1; // [4] GPIO port E clock enable
-      uint8_t PFEN : 1; // [5] GPIO port F clock enable
-      uint8_t PGEN : 1; // [6] GPIO port G clock enable
-      uint8_t PHEN : 1; // [7] GPIO port H clock enable
 
-      // Byte 1 (bits 8–15)
-      uint8_t PIEN : 1;             // [8] GPIO port I clock enable
-      const uint8_t res1_9_11 : 3;  // [9:11] Reserved
-      uint8_t CRCEN : 1;            // [12] CRC clock enable
-      const uint8_t res1_13_17 : 5; // [13:17] Reserved
+union AHB1EN_register {
+  struct AHB1EN_bits {
+    // Byte 0 (bits 0–7)
+    uint8_t PAEN : 1;  // [0] GPIO port A clock enable
+    uint8_t PBEN : 1;  // [1] GPIO port B clock enable
+    uint8_t PCEN : 1;  // [2] GPIO port C clock enable
+    uint8_t PDEN : 1;  // [3] GPIO port D clock enable
+    uint8_t PEEN : 1;  // [4] GPIO port E clock enable
+    uint8_t PFEN : 1;  // [5] GPIO port F clock enable
+    uint8_t PGEN : 1;  // [6] GPIO port G clock enable
+    uint8_t PHEN : 1;  // [7] GPIO port H clock enable
 
-      // Byte 2 (bits 16–23)
-      uint8_t BKPSRAMEN : 1;     // [18] BKPSRAM clock enable
-      const uint8_t res2_19 : 1; // [19] Reserved
-      uint8_t TCMSRAMEN : 1;     // [20] TCMSRAM clock enable
-      uint8_t DMA0EN : 1;        // [21] DMA0 clock enable
-      uint8_t DMA1EN : 1;        // [22] DMA1 clock enable
-      uint8_t IPAEN : 1;         // [23] IPA clock enable
-      const uint8_t res2_24 : 1; // [24] Reserved
-      uint8_t ENETEN : 1;        // [25] Ethernet clock enable
+    // Byte 1 (bits 8–15)
+    uint8_t PIEN : 1;           // [8] GPIO port I clock enable
+    uint8_t res1_9_11 : 3;      // [9:11] Reserved
+    uint8_t CRCEN : 1;          // [12] CRC clock enable
+    uint8_t res1_13_15 : 3;     // [13:15] Reserved
 
-      // Byte 3 (bits 24–31)
-      uint8_t ENETTXEN : 1;      // [26] Ethernet TX clock enable
-      uint8_t ENETRXEN : 1;      // [27] Ethernet RX clock enable
-      uint8_t ENETPTPEN : 1;     // [28] Ethernet PTP clock enable
-      uint8_t USBHSEN : 1;       // [29] USBHS clock enable
-      uint8_t USBHSULPIEN : 1;   // [30] USBHS ULPI clock enable
-      const uint8_t res3_31 : 1; // [31] Reserved
-    } __attribute__((packed));
+    // Byte 2 (bits 16–23)
+    uint8_t BKPSRAMEN : 1;      // [16] BKPSRAM clock enable
+    uint8_t res2_17 : 1;        // [17] Reserved
+    uint8_t TCMSRAMEN : 1;      // [18] TCMSRAM clock enable
+    uint8_t DMA0EN : 1;         // [19] DMA0 clock enable
+    uint8_t DMA1EN : 1;         // [20] DMA1 clock enable
+    uint8_t IPAEN : 1;          // [21] IPA clock enable
+    uint8_t res2_22 : 1;        // [22] Reserved
+    uint8_t ENETEN : 1;         // [23] Ethernet clock enable
 
-    uint32_t value;
-    struct AHB1EN_bits bits;
-  };
+    // Byte 3 (bits 24–31)
+    uint8_t ENETTXEN : 1;       // [24] Ethernet TX clock enable
+    uint8_t ENETRXEN : 1;       // [25] Ethernet RX clock enable
+    uint8_t ENETPTPEN : 1;      // [26] Ethernet PTP clock enable
+    uint8_t USBHSEN : 1;        // [27] USBHS clock enable
+    uint8_t USBHSULPIEN : 1;    // [28] USBHS ULPI clock enable
+    uint8_t res3_29_31 : 3;     // [29:31] Reserved
+  } __attribute__((packed));
 
+  uint32_t value;
+  struct AHB1EN_bits bits;
+};
   union AHB2EN_register {
     struct AHB2EN_bits {
       uint32_t DCIEN : 1;      // [0] DCI clock enable
@@ -635,13 +723,11 @@ private:
       uint8_t LXTALBPS : 1;       // Bit 2: LXTAL bypass mode enable
       uint8_t LXTALDRI : 1;       // Bit 3: LXTAL drive capability
       const uint8_t Reserved4_7 : 4;
-
       uint8_t RTCSRC : 2; // Bits 8–9: RTC clock source selection
       const uint8_t Reserved10_14 : 5;
       uint8_t RTCEN : 1; // Bit 15: RTC clock enable
-
       uint8_t BKPRST : 1; // Bit 16: Backup domain reset
-      const uint8_t Reserved17_31 : 15;
+      const uint16_t Reserved17_31 : 15;
 
     } __attribute__((packed));
 
