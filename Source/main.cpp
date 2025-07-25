@@ -29,8 +29,9 @@ int main() {
 
 
     rcu.EnableExternalClock();
-    /* Configure the main PLL, PSC = 25, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
-    rcu.ConfigurePll(Rcu::PllClockSource::HXTAL, Rcu::PLLFactors(Rcu::PllFactorP::DIV2, 9, 400, Rcu::PllVcoPrescaler::DIV24));
+    // 200Mhz --->/* Configure the main PLL, PSC = 25, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
+    // 240Mhz --->/* Configure the main PLL, PSC = 25, PLL_N = 480, PLL_P = 2, PLL_Q = 10 */ 
+    rcu.ConfigurePll(Rcu::PllClockSource::HXTAL, Rcu::PLLFactors(Rcu::PllFactorP::DIV2, 10, 480, Rcu::PllVcoPrescaler::DIV24));
     rcu.EnablePll();
     rcu.SetAhbPrescaler(Rcu::AhbPrescaler::DIV1);
     rcu.SetApb1Prescaler(Rcu::Apb1Prescaler::DIV2);

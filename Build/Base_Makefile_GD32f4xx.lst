@@ -333,13 +333,14 @@ int main() {
     rcu.EnableExternalClock();
  80003d0:	6a78      	ldr	r0, [r7, #36]	@ 0x24
  80003d2:	f000 fa38 	bl	8000846 <_ZN3Rcu19EnableExternalClockEv>
-    /* Configure the main PLL, PSC = 25, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
-    rcu.ConfigurePll(Rcu::PllClockSource::HXTAL, Rcu::PLLFactors(Rcu::PllFactorP::DIV2, 9, 400, Rcu::PllVcoPrescaler::DIV24));
+    // 200Mhz --->/* Configure the main PLL, PSC = 25, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
+    // 240Mhz --->/* Configure the main PLL, PSC = 25, PLL_N = 480, PLL_P = 2, PLL_Q = 10 */ 
+    rcu.ConfigurePll(Rcu::PllClockSource::HXTAL, Rcu::PLLFactors(Rcu::PllFactorP::DIV2, 10, 480, Rcu::PllVcoPrescaler::DIV24));
  80003d6:	f107 0010 	add.w	r0, r7, #16
  80003da:	2318      	movs	r3, #24
  80003dc:	9300      	str	r3, [sp, #0]
- 80003de:	f44f 73c8 	mov.w	r3, #400	@ 0x190
- 80003e2:	2209      	movs	r2, #9
+ 80003de:	f44f 73f0 	mov.w	r3, #480	@ 0x1e0
+ 80003e2:	220a      	movs	r2, #10
  80003e4:	2100      	movs	r1, #0
  80003e6:	f7ff ffc4 	bl	8000372 <_ZN3Rcu10PLLFactorsC1ENS_10PllFactorPEhtNS_15PllVcoPrescalerE>
  80003ea:	f107 0310 	add.w	r3, r7, #16
