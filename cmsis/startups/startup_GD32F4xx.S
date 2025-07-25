@@ -269,18 +269,19 @@ Reset_Handler:
  *
  *  Both addresses must be aligned to 4 bytes boundary.
  */
-	ldr	r1, =__bss_start__
-	ldr	r2, =__bss_end__
-
-    movs    r0, 0
-
-    subs    r2, r1
-    ble .L_loop3_done
+    ldr r1, =__bss_start__
+    ldr r2, =__bss_end__
+    movs r0, #0
 
 .L_loop3:
-    subs    r2, #4
-    str r0, [r1, r2]
-    bgt .L_loop3
+    cmp r1, r2
+    bcc .L_clear
+    b .L_loop3_done
+
+.L_clear:
+    str r0, [r1], #4
+    b .L_loop3
+
 .L_loop3_done:
 #endif /* __STARTUP_CLEAR_BSS_MULTIPLE || __STARTUP_CLEAR_BSS */
 #ifndef __NO_SYSTEM_INIT

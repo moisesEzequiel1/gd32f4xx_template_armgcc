@@ -55,26 +55,32 @@ HEX_PATH ?= $(WORKSPACE)/Build/$(TARGET).hex
 #             line = ""
 # }'  if (line) print line"
 
-SRCS += system_gd32f4xx.c startup_GD32F4xx.S main.c _syscalls.c
+SRCS += system_gd32f4xx.c startup_gd32f407_427.S main.cpp _syscalls.c
 
-SRCS += ints.c 
+SRCS += Gpio.cpp
 SRCS += $(wildcard hal/src/*.c)
 # library files
 LIBF = 
 # linker file
 LINKER = gcc_arm.ld
 # Global symbols (#defines)
-SYMBOLS = -DGD32F427
+SYMBOLS = -DGD32F427 -D__STARTUP_CLEAR_BSS 
 # -DFIVE_PORT_ENABLE
 # directories with source files to compiler (.c y .s)
 SRC_PATHS  = Source
 SRC_PATHS += cmsis/startups
 SRC_PATHS += hal/src
+
+SRC_PATHS += Source/middleware/input_manager Source/MCU
+SRC_PATHS += Source/middleware/
 # directories with header files
 INC_PATHS  = Source
 INC_PATHS += cmsis/core
 INC_PATHS += cmsis/registers
 INC_PATHS += hal/inc
+
+INC_PATHS += Source/middleware/input_manager Source/MCU
+INC_PATHS += Source/middleware/
 # directories with library files *.a
 LIB_PATHS  =
 

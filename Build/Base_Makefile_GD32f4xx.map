@@ -135,8 +135,32 @@ Discarded input sections
  .text          0x00000000        0x0 Build/obj/system_gd32f4xx.o
  .data          0x00000000        0x0 Build/obj/system_gd32f4xx.o
  .bss           0x00000000        0x0 Build/obj/system_gd32f4xx.o
- .data          0x00000000        0x0 Build/obj/startup_GD32F4xx.o
- .bss           0x00000000        0x0 Build/obj/startup_GD32F4xx.o
+ .text.SystemCoreClockUpdate
+                0x00000000       0x98 Build/obj/system_gd32f4xx.o
+ .data.SystemCoreClock
+                0x00000000        0x4 Build/obj/system_gd32f4xx.o
+ .rodata        0x00000000       0x10 Build/obj/system_gd32f4xx.o
+ .text          0x00000000       0x14 Build/obj/startup_gd32f407_427.o
+ .data          0x00000000        0x0 Build/obj/startup_gd32f407_427.o
+ .bss           0x00000000        0x0 Build/obj/startup_gd32f407_427.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
+ .group         0x00000000        0xc Build/obj/main.o
  .group         0x00000000        0xc Build/obj/main.o
  .group         0x00000000        0xc Build/obj/main.o
  .group         0x00000000        0xc Build/obj/main.o
@@ -197,15 +221,13 @@ Discarded input sections
  .text          0x00000000        0x0 Build/obj/main.o
  .data          0x00000000        0x0 Build/obj/main.o
  .bss           0x00000000        0x0 Build/obj/main.o
- .debug_macro   0x00000000      0xac6 Build/obj/main.o
- .debug_macro   0x00000000       0x6a Build/obj/main.o
  .debug_macro   0x00000000      0x34e Build/obj/main.o
+ .debug_macro   0x00000000       0x6a Build/obj/main.o
  .debug_macro   0x00000000       0x2e Build/obj/main.o
  .debug_macro   0x00000000       0x10 Build/obj/main.o
  .debug_macro   0x00000000       0x34 Build/obj/main.o
  .debug_macro   0x00000000      0x26d Build/obj/main.o
  .debug_macro   0x00000000       0x28 Build/obj/main.o
- .debug_macro   0x00000000     0x11ae Build/obj/main.o
  .debug_macro   0x00000000      0x11f Build/obj/main.o
  .debug_macro   0x00000000      0x154 Build/obj/main.o
  .debug_macro   0x00000000      0xe8a Build/obj/main.o
@@ -236,22 +258,14 @@ Discarded input sections
  .debug_macro   0x00000000       0x2a Build/obj/main.o
  .debug_macro   0x00000000       0x22 Build/obj/main.o
  .debug_macro   0x00000000       0x60 Build/obj/main.o
- .debug_macro   0x00000000       0x94 Build/obj/main.o
  .debug_macro   0x00000000       0x3c Build/obj/main.o
- .debug_macro   0x00000000       0x34 Build/obj/main.o
  .debug_macro   0x00000000       0x16 Build/obj/main.o
- .debug_macro   0x00000000      0x11c Build/obj/main.o
- .debug_macro   0x00000000       0x94 Build/obj/main.o
  .debug_macro   0x00000000       0x57 Build/obj/main.o
- .debug_macro   0x00000000      0x38c Build/obj/main.o
  .debug_macro   0x00000000       0x16 Build/obj/main.o
- .debug_macro   0x00000000       0x4a Build/obj/main.o
  .debug_macro   0x00000000       0x34 Build/obj/main.o
  .debug_macro   0x00000000       0x10 Build/obj/main.o
  .debug_macro   0x00000000       0x52 Build/obj/main.o
  .debug_macro   0x00000000      0x1de Build/obj/main.o
- .debug_macro   0x00000000       0x16 Build/obj/main.o
- .debug_macro   0x00000000       0x29 Build/obj/main.o
  .debug_macro   0x00000000     0x135a Build/obj/main.o
  .debug_macro   0x00000000      0xae2 Build/obj/main.o
  .group         0x00000000        0xc Build/obj/_syscalls.o
@@ -307,7 +321,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x37 Build/obj/_syscalls.o
  .debug_macro   0x00000000      0x1a5 Build/obj/_syscalls.o
- .debug_macro   0x00000000      0xac6 Build/obj/_syscalls.o
+ .debug_macro   0x00000000      0xacc Build/obj/_syscalls.o
  .debug_macro   0x00000000       0x22 Build/obj/_syscalls.o
  .debug_macro   0x00000000       0x60 Build/obj/_syscalls.o
  .debug_macro   0x00000000       0x2a Build/obj/_syscalls.o
@@ -342,128 +356,38 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 Build/obj/_syscalls.o
  .debug_macro   0x00000000      0x242 Build/obj/_syscalls.o
  .debug_line    0x00000000      0x36c Build/obj/_syscalls.o
- .debug_str     0x00000000     0x75d5 Build/obj/_syscalls.o
+ .debug_str     0x00000000     0x75eb Build/obj/_syscalls.o
  .comment       0x00000000       0x27 Build/obj/_syscalls.o
  .debug_frame   0x00000000       0xa8 Build/obj/_syscalls.o
  .ARM.attributes
                 0x00000000       0x34 Build/obj/_syscalls.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .group         0x00000000        0xc Build/obj/ints.o
- .text          0x00000000        0x0 Build/obj/ints.o
- .data          0x00000000        0x0 Build/obj/ints.o
- .bss           0x00000000        0x0 Build/obj/ints.o
- .debug_macro   0x00000000      0xac6 Build/obj/ints.o
- .debug_macro   0x00000000       0x6a Build/obj/ints.o
- .debug_macro   0x00000000      0x34e Build/obj/ints.o
- .debug_macro   0x00000000       0x2e Build/obj/ints.o
- .debug_macro   0x00000000       0x10 Build/obj/ints.o
- .debug_macro   0x00000000       0x34 Build/obj/ints.o
- .debug_macro   0x00000000      0x26d Build/obj/ints.o
- .debug_macro   0x00000000       0x28 Build/obj/ints.o
- .debug_macro   0x00000000     0x11ae Build/obj/ints.o
- .debug_macro   0x00000000      0x11f Build/obj/ints.o
- .debug_macro   0x00000000      0x154 Build/obj/ints.o
- .debug_macro   0x00000000      0xe8a Build/obj/ints.o
- .debug_macro   0x00000000      0x73e Build/obj/ints.o
- .debug_macro   0x00000000      0x8ed Build/obj/ints.o
- .debug_macro   0x00000000       0x34 Build/obj/ints.o
- .debug_macro   0x00000000      0x194 Build/obj/ints.o
- .debug_macro   0x00000000      0x2df Build/obj/ints.o
- .debug_macro   0x00000000       0xee Build/obj/ints.o
- .debug_macro   0x00000000      0x25b Build/obj/ints.o
- .debug_macro   0x00000000      0x49e Build/obj/ints.o
- .debug_macro   0x00000000      0x3b4 Build/obj/ints.o
- .debug_macro   0x00000000      0x561 Build/obj/ints.o
- .debug_macro   0x00000000       0xac Build/obj/ints.o
- .debug_macro   0x00000000      0x74a Build/obj/ints.o
- .debug_macro   0x00000000      0x1e1 Build/obj/ints.o
- .debug_macro   0x00000000      0x333 Build/obj/ints.o
- .debug_macro   0x00000000      0x2c6 Build/obj/ints.o
- .debug_macro   0x00000000      0x1c0 Build/obj/ints.o
- .debug_macro   0x00000000      0x8da Build/obj/ints.o
- .debug_macro   0x00000000      0x609 Build/obj/ints.o
- .debug_macro   0x00000000      0x424 Build/obj/ints.o
- .debug_macro   0x00000000      0xa3e Build/obj/ints.o
- .debug_macro   0x00000000       0x52 Build/obj/ints.o
- .debug_macro   0x00000000      0x44e Build/obj/ints.o
- .debug_macro   0x00000000       0x70 Build/obj/ints.o
- .debug_macro   0x00000000       0x70 Build/obj/ints.o
- .debug_macro   0x00000000       0x2a Build/obj/ints.o
- .debug_macro   0x00000000       0x22 Build/obj/ints.o
- .debug_macro   0x00000000       0x60 Build/obj/ints.o
- .debug_macro   0x00000000       0x94 Build/obj/ints.o
- .debug_macro   0x00000000       0x3c Build/obj/ints.o
- .debug_macro   0x00000000       0x34 Build/obj/ints.o
- .debug_macro   0x00000000       0x16 Build/obj/ints.o
- .debug_macro   0x00000000      0x11c Build/obj/ints.o
- .debug_macro   0x00000000       0x94 Build/obj/ints.o
- .debug_macro   0x00000000       0x57 Build/obj/ints.o
- .debug_macro   0x00000000      0x38c Build/obj/ints.o
- .debug_macro   0x00000000       0x16 Build/obj/ints.o
- .debug_macro   0x00000000       0x4a Build/obj/ints.o
- .debug_macro   0x00000000       0x34 Build/obj/ints.o
- .debug_macro   0x00000000       0x10 Build/obj/ints.o
- .debug_macro   0x00000000       0x52 Build/obj/ints.o
- .debug_macro   0x00000000      0x1de Build/obj/ints.o
- .debug_macro   0x00000000       0x16 Build/obj/ints.o
- .debug_macro   0x00000000       0x29 Build/obj/ints.o
- .debug_macro   0x00000000     0x135a Build/obj/ints.o
- .debug_macro   0x00000000      0xae2 Build/obj/ints.o
+ .group         0x00000000        0xc Build/obj/Gpio.o
+ .group         0x00000000        0xc Build/obj/Gpio.o
+ .group         0x00000000        0xc Build/obj/Gpio.o
+ .group         0x00000000        0xc Build/obj/Gpio.o
+ .group         0x00000000        0xc Build/obj/Gpio.o
+ .group         0x00000000        0xc Build/obj/Gpio.o
+ .text          0x00000000        0x0 Build/obj/Gpio.o
+ .data          0x00000000        0x0 Build/obj/Gpio.o
+ .bss           0x00000000        0x0 Build/obj/Gpio.o
+ .text._ZN4Gpio7ReadPinENS_3PinE
+                0x00000000       0x10 Build/obj/Gpio.o
+ .text._ZN4Gpio6SetPinENS_3PinE
+                0x00000000        0xc Build/obj/Gpio.o
+ .text._ZN4Gpio9TogglePinENS_3PinE
+                0x00000000        0xc Build/obj/Gpio.o
+ .text._ZN4Gpio20SetAlternateFunctionENS_3PinENS_17AlternateFunctionE
+                0x00000000       0x36 Build/obj/Gpio.o
+ .text._ZNK7GpioPin6ToggleEv
+                0x00000000       0x10 Build/obj/Gpio.o
+ .text._ZNK7GpioPin20SetAlternateFunctionEN4Gpio17AlternateFunctionE
+                0x00000000        0xe Build/obj/Gpio.o
+ .debug_macro   0x00000000      0xba4 Build/obj/Gpio.o
+ .debug_macro   0x00000000      0x34e Build/obj/Gpio.o
+ .debug_macro   0x00000000      0x1f2 Build/obj/Gpio.o
+ .debug_macro   0x00000000       0x10 Build/obj/Gpio.o
+ .debug_macro   0x00000000      0x41e Build/obj/Gpio.o
+ .debug_macro   0x00000000       0x2d Build/obj/Gpio.o
  .group         0x00000000        0xc Build/obj/gd32f4xx_adc.o
  .group         0x00000000        0xc Build/obj/gd32f4xx_adc.o
  .group         0x00000000        0xc Build/obj/gd32f4xx_adc.o
@@ -625,7 +549,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x122 Build/obj/gd32f4xx_adc.o
  .debug_macro   0x00000000      0x2de Build/obj/gd32f4xx_adc.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_adc.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_adc.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_adc.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_adc.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_adc.o
@@ -683,7 +607,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_adc.o
  .debug_macro   0x00000000      0x738 Build/obj/gd32f4xx_adc.o
  .debug_line    0x00000000      0xeee Build/obj/gd32f4xx_adc.o
- .debug_str     0x00000000    0x3afb2 Build/obj/gd32f4xx_adc.o
+ .debug_str     0x00000000    0x3afc8 Build/obj/gd32f4xx_adc.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_adc.o
  .debug_frame   0x00000000      0x314 Build/obj/gd32f4xx_adc.o
  .ARM.attributes
@@ -809,7 +733,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0xaf Build/obj/gd32f4xx_can.o
  .debug_macro   0x00000000      0x290 Build/obj/gd32f4xx_can.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_can.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_can.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_can.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_can.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_can.o
@@ -867,7 +791,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_can.o
  .debug_macro   0x00000000      0x8e7 Build/obj/gd32f4xx_can.o
  .debug_line    0x00000000     0x112f Build/obj/gd32f4xx_can.o
- .debug_str     0x00000000    0x3b28b Build/obj/gd32f4xx_can.o
+ .debug_str     0x00000000    0x3b2a1 Build/obj/gd32f4xx_can.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_can.o
  .debug_frame   0x00000000      0x204 Build/obj/gd32f4xx_can.o
  .ARM.attributes
@@ -955,7 +879,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x37 Build/obj/gd32f4xx_crc.o
  .debug_macro   0x00000000      0x296 Build/obj/gd32f4xx_crc.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_crc.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_crc.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_crc.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_crc.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_crc.o
@@ -1013,7 +937,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_crc.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_crc.o
  .debug_line    0x00000000      0x57b Build/obj/gd32f4xx_crc.o
- .debug_str     0x00000000    0x3a4f8 Build/obj/gd32f4xx_crc.o
+ .debug_str     0x00000000    0x3a50e Build/obj/gd32f4xx_crc.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_crc.o
  .debug_frame   0x00000000       0x80 Build/obj/gd32f4xx_crc.o
  .ARM.attributes
@@ -1129,7 +1053,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x8b Build/obj/gd32f4xx_ctc.o
  .debug_macro   0x00000000      0x2a8 Build/obj/gd32f4xx_ctc.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_ctc.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_ctc.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_ctc.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_ctc.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_ctc.o
@@ -1187,7 +1111,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_ctc.o
  .debug_macro   0x00000000      0x18e Build/obj/gd32f4xx_ctc.o
  .debug_line    0x00000000      0x754 Build/obj/gd32f4xx_ctc.o
- .debug_str     0x00000000    0x3aa89 Build/obj/gd32f4xx_ctc.o
+ .debug_str     0x00000000    0x3aa9f Build/obj/gd32f4xx_ctc.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_ctc.o
  .debug_frame   0x00000000      0x168 Build/obj/gd32f4xx_ctc.o
  .ARM.attributes
@@ -1317,7 +1241,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0xb5 Build/obj/gd32f4xx_dac.o
  .debug_macro   0x00000000      0x2ae Build/obj/gd32f4xx_dac.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_dac.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_dac.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_dac.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_dac.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_dac.o
@@ -1375,7 +1299,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_dac.o
  .debug_macro   0x00000000      0x2d9 Build/obj/gd32f4xx_dac.o
  .debug_line    0x00000000      0xa92 Build/obj/gd32f4xx_dac.o
- .debug_str     0x00000000    0x3ab3d Build/obj/gd32f4xx_dac.o
+ .debug_str     0x00000000    0x3ab53 Build/obj/gd32f4xx_dac.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_dac.o
  .debug_frame   0x00000000      0x1d8 Build/obj/gd32f4xx_dac.o
  .ARM.attributes
@@ -1465,7 +1389,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x3d Build/obj/gd32f4xx_dbg.o
  .debug_macro   0x00000000      0x290 Build/obj/gd32f4xx_dbg.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_dbg.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_dbg.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_dbg.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_dbg.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_dbg.o
@@ -1523,7 +1447,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_dbg.o
  .debug_macro   0x00000000       0xe8 Build/obj/gd32f4xx_dbg.o
  .debug_line    0x00000000      0x554 Build/obj/gd32f4xx_dbg.o
- .debug_str     0x00000000    0x3a5ec Build/obj/gd32f4xx_dbg.o
+ .debug_str     0x00000000    0x3a602 Build/obj/gd32f4xx_dbg.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_dbg.o
  .debug_frame   0x00000000       0x90 Build/obj/gd32f4xx_dbg.o
  .ARM.attributes
@@ -1639,7 +1563,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x8b Build/obj/gd32f4xx_dci.o
  .debug_macro   0x00000000      0x28a Build/obj/gd32f4xx_dci.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_dci.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_dci.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_dci.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_dci.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_dci.o
@@ -1697,7 +1621,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_dci.o
  .debug_macro   0x00000000      0x255 Build/obj/gd32f4xx_dci.o
  .debug_line    0x00000000      0x71b Build/obj/gd32f4xx_dci.o
- .debug_str     0x00000000    0x3a9b3 Build/obj/gd32f4xx_dci.o
+ .debug_str     0x00000000    0x3a9c9 Build/obj/gd32f4xx_dci.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_dci.o
  .debug_frame   0x00000000      0x168 Build/obj/gd32f4xx_dci.o
  .ARM.attributes
@@ -1837,7 +1761,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0xd6 Build/obj/gd32f4xx_dma.o
  .debug_macro   0x00000000      0x290 Build/obj/gd32f4xx_dma.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_dma.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_dma.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_dma.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_dma.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_dma.o
@@ -1895,7 +1819,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_dma.o
  .debug_macro   0x00000000      0x498 Build/obj/gd32f4xx_dma.o
  .debug_line    0x00000000      0xdd7 Build/obj/gd32f4xx_dma.o
- .debug_str     0x00000000    0x3aa0e Build/obj/gd32f4xx_dma.o
+ .debug_str     0x00000000    0x3aa24 Build/obj/gd32f4xx_dma.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_dma.o
  .debug_frame   0x00000000      0x270 Build/obj/gd32f4xx_dma.o
  .ARM.attributes
@@ -2153,7 +2077,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x20c Build/obj/gd32f4xx_enet.o
  .debug_macro   0x00000000      0x28a Build/obj/gd32f4xx_enet.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_enet.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_enet.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_enet.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_enet.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_enet.o
@@ -2211,7 +2135,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x29 Build/obj/gd32f4xx_enet.o
  .debug_macro   0x00000000     0x135a Build/obj/gd32f4xx_enet.o
  .debug_line    0x00000000     0x2458 Build/obj/gd32f4xx_enet.o
- .debug_str     0x00000000    0x3c645 Build/obj/gd32f4xx_enet.o
+ .debug_str     0x00000000    0x3c65b Build/obj/gd32f4xx_enet.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_enet.o
  .debug_frame   0x00000000      0x680 Build/obj/gd32f4xx_enet.o
  .ARM.attributes
@@ -2377,7 +2301,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x125 Build/obj/gd32f4xx_exmc.o
  .debug_macro   0x00000000      0x3f2 Build/obj/gd32f4xx_exmc.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_exmc.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_exmc.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_exmc.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_exmc.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_exmc.o
@@ -2435,7 +2359,7 @@ Discarded input sections
  .debug_macro   0x00000000     0x135a Build/obj/gd32f4xx_exmc.o
  .debug_macro   0x00000000      0xadc Build/obj/gd32f4xx_exmc.o
  .debug_line    0x00000000     0x1126 Build/obj/gd32f4xx_exmc.o
- .debug_str     0x00000000    0x3b8ca Build/obj/gd32f4xx_exmc.o
+ .debug_str     0x00000000    0x3b8e0 Build/obj/gd32f4xx_exmc.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_exmc.o
  .debug_frame   0x00000000      0x33c Build/obj/gd32f4xx_exmc.o
  .ARM.attributes
@@ -2533,7 +2457,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x56 Build/obj/gd32f4xx_exti.o
  .debug_macro   0x00000000      0x290 Build/obj/gd32f4xx_exti.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_exti.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_exti.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_exti.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_exti.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_exti.o
@@ -2591,7 +2515,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_exti.o
  .debug_macro   0x00000000      0x3ae Build/obj/gd32f4xx_exti.o
  .debug_line    0x00000000      0x65d Build/obj/gd32f4xx_exti.o
- .debug_str     0x00000000    0x3a649 Build/obj/gd32f4xx_exti.o
+ .debug_str     0x00000000    0x3a65f Build/obj/gd32f4xx_exti.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_exti.o
  .debug_frame   0x00000000       0xdc Build/obj/gd32f4xx_exti.o
  .ARM.attributes
@@ -2740,7 +2664,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0xf1 Build/obj/gd32f4xx_fmc.o
  .debug_macro   0x00000000      0x28a Build/obj/gd32f4xx_fmc.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_fmc.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_fmc.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_fmc.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_fmc.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_fmc.o
@@ -2798,7 +2722,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_fmc.o
  .debug_macro   0x00000000      0x55b Build/obj/gd32f4xx_fmc.o
  .debug_line    0x00000000      0xde9 Build/obj/gd32f4xx_fmc.o
- .debug_str     0x00000000    0x3a7a9 Build/obj/gd32f4xx_fmc.o
+ .debug_str     0x00000000    0x3a7bf Build/obj/gd32f4xx_fmc.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_fmc.o
  .debug_frame   0x00000000      0x320 Build/obj/gd32f4xx_fmc.o
  .ARM.attributes
@@ -2888,7 +2812,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x3d Build/obj/gd32f4xx_fwdgt.o
  .debug_macro   0x00000000      0x28a Build/obj/gd32f4xx_fwdgt.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_fwdgt.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_fwdgt.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_fwdgt.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_fwdgt.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_fwdgt.o
@@ -2946,7 +2870,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_fwdgt.o
  .debug_macro   0x00000000       0xa6 Build/obj/gd32f4xx_fwdgt.o
  .debug_line    0x00000000      0x680 Build/obj/gd32f4xx_fwdgt.o
- .debug_str     0x00000000    0x3a4df Build/obj/gd32f4xx_fwdgt.o
+ .debug_str     0x00000000    0x3a4f5 Build/obj/gd32f4xx_fwdgt.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_fwdgt.o
  .debug_frame   0x00000000       0x9c Build/obj/gd32f4xx_fwdgt.o
  .ARM.attributes
@@ -3013,7 +2937,13 @@ Discarded input sections
  .bss           0x00000000        0x0 Build/obj/gd32f4xx_gpio.o
  .text.gpio_deinit
                 0x00000000       0xfc Build/obj/gd32f4xx_gpio.o
+ .text.gpio_mode_set
+                0x00000000       0x50 Build/obj/gd32f4xx_gpio.o
+ .text.gpio_output_options_set
+                0x00000000       0x44 Build/obj/gd32f4xx_gpio.o
  .text.gpio_bit_set
+                0x00000000        0x4 Build/obj/gd32f4xx_gpio.o
+ .text.gpio_bit_reset
                 0x00000000        0x4 Build/obj/gd32f4xx_gpio.o
  .text.gpio_bit_write
                 0x00000000        0xa Build/obj/gd32f4xx_gpio.o
@@ -3031,9 +2961,20 @@ Discarded input sections
                 0x00000000       0x6a Build/obj/gd32f4xx_gpio.o
  .text.gpio_pin_lock
                 0x00000000       0x10 Build/obj/gd32f4xx_gpio.o
+ .text.gpio_bit_toggle
+                0x00000000        0x4 Build/obj/gd32f4xx_gpio.o
  .text.gpio_port_toggle
                 0x00000000        0x8 Build/obj/gd32f4xx_gpio.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_gpio.o
+ .debug_info    0x00000000      0x7fb Build/obj/gd32f4xx_gpio.o
+ .debug_abbrev  0x00000000      0x1ec Build/obj/gd32f4xx_gpio.o
+ .debug_loclists
+                0x00000000      0x2c5 Build/obj/gd32f4xx_gpio.o
+ .debug_aranges
+                0x00000000       0x90 Build/obj/gd32f4xx_gpio.o
+ .debug_rnglists
+                0x00000000       0x68 Build/obj/gd32f4xx_gpio.o
+ .debug_macro   0x00000000      0x28a Build/obj/gd32f4xx_gpio.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_gpio.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_gpio.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_gpio.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_gpio.o
@@ -3089,6 +3030,13 @@ Discarded input sections
  .debug_macro   0x00000000       0x29 Build/obj/gd32f4xx_gpio.o
  .debug_macro   0x00000000     0x135a Build/obj/gd32f4xx_gpio.o
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_gpio.o
+ .debug_macro   0x00000000      0x744 Build/obj/gd32f4xx_gpio.o
+ .debug_line    0x00000000      0x845 Build/obj/gd32f4xx_gpio.o
+ .debug_str     0x00000000    0x3a8b6 Build/obj/gd32f4xx_gpio.o
+ .comment       0x00000000       0x27 Build/obj/gd32f4xx_gpio.o
+ .debug_frame   0x00000000      0x138 Build/obj/gd32f4xx_gpio.o
+ .ARM.attributes
+                0x00000000       0x34 Build/obj/gd32f4xx_gpio.o
  .group         0x00000000        0xc Build/obj/gd32f4xx_i2c.o
  .group         0x00000000        0xc Build/obj/gd32f4xx_i2c.o
  .group         0x00000000        0xc Build/obj/gd32f4xx_i2c.o
@@ -3234,7 +3182,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0xf2 Build/obj/gd32f4xx_i2c.o
  .debug_macro   0x00000000      0x2ae Build/obj/gd32f4xx_i2c.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_i2c.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_i2c.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_i2c.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_i2c.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_i2c.o
@@ -3292,7 +3240,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_i2c.o
  .debug_macro   0x00000000      0x32d Build/obj/gd32f4xx_i2c.o
  .debug_line    0x00000000      0xbd2 Build/obj/gd32f4xx_i2c.o
- .debug_str     0x00000000    0x3b0b6 Build/obj/gd32f4xx_i2c.o
+ .debug_str     0x00000000    0x3b0cc Build/obj/gd32f4xx_i2c.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_i2c.o
  .debug_frame   0x00000000      0x2ac Build/obj/gd32f4xx_i2c.o
  .ARM.attributes
@@ -3419,7 +3367,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0xac Build/obj/gd32f4xx_ipa.o
  .debug_macro   0x00000000      0x295 Build/obj/gd32f4xx_ipa.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_ipa.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_ipa.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_ipa.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_ipa.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_ipa.o
@@ -3478,7 +3426,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_ipa.o
  .debug_macro   0x00000000      0x3ee Build/obj/gd32f4xx_ipa.o
  .debug_line    0x00000000      0xb21 Build/obj/gd32f4xx_ipa.o
- .debug_str     0x00000000    0x3bedf Build/obj/gd32f4xx_ipa.o
+ .debug_str     0x00000000    0x3bef5 Build/obj/gd32f4xx_ipa.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_ipa.o
  .debug_frame   0x00000000      0x200 Build/obj/gd32f4xx_ipa.o
  .ARM.attributes
@@ -3564,7 +3512,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x37 Build/obj/gd32f4xx_iref.o
  .debug_macro   0x00000000      0x28a Build/obj/gd32f4xx_iref.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_iref.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_iref.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_iref.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_iref.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_iref.o
@@ -3622,7 +3570,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_iref.o
  .debug_macro   0x00000000      0x2c0 Build/obj/gd32f4xx_iref.o
  .debug_line    0x00000000      0x547 Build/obj/gd32f4xx_iref.o
- .debug_str     0x00000000    0x3a7b3 Build/obj/gd32f4xx_iref.o
+ .debug_str     0x00000000    0x3a7c9 Build/obj/gd32f4xx_iref.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_iref.o
  .debug_frame   0x00000000       0x88 Build/obj/gd32f4xx_iref.o
  .ARM.attributes
@@ -3710,7 +3658,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x44 Build/obj/gd32f4xx_misc.o
  .debug_macro   0x00000000      0x28a Build/obj/gd32f4xx_misc.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_misc.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_misc.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_misc.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_misc.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_misc.o
@@ -3768,7 +3716,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_misc.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_misc.o
  .debug_line    0x00000000      0x623 Build/obj/gd32f4xx_misc.o
- .debug_str     0x00000000    0x3ab2f Build/obj/gd32f4xx_misc.o
+ .debug_str     0x00000000    0x3ab45 Build/obj/gd32f4xx_misc.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_misc.o
  .debug_frame   0x00000000       0x80 Build/obj/gd32f4xx_misc.o
  .ARM.attributes
@@ -3886,7 +3834,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x8c Build/obj/gd32f4xx_pmu.o
  .debug_macro   0x00000000      0x28e Build/obj/gd32f4xx_pmu.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_pmu.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_pmu.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_pmu.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_pmu.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_pmu.o
@@ -3944,7 +3892,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_pmu.o
  .debug_macro   0x00000000      0x1ba Build/obj/gd32f4xx_pmu.o
  .debug_line    0x00000000      0x850 Build/obj/gd32f4xx_pmu.o
- .debug_str     0x00000000    0x3a9eb Build/obj/gd32f4xx_pmu.o
+ .debug_str     0x00000000    0x3aa01 Build/obj/gd32f4xx_pmu.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_pmu.o
  .debug_frame   0x00000000      0x184 Build/obj/gd32f4xx_pmu.o
  .ARM.attributes
@@ -4102,7 +4050,7 @@ Discarded input sections
  .text.rcu_interrupt_disable
                 0x00000000       0x1c Build/obj/gd32f4xx_rcu.o
  .rodata        0x00000000       0x18 Build/obj/gd32f4xx_rcu.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_rcu.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_rcu.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_rcu.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_rcu.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_rcu.o
@@ -4312,7 +4260,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x10c Build/obj/gd32f4xx_rtc.o
  .debug_macro   0x00000000      0x2ae Build/obj/gd32f4xx_rtc.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_rtc.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_rtc.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_rtc.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_rtc.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_rtc.o
@@ -4370,7 +4318,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_rtc.o
  .debug_macro   0x00000000      0x8d4 Build/obj/gd32f4xx_rtc.o
  .debug_line    0x00000000     0x135d Build/obj/gd32f4xx_rtc.o
- .debug_str     0x00000000    0x3abcc Build/obj/gd32f4xx_rtc.o
+ .debug_str     0x00000000    0x3abe2 Build/obj/gd32f4xx_rtc.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_rtc.o
  .debug_frame   0x00000000      0x38c Build/obj/gd32f4xx_rtc.o
  .ARM.attributes
@@ -4536,7 +4484,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x121 Build/obj/gd32f4xx_sdio.o
  .debug_macro   0x00000000      0x28a Build/obj/gd32f4xx_sdio.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_sdio.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_sdio.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_sdio.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_sdio.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_sdio.o
@@ -4594,7 +4542,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_sdio.o
  .debug_macro   0x00000000      0x603 Build/obj/gd32f4xx_sdio.o
  .debug_line    0x00000000      0xa74 Build/obj/gd32f4xx_sdio.o
- .debug_str     0x00000000    0x3ac54 Build/obj/gd32f4xx_sdio.o
+ .debug_str     0x00000000    0x3ac6a Build/obj/gd32f4xx_sdio.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_sdio.o
  .debug_frame   0x00000000      0x31c Build/obj/gd32f4xx_sdio.o
  .ARM.attributes
@@ -4748,7 +4696,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0xff Build/obj/gd32f4xx_spi.o
  .debug_macro   0x00000000      0x2a2 Build/obj/gd32f4xx_spi.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_spi.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_spi.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_spi.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_spi.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_spi.o
@@ -4806,7 +4754,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_spi.o
  .debug_macro   0x00000000      0x41e Build/obj/gd32f4xx_spi.o
  .debug_line    0x00000000      0xbd9 Build/obj/gd32f4xx_spi.o
- .debug_str     0x00000000    0x3ad00 Build/obj/gd32f4xx_spi.o
+ .debug_str     0x00000000    0x3ad16 Build/obj/gd32f4xx_spi.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_spi.o
  .debug_frame   0x00000000      0x2cc Build/obj/gd32f4xx_spi.o
  .ARM.attributes
@@ -4896,7 +4844,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x3e Build/obj/gd32f4xx_syscfg.o
  .debug_macro   0x00000000      0x28a Build/obj/gd32f4xx_syscfg.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_syscfg.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_syscfg.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_syscfg.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_syscfg.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_syscfg.o
@@ -4954,7 +4902,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_syscfg.o
  .debug_macro   0x00000000      0x1db Build/obj/gd32f4xx_syscfg.o
  .debug_line    0x00000000      0x5ee Build/obj/gd32f4xx_syscfg.o
- .debug_str     0x00000000    0x3a87f Build/obj/gd32f4xx_syscfg.o
+ .debug_str     0x00000000    0x3a895 Build/obj/gd32f4xx_syscfg.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_syscfg.o
  .debug_frame   0x00000000       0x98 Build/obj/gd32f4xx_syscfg.o
  .ARM.attributes
@@ -5172,7 +5120,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x1c3 Build/obj/gd32f4xx_timer.o
  .debug_macro   0x00000000      0x28a Build/obj/gd32f4xx_timer.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_timer.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_timer.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_timer.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_timer.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_timer.o
@@ -5230,7 +5178,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_timer.o
  .debug_macro   0x00000000      0xa38 Build/obj/gd32f4xx_timer.o
  .debug_line    0x00000000     0x177d Build/obj/gd32f4xx_timer.o
- .debug_str     0x00000000    0x3b2d9 Build/obj/gd32f4xx_timer.o
+ .debug_str     0x00000000    0x3b2ef Build/obj/gd32f4xx_timer.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_timer.o
  .debug_frame   0x00000000      0x4f4 Build/obj/gd32f4xx_timer.o
  .ARM.attributes
@@ -5357,7 +5305,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0xac Build/obj/gd32f4xx_tli.o
  .debug_macro   0x00000000      0x29b Build/obj/gd32f4xx_tli.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_tli.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_tli.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_tli.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_tli.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_tli.o
@@ -5416,7 +5364,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_tli.o
  .debug_macro   0x00000000      0x362 Build/obj/gd32f4xx_tli.o
  .debug_line    0x00000000      0xace Build/obj/gd32f4xx_tli.o
- .debug_str     0x00000000    0x3bc82 Build/obj/gd32f4xx_tli.o
+ .debug_str     0x00000000    0x3bc98 Build/obj/gd32f4xx_tli.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_tli.o
  .debug_frame   0x00000000      0x1d8 Build/obj/gd32f4xx_tli.o
  .ARM.attributes
@@ -5508,7 +5456,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x43 Build/obj/gd32f4xx_trng.o
  .debug_macro   0x00000000      0x28a Build/obj/gd32f4xx_trng.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_trng.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_trng.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_trng.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_trng.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_trng.o
@@ -5566,7 +5514,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_trng.o
  .debug_macro   0x00000000       0x4c Build/obj/gd32f4xx_trng.o
  .debug_line    0x00000000      0x567 Build/obj/gd32f4xx_trng.o
- .debug_str     0x00000000    0x3a859 Build/obj/gd32f4xx_trng.o
+ .debug_str     0x00000000    0x3a86f Build/obj/gd32f4xx_trng.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_trng.o
  .debug_frame   0x00000000       0xa8 Build/obj/gd32f4xx_trng.o
  .ARM.attributes
@@ -5750,7 +5698,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000      0x159 Build/obj/gd32f4xx_usart.o
  .debug_macro   0x00000000      0x29c Build/obj/gd32f4xx_usart.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_usart.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_usart.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_usart.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_usart.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_usart.o
@@ -5808,7 +5756,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_usart.o
  .debug_macro   0x00000000      0x448 Build/obj/gd32f4xx_usart.o
  .debug_line    0x00000000      0xd43 Build/obj/gd32f4xx_usart.o
- .debug_str     0x00000000    0x3b17a Build/obj/gd32f4xx_usart.o
+ .debug_str     0x00000000    0x3b190 Build/obj/gd32f4xx_usart.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_usart.o
  .debug_frame   0x00000000      0x3b8 Build/obj/gd32f4xx_usart.o
  .ARM.attributes
@@ -5896,7 +5844,7 @@ Discarded input sections
  .debug_rnglists
                 0x00000000       0x37 Build/obj/gd32f4xx_wwdgt.o
  .debug_macro   0x00000000      0x28a Build/obj/gd32f4xx_wwdgt.o
- .debug_macro   0x00000000      0xac6 Build/obj/gd32f4xx_wwdgt.o
+ .debug_macro   0x00000000      0xacc Build/obj/gd32f4xx_wwdgt.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_wwdgt.o
  .debug_macro   0x00000000      0x34e Build/obj/gd32f4xx_wwdgt.o
  .debug_macro   0x00000000       0x2e Build/obj/gd32f4xx_wwdgt.o
@@ -5954,7 +5902,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xae2 Build/obj/gd32f4xx_wwdgt.o
  .debug_macro   0x00000000       0x6a Build/obj/gd32f4xx_wwdgt.o
  .debug_line    0x00000000      0x53c Build/obj/gd32f4xx_wwdgt.o
- .debug_str     0x00000000    0x3a7ce Build/obj/gd32f4xx_wwdgt.o
+ .debug_str     0x00000000    0x3a7e4 Build/obj/gd32f4xx_wwdgt.o
  .comment       0x00000000       0x27 Build/obj/gd32f4xx_wwdgt.o
  .debug_frame   0x00000000       0x88 Build/obj/gd32f4xx_wwdgt.o
  .ARM.attributes
@@ -5999,21 +5947,8 @@ Discarded input sections
  .comment       0x00000000       0x27 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-impure.o)
  .ARM.attributes
                 0x00000000       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-impure.o)
- .text          0x00000000       0x50 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
- .debug_info    0x00000000      0x10b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
- .debug_abbrev  0x00000000       0xc9 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
- .debug_loclists
-                0x00000000       0x65 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
- .debug_aranges
-                0x00000000       0x20 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
- .debug_line    0x00000000      0x11e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
- .debug_str     0x00000000      0x1f5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
- .comment       0x00000000       0x27 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
- .debug_frame   0x00000000       0x2c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
- .ARM.attributes
-                0x00000000       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
  .text          0x00000000      0x224 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-findfp.o)
  .data          0x00000000        0xc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-findfp.o)
  .bss           0x00000000      0x13c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-findfp.o)
@@ -6301,6 +6236,7 @@ Discarded input sections
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
  .rodata        0x00000000       0x24 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
+ .eh_frame      0x00000000        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
  .text          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
@@ -6319,10 +6255,10 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crti.o
 LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
 LOAD Build/obj/system_gd32f4xx.o
-LOAD Build/obj/startup_GD32F4xx.o
+LOAD Build/obj/startup_gd32f407_427.o
 LOAD Build/obj/main.o
 LOAD Build/obj/_syscalls.o
-LOAD Build/obj/ints.o
+LOAD Build/obj/Gpio.o
 LOAD Build/obj/gd32f4xx_adc.o
 LOAD Build/obj/gd32f4xx_can.o
 LOAD Build/obj/gd32f4xx_crc.o
@@ -6363,261 +6299,277 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp
 END GROUP
 LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
 LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
-START GROUP
-LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/libgcc.a
-LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
-LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
-LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a
-END GROUP
+                0x20030000                        _estack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x00000200                        _Min_Heap_Size = 0x200
+                0x00000400                        _Min_Stack_Size = 0x400
 
-.text           0x08000000      0x680
- *(.vectors)
- .vectors       0x08000000      0x188 Build/obj/startup_GD32F4xx.o
-                0x08000000                __Vectors
-                0x08000188                        __Vectors_End = .
-                0x08000188                        __Vectors_Size = (__Vectors_End - __Vectors)
-                0x200001c0                        __end__ = .
- *(.text*)
+.isr_vector     0x08000000      0x188
+                0x08000000                        . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000      0x188 Build/obj/startup_gd32f407_427.o
+                0x08000000                g_pfnVectors
+                0x08000188                        . = ALIGN (0x4)
+
+.text           0x08000188      0x440
+                0x08000188                        . = ALIGN (0x4)
+ *(.text)
  .text          0x08000188       0x88 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .text          0x08000210       0x50 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
+                0x08000210                __libc_init_array
+ .text          0x08000260        0xc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
+                0x08000260                atexit
+ .text          0x0800026c       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
+                0x0800026c                __libc_fini_array
+ .text          0x08000294       0x64 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+                0x08000294                __register_exitproc
+ *(.text*)
  .text.SystemInit
-                0x08000210      0x194 Build/obj/system_gd32f4xx.o
-                0x08000210                SystemInit
- .text.SystemCoreClockUpdate
-                0x080003a4       0x98 Build/obj/system_gd32f4xx.o
-                0x080003a4                SystemCoreClockUpdate
- .text          0x0800043c       0x2c Build/obj/startup_GD32F4xx.o
-                0x0800043c                Reset_Handler
-                0x08000464                RTC_Alarm_IRQHandler
-                0x08000464                EXTI2_IRQHandler
-                0x08000464                TIMER2_IRQHandler
-                0x08000464                DebugMon_Handler
-                0x08000464                LVD_IRQHandler
-                0x08000464                CAN1_EWMC_IRQHandler
-                0x08000464                TIMER7_UP_TIMER12_IRQHandler
-                0x08000464                SDIO_IRQHandler
-                0x08000464                EXTI3_IRQHandler
-                0x08000464                DCI_IRQHandler
-                0x08000464                USBFS_WKUP_IRQHandler
-                0x08000464                USBHS_IRQHandler
-                0x08000464                TIMER5_DAC_IRQHandler
-                0x08000464                TIMER0_TRG_CMT_TIMER10_IRQHandler
-                0x08000464                USBFS_IRQHandler
-                0x08000464                TIMER3_IRQHandler
-                0x08000464                DMA0_Channel6_IRQHandler
-                0x08000464                I2C0_EV_IRQHandler
-                0x08000464                EXTI0_IRQHandler
-                0x08000464                I2C2_EV_IRQHandler
-                0x08000464                CAN1_RX0_IRQHandler
-                0x08000464                FPU_IRQHandler
-                0x08000464                TIMER7_TRG_CMT_TIMER13_IRQHandler
-                0x08000464                UsageFault_Handler
-                0x08000464                TIMER4_IRQHandler
-                0x08000464                SPI1_IRQHandler
-                0x08000464                DMA0_Channel0_IRQHandler
-                0x08000464                USART5_IRQHandler
-                0x08000464                TIMER0_BRK_TIMER8_IRQHandler
-                0x08000464                DMA1_Channel0_IRQHandler
-                0x08000464                TIMER7_BRK_TIMER11_IRQHandler
-                0x08000464                TIMER6_IRQHandler
-                0x08000464                DMA1_Channel4_IRQHandler
-                0x08000464                DMA0_Channel3_IRQHandler
-                0x08000464                I2C0_ER_IRQHandler
-                0x08000464                TIMER0_UP_TIMER9_IRQHandler
-                0x08000464                DMA1_Channel7_IRQHandler
-                0x08000464                CAN1_RX1_IRQHandler
-                0x08000464                DMA0_Channel2_IRQHandler
-                0x08000464                USART0_IRQHandler
-                0x08000464                TIMER1_IRQHandler
-                0x08000464                I2C1_EV_IRQHandler
-                0x08000464                DMA1_Channel6_IRQHandler
-                0x08000464                UART4_IRQHandler
-                0x08000464                EXTI10_15_IRQHandler
-                0x08000464                DMA1_Channel1_IRQHandler
-                0x08000464                Default_Handler
-                0x08000464                TIMER7_Channel_IRQHandler
-                0x08000464                DMA0_Channel7_IRQHandler
-                0x08000464                ADC_IRQHandler
-                0x08000464                CAN0_TX_IRQHandler
-                0x08000464                WWDGT_IRQHandler
-                0x08000464                EXMC_IRQHandler
-                0x08000464                TAMPER_STAMP_IRQHandler
-                0x08000464                RTC_WKUP_IRQHandler
-                0x08000464                SPI2_IRQHandler
-                0x08000464                MemManage_Handler
-                0x08000464                CAN1_TX_IRQHandler
-                0x08000464                RCU_CTC_IRQHandler
-                0x08000464                DMA1_Channel5_IRQHandler
-                0x08000464                EXTI4_IRQHandler
-                0x08000464                CAN0_RX1_IRQHandler
-                0x08000464                DMA0_Channel5_IRQHandler
-                0x08000464                DMA1_Channel3_IRQHandler
-                0x08000464                EXTI5_9_IRQHandler
-                0x08000464                DMA0_Channel1_IRQHandler
-                0x08000464                TIMER0_Channel_IRQHandler
-                0x08000464                EXTI1_IRQHandler
-                0x08000464                ENET_WKUP_IRQHandler
-                0x08000464                USBHS_EP1_In_IRQHandler
-                0x08000464                SPI0_IRQHandler
-                0x08000464                USART2_IRQHandler
-                0x08000464                CAN0_EWMC_IRQHandler
-                0x08000464                CAN0_RX0_IRQHandler
-                0x08000464                I2C2_ER_IRQHandler
-                0x08000464                DMA1_Channel2_IRQHandler
-                0x08000464                BusFault_Handler
-                0x08000464                USART1_IRQHandler
-                0x08000464                UART3_IRQHandler
-                0x08000464                I2C1_ER_IRQHandler
-                0x08000464                FMC_IRQHandler
-                0x08000464                USBHS_WKUP_IRQHandler
-                0x08000464                DMA0_Channel4_IRQHandler
-                0x08000464                TRNG_IRQHandler
-                0x08000464                ENET_IRQHandler
-                0x08000464                USBHS_EP1_Out_IRQHandler
- .text.main     0x08000468       0x70 Build/obj/main.o
-                0x08000468                main
- .text.NMI_Handler
-                0x080004d8        0x2 Build/obj/ints.o
-                0x080004d8                NMI_Handler
- .text.HardFault_Handler
-                0x080004da        0x2 Build/obj/ints.o
-                0x080004da                HardFault_Handler
- .text.SVC_Handler
-                0x080004dc        0x2 Build/obj/ints.o
-                0x080004dc                SVC_Handler
- .text.PendSV_Handler
-                0x080004de        0x2 Build/obj/ints.o
-                0x080004de                PendSV_Handler
- .text.SysTick_Handler
-                0x080004e0       0x10 Build/obj/ints.o
-                0x080004e0                SysTick_Handler
- .text.gpio_mode_set
-                0x080004f0       0x50 Build/obj/gd32f4xx_gpio.o
-                0x080004f0                gpio_mode_set
- .text.gpio_output_options_set
-                0x08000540       0x44 Build/obj/gd32f4xx_gpio.o
-                0x08000540                gpio_output_options_set
- .text.gpio_bit_reset
-                0x08000584        0x4 Build/obj/gd32f4xx_gpio.o
-                0x08000584                gpio_bit_reset
- .text.gpio_bit_toggle
-                0x08000588        0x4 Build/obj/gd32f4xx_gpio.o
-                0x08000588                gpio_bit_toggle
+                0x080002f8       0xf0 Build/obj/system_gd32f4xx.o
+                0x080002f8                SystemInit
+ .text.Reset_Handler
+                0x080003e8       0x48 Build/obj/startup_gd32f407_427.o
+                0x080003e8                Reset_Handler
+ .text.Default_Handler
+                0x08000430        0x2 Build/obj/startup_gd32f407_427.o
+                0x08000430                RTC_Alarm_IRQHandler
+                0x08000430                EXTI2_IRQHandler
+                0x08000430                TIMER2_IRQHandler
+                0x08000430                DebugMon_Handler
+                0x08000430                LVD_IRQHandler
+                0x08000430                CAN1_EWMC_IRQHandler
+                0x08000430                HardFault_Handler
+                0x08000430                TIMER7_UP_TIMER12_IRQHandler
+                0x08000430                SysTick_Handler
+                0x08000430                SDIO_IRQHandler
+                0x08000430                PendSV_Handler
+                0x08000430                NMI_Handler
+                0x08000430                EXTI3_IRQHandler
+                0x08000430                DCI_IRQHandler
+                0x08000430                USBFS_WKUP_IRQHandler
+                0x08000430                USBHS_IRQHandler
+                0x08000430                TIMER5_DAC_IRQHandler
+                0x08000430                TIMER0_TRG_CMT_TIMER10_IRQHandler
+                0x08000430                USBFS_IRQHandler
+                0x08000430                TIMER3_IRQHandler
+                0x08000430                DMA0_Channel6_IRQHandler
+                0x08000430                I2C0_EV_IRQHandler
+                0x08000430                EXTI0_IRQHandler
+                0x08000430                I2C2_EV_IRQHandler
+                0x08000430                CAN1_RX0_IRQHandler
+                0x08000430                FPU_IRQHandler
+                0x08000430                TIMER7_TRG_CMT_TIMER13_IRQHandler
+                0x08000430                UsageFault_Handler
+                0x08000430                TIMER4_IRQHandler
+                0x08000430                SPI1_IRQHandler
+                0x08000430                DMA0_Channel0_IRQHandler
+                0x08000430                USART5_IRQHandler
+                0x08000430                TIMER0_BRK_TIMER8_IRQHandler
+                0x08000430                DMA1_Channel0_IRQHandler
+                0x08000430                TIMER7_BRK_TIMER11_IRQHandler
+                0x08000430                TIMER6_IRQHandler
+                0x08000430                DMA1_Channel4_IRQHandler
+                0x08000430                DMA0_Channel3_IRQHandler
+                0x08000430                I2C0_ER_IRQHandler
+                0x08000430                TIMER0_UP_TIMER9_IRQHandler
+                0x08000430                DMA1_Channel7_IRQHandler
+                0x08000430                CAN1_RX1_IRQHandler
+                0x08000430                DMA0_Channel2_IRQHandler
+                0x08000430                USART0_IRQHandler
+                0x08000430                TIMER1_IRQHandler
+                0x08000430                I2C1_EV_IRQHandler
+                0x08000430                DMA1_Channel6_IRQHandler
+                0x08000430                UART4_IRQHandler
+                0x08000430                EXTI10_15_IRQHandler
+                0x08000430                DMA1_Channel1_IRQHandler
+                0x08000430                Default_Handler
+                0x08000430                TIMER7_Channel_IRQHandler
+                0x08000430                DMA0_Channel7_IRQHandler
+                0x08000430                ADC_IRQHandler
+                0x08000430                CAN0_TX_IRQHandler
+                0x08000430                WWDGT_IRQHandler
+                0x08000430                EXMC_IRQHandler
+                0x08000430                TAMPER_STAMP_IRQHandler
+                0x08000430                RTC_WKUP_IRQHandler
+                0x08000430                SPI2_IRQHandler
+                0x08000430                MemManage_Handler
+                0x08000430                CAN1_TX_IRQHandler
+                0x08000430                SVC_Handler
+                0x08000430                RCU_CTC_IRQHandler
+                0x08000430                DMA1_Channel5_IRQHandler
+                0x08000430                EXTI4_IRQHandler
+                0x08000430                CAN0_RX1_IRQHandler
+                0x08000430                DMA0_Channel5_IRQHandler
+                0x08000430                DMA1_Channel3_IRQHandler
+                0x08000430                EXTI5_9_IRQHandler
+                0x08000430                DMA0_Channel1_IRQHandler
+                0x08000430                TIMER0_Channel_IRQHandler
+                0x08000430                EXTI1_IRQHandler
+                0x08000430                ENET_WKUP_IRQHandler
+                0x08000430                USBHS_EP1_In_IRQHandler
+                0x08000430                SPI0_IRQHandler
+                0x08000430                USART2_IRQHandler
+                0x08000430                CAN0_EWMC_IRQHandler
+                0x08000430                CAN0_RX0_IRQHandler
+                0x08000430                I2C2_ER_IRQHandler
+                0x08000430                DMA1_Channel2_IRQHandler
+                0x08000430                BusFault_Handler
+                0x08000430                USART1_IRQHandler
+                0x08000430                UART3_IRQHandler
+                0x08000430                I2C1_ER_IRQHandler
+                0x08000430                FMC_IRQHandler
+                0x08000430                USBHS_WKUP_IRQHandler
+                0x08000430                DMA0_Channel4_IRQHandler
+                0x08000430                TRNG_IRQHandler
+                0x08000430                ENET_IRQHandler
+                0x08000430                USBHS_EP1_Out_IRQHandler
+ *fill*         0x08000432        0x2 
+ .text.main     0x08000434       0x74 Build/obj/main.o
+                0x08000434                main
+ .text._ZN4Gpio10SetPinModeENS_3PinENS_4ModeE
+                0x080004a8       0x18 Build/obj/Gpio.o
+                0x080004a8                Gpio::SetPinMode(Gpio::Pin, Gpio::Mode)
+ .text._ZN4Gpio13SetOutputTypeENS_3PinENS_10OutputTypeE
+                0x080004c0       0x16 Build/obj/Gpio.o
+                0x080004c0                Gpio::SetOutputType(Gpio::Pin, Gpio::OutputType)
+ .text._ZN4Gpio18SetOutputTypeSpeedENS_3PinENS_11OutputSpeedE
+                0x080004d6       0x18 Build/obj/Gpio.o
+                0x080004d6                Gpio::SetOutputTypeSpeed(Gpio::Pin, Gpio::OutputSpeed)
+ .text._ZN4Gpio10SetPinPullENS_3PinENS_4PullE
+                0x080004ee       0x18 Build/obj/Gpio.o
+                0x080004ee                Gpio::SetPinPull(Gpio::Pin, Gpio::Pull)
+ .text._ZN4Gpio8ResetPinENS_3PinE
+                0x08000506        0xe Build/obj/Gpio.o
+                0x08000506                Gpio::ResetPin(Gpio::Pin)
+ .text._ZN7GpioPinC2ER4GpioNS0_3PinE
+                0x08000514        0x6 Build/obj/Gpio.o
+                0x08000514                GpioPin::GpioPin(Gpio&, Gpio::Pin)
+                0x08000514                GpioPin::GpioPin(Gpio&, Gpio::Pin)
+ .text._ZNK7GpioPin3SetEv
+                0x0800051a       0x10 Build/obj/Gpio.o
+                0x0800051a                GpioPin::Set() const
+ .text._ZNK7GpioPin5ResetEv
+                0x0800052a        0xc Build/obj/Gpio.o
+                0x0800052a                GpioPin::Reset() const
+ .text._ZNK7GpioPin8GetStateEv
+                0x08000536       0x14 Build/obj/Gpio.o
+                0x08000536                GpioPin::GetState() const
+ .text._ZNK7GpioPin7SetModeEN4Gpio4ModeE
+                0x0800054a        0xe Build/obj/Gpio.o
+                0x0800054a                GpioPin::SetMode(Gpio::Mode) const
+ .text._ZNK7GpioPin13SetOutputTypeEN4Gpio10OutputTypeE
+                0x08000558        0xe Build/obj/Gpio.o
+                0x08000558                GpioPin::SetOutputType(Gpio::OutputType) const
+ .text._ZNK7GpioPin14SetOutputSpeedEN4Gpio11OutputSpeedE
+                0x08000566        0xe Build/obj/Gpio.o
+                0x08000566                GpioPin::SetOutputSpeed(Gpio::OutputSpeed) const
+ .text._ZNK7GpioPin7SetPullEN4Gpio4PullE
+                0x08000574        0xe Build/obj/Gpio.o
+                0x08000574                GpioPin::SetPull(Gpio::Pull) const
  .text.rcu_periph_clock_enable
-                0x0800058c       0x1a Build/obj/gd32f4xx_rcu.o
-                0x0800058c                rcu_periph_clock_enable
- *fill*         0x080005a6        0x2 
- .text          0x080005a8        0xc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
-                0x080005a8                atexit
- .text          0x080005b4       0x28 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
-                0x080005b4                __libc_fini_array
- .text.startup  0x080005dc       0x14 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
- .text          0x080005f0       0x64 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
-                0x080005f0                __register_exitproc
+                0x08000582       0x1a Build/obj/gd32f4xx_rcu.o
+                0x08000582                rcu_periph_clock_enable
+ .text.startup  0x0800059c       0x14 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+ *(.glue_7)
+ .glue_7        0x080005b0        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x080005b0        0x0 linker stubs
+ *(.eh_frame)
+ .eh_frame      0x080005b0        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08000654        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crti.o
-                0x08000654                _init
- .init          0x08000658        0x8 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x080005b0        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x080005b0                _init
+ .init          0x080005b4        0x8 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08000660        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crti.o
-                0x08000660                _fini
- .fini          0x08000664        0x8 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
- *crtbegin.o(.ctors)
- *crtbegin?.o(.ctors)
- *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
- *(SORT_BY_NAME(.ctors.*))
- *(.ctors)
- *crtbegin.o(.dtors)
- *crtbegin?.o(.dtors)
- *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
- *(SORT_BY_NAME(.dtors.*))
- *(.dtors)
+ .fini          0x080005bc        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x080005bc                _fini
+ .fini          0x080005c0        0x8 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
+                0x080005c8                        . = ALIGN (0x4)
+                0x080005c8                        _etext = .
+
+.vfp11_veneer   0x080005c8        0x0
+ .vfp11_veneer  0x080005c8        0x0 linker stubs
+
+.v4_bx          0x080005c8        0x0
+ .v4_bx         0x080005c8        0x0 linker stubs
+
+.iplt           0x080005c8        0x0
+ .iplt          0x080005c8        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+
+.rel.dyn        0x080005c8        0x0
+ .rel.iplt      0x080005c8        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+
+.rodata         0x080005c8        0x0
+                0x080005c8                        . = ALIGN (0x4)
+ *(.rodata)
  *(.rodata*)
- .rodata        0x0800066c       0x10 Build/obj/system_gd32f4xx.o
- *(.eh_frame*)
- .eh_frame      0x0800067c        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
- .eh_frame      0x0800067c        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
-
-.glue_7         0x08000680        0x0
- .glue_7        0x08000680        0x0 linker stubs
-
-.glue_7t        0x08000680        0x0
- .glue_7t       0x08000680        0x0 linker stubs
-
-.vfp11_veneer   0x08000680        0x0
- .vfp11_veneer  0x08000680        0x0 linker stubs
-
-.v4_bx          0x08000680        0x0
- .v4_bx         0x08000680        0x0 linker stubs
-
-.iplt           0x08000680        0x0
- .iplt          0x08000680        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
-
-.rel.dyn        0x08000680        0x0
- .rel.iplt      0x08000680        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080005c8                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08000680                        __exidx_start = .
 
-.ARM.exidx
- *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08000680                        __exidx_end = .
-                0x08000680                        __etext = .
+.ARM            0x080005c8        0x0
+                0x080005c8                        __exidx_start = .
+ *(.ARM.exidx*)
+                0x080005c8                        __exidx_end = .
 
-.data           0x20000000       0x10 load address 0x08000680
-                0x20000000                        __data_start__ = .
- *(vtable)
- *(.data*)
- .data.SystemCoreClock
-                0x20000000        0x4 Build/obj/system_gd32f4xx.o
-                0x20000000                SystemCoreClock
-                0x20000004                        . = ALIGN (0x4)
-                0x20000004                        PROVIDE (__preinit_array_start = .)
- *(.preinit_array)
-                0x20000004                        PROVIDE (__preinit_array_end = .)
-                0x20000004                        . = ALIGN (0x4)
-                0x20000004                        PROVIDE (__init_array_start = .)
+.preinit_array  0x080005c8        0x0
+                0x080005c8                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array*)
+                0x080005c8                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x080005c8        0x8
+                0x080005c8                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x20000004        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
- *(.init_array)
- .init_array    0x20000008        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x2000000c                        PROVIDE (__init_array_end = .)
-                0x2000000c                        . = ALIGN (0x4)
-                0x2000000c                        PROVIDE (__fini_array_start = .)
+                0x080005c8        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+ *(.init_array*)
+ .init_array    0x080005cc        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080005d0                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x080005d0        0x4
+                0x080005d0                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
- *(.fini_array)
- .fini_array    0x2000000c        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x20000010                        PROVIDE (__fini_array_end = .)
- *(.jcr*)
-                0x20000010                        . = ALIGN (0x4)
-                0x20000010                        __data_end__ = .
+ *(.fini_array*)
+ .fini_array    0x080005d0        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080005d4                        PROVIDE (__fini_array_end = .)
+                0x080005d4                        _sidata = LOADADDR (.data)
+
+.data           0x20000000        0x0 load address 0x080005d4
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sdata = .
+ *(.data)
+ *(.data*)
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _edata = .
 
 .tm_clone_table
-                0x20000010        0x0 load address 0x08000690
+                0x20000000        0x0 load address 0x080005d4
  .tm_clone_table
-                0x20000010        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x20000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  .tm_clone_table
-                0x20000010        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
+                0x20000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
 
-.igot.plt       0x20000010        0x0 load address 0x08000690
- .igot.plt      0x20000010        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+.igot.plt       0x20000000        0x0 load address 0x080005d4
+ .igot.plt      0x20000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x20000000                        . = ALIGN (0x4)
 
-.bss            0x20000010      0x1b0 load address 0x08000690
-                0x20000010                        . = ALIGN (0x4)
-                0x20000010                        __bss_start__ = .
+.bss            0x20000000      0x1b0 load address 0x080005d4
+                0x20000000                        _sbss = .
+                0x20000000                        __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x20000000       0x1c /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .bss           0x2000001c        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+                0x2000001c                __atexit
+ .bss           0x20000020      0x190 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+                0x20000020                __atexit0
  *(.bss*)
- .bss           0x20000010       0x1c /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
- .bss           0x2000002c        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
-                0x2000002c                __atexit
- .bss           0x20000030      0x190 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
-                0x20000030                __atexit0
  *(COMMON)
-                0x200001c0                        . = ALIGN (0x4)
-                0x200001c0                        __bss_end__ = .
-                0x08000680                        _sitcmram = LOADADDR (.tcmram)
+                0x200001b0                        . = ALIGN (0x4)
+                0x200001b0                        _ebss = .
+                0x200001b0                        __bss_end__ = _ebss
+                0x080005d4                        _sitcmram = LOADADDR (.tcmram)
 
-.tcmram         0x10000000        0x0 load address 0x08000680
+.tcmram         0x10000000        0x0 load address 0x080005d4
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _stcmram = .
  *(.tcmram)
@@ -6625,26 +6577,25 @@ END GROUP
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _etcmram = .
 
-.heap           0x200001c0      0x400
-                0x200001c0                        __HeapBase = .
-                0x200001c0                        __end__ = .
-                0x200001c0                        end = __end__
- *(.heap*)
- .heap          0x200001c0      0x400 Build/obj/startup_GD32F4xx.o
-                0x200005c0                        __HeapLimit = .
+._user_heap_stack
+                0x200001b0      0x600
+                0x200001b0                        . = ALIGN (0x8)
+                0x200001b0                        PROVIDE (end = .)
+                [!provide]                        PROVIDE (_end = .)
+                0x200003b0                        . = (. + _Min_Heap_Size)
+ *fill*         0x200001b0      0x200 
+                0x200007b0                        . = (. + _Min_Stack_Size)
+ *fill*         0x200003b0      0x400 
+                0x200007b0                        . = ALIGN (0x8)
 
-.stack_dummy    0x200001c0      0x400
- *(.stack*)
- .stack         0x200001c0      0x400 Build/obj/startup_GD32F4xx.o
-                0x20030000                        __StackTop = (ORIGIN (RAM) + LENGTH (RAM))
-                0x2002fc00                        __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
-                0x20030000                        PROVIDE (__stack = __StackTop)
-                0x00000001                        ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
-OUTPUT(Build/Base_Makefile_GD32f4xx.elf elf32-littlearm)
-LOAD linker stubs
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
 
 .ARM.attributes
                 0x00000000       0x30
+ *(.ARM.attributes)
  .ARM.attributes
                 0x00000000       0x22 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crti.o
  .ARM.attributes
@@ -6652,82 +6603,87 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000056       0x34 Build/obj/system_gd32f4xx.o
  .ARM.attributes
-                0x0000008a       0x1f Build/obj/startup_GD32F4xx.o
+                0x0000008a       0x21 Build/obj/startup_gd32f407_427.o
  .ARM.attributes
-                0x000000a9       0x34 Build/obj/main.o
+                0x000000ab       0x34 Build/obj/main.o
  .ARM.attributes
-                0x000000dd       0x34 Build/obj/ints.o
+                0x000000df       0x34 Build/obj/Gpio.o
  .ARM.attributes
-                0x00000111       0x34 Build/obj/gd32f4xx_gpio.o
+                0x00000113       0x34 Build/obj/gd32f4xx_rcu.o
  .ARM.attributes
-                0x00000145       0x34 Build/obj/gd32f4xx_rcu.o
+                0x00000147       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
  .ARM.attributes
-                0x00000179       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
+                0x0000017b       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
  .ARM.attributes
-                0x000001ad       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
+                0x000001af       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
  .ARM.attributes
-                0x000001e1       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+                0x000001e3       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
  .ARM.attributes
-                0x00000215       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+                0x00000217       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
  .ARM.attributes
-                0x00000249       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
+                0x0000024b       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
  .ARM.attributes
-                0x0000027d       0x22 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
+                0x0000027f       0x22 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
+OUTPUT(Build/Base_Makefile_GD32f4xx.elf elf32-littlearm)
+LOAD linker stubs
+LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
+LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
+LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/libgcc.a
 
 .comment        0x00000000       0x26
  .comment       0x00000000       0x26 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
                                  0x27 (size before relaxing)
  .comment       0x00000026       0x27 Build/obj/system_gd32f4xx.o
  .comment       0x00000026       0x27 Build/obj/main.o
- .comment       0x00000026       0x27 Build/obj/ints.o
- .comment       0x00000026       0x27 Build/obj/gd32f4xx_gpio.o
+ .comment       0x00000026       0x27 Build/obj/Gpio.o
  .comment       0x00000026       0x27 Build/obj/gd32f4xx_rcu.o
+ .comment       0x00000026       0x27 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
  .comment       0x00000026       0x27 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
  .comment       0x00000026       0x27 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
  .comment       0x00000026       0x27 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
  .comment       0x00000026       0x27 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
  .comment       0x00000026       0x27 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
 
-.debug_info     0x00000000     0x31f0
- .debug_info    0x00000000      0x414 Build/obj/system_gd32f4xx.o
- .debug_info    0x00000414      0x9d9 Build/obj/main.o
- .debug_info    0x00000ded      0x10c Build/obj/ints.o
- .debug_info    0x00000ef9      0x7fb Build/obj/gd32f4xx_gpio.o
- .debug_info    0x000016f4     0x1466 Build/obj/gd32f4xx_rcu.o
- .debug_info    0x00002b5a      0x11e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
- .debug_info    0x00002c78       0xf7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
- .debug_info    0x00002d6f      0x284 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
- .debug_info    0x00002ff3      0x1fd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+.debug_info     0x00000000     0x3e8a
+ .debug_info    0x00000000      0x3f9 Build/obj/system_gd32f4xx.o
+ .debug_info    0x000003f9     0x1274 Build/obj/main.o
+ .debug_info    0x0000166d      0xc16 Build/obj/Gpio.o
+ .debug_info    0x00002283     0x1466 Build/obj/gd32f4xx_rcu.o
+ .debug_info    0x000036e9      0x10b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
+ .debug_info    0x000037f4      0x11e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
+ .debug_info    0x00003912       0xf7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
+ .debug_info    0x00003a09      0x284 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+ .debug_info    0x00003c8d      0x1fd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
 
-.debug_abbrev   0x00000000      0xd48
- .debug_abbrev  0x00000000      0x1d7 Build/obj/system_gd32f4xx.o
- .debug_abbrev  0x000001d7      0x255 Build/obj/main.o
- .debug_abbrev  0x0000042c       0x9f Build/obj/ints.o
- .debug_abbrev  0x000004cb      0x1ec Build/obj/gd32f4xx_gpio.o
- .debug_abbrev  0x000006b7      0x1d0 Build/obj/gd32f4xx_rcu.o
- .debug_abbrev  0x00000887       0xc1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
- .debug_abbrev  0x00000948       0xcc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
- .debug_abbrev  0x00000a14      0x1dd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
- .debug_abbrev  0x00000bf1      0x157 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+.debug_abbrev   0x00000000      0xf8c
+ .debug_abbrev  0x00000000      0x1bb Build/obj/system_gd32f4xx.o
+ .debug_abbrev  0x000001bb      0x3c5 Build/obj/main.o
+ .debug_abbrev  0x00000580      0x2b2 Build/obj/Gpio.o
+ .debug_abbrev  0x00000832      0x1d0 Build/obj/gd32f4xx_rcu.o
+ .debug_abbrev  0x00000a02       0xc9 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
+ .debug_abbrev  0x00000acb       0xc1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
+ .debug_abbrev  0x00000b8c       0xcc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
+ .debug_abbrev  0x00000c58      0x1dd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+ .debug_abbrev  0x00000e35      0x157 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
 
 .debug_loclists
-                0x00000000     0x1220
+                0x00000000     0x12da
  .debug_loclists
                 0x00000000       0xe0 Build/obj/system_gd32f4xx.o
  .debug_loclists
-                0x000000e0       0x52 Build/obj/main.o
+                0x000000e0      0x36c Build/obj/Gpio.o
  .debug_loclists
-                0x00000132      0x2c5 Build/obj/gd32f4xx_gpio.o
+                0x0000044c      0xbd4 Build/obj/gd32f4xx_rcu.o
  .debug_loclists
-                0x000003f7      0xbd4 Build/obj/gd32f4xx_rcu.o
+                0x00001020       0x65 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
  .debug_loclists
-                0x00000fcb       0x2b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
+                0x00001085       0x2b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
  .debug_loclists
-                0x00000ff6       0x42 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
+                0x000010b0       0x42 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
  .debug_loclists
-                0x00001038      0x102 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+                0x000010f2      0x102 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
  .debug_loclists
-                0x0000113a       0xe6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+                0x000011f4       0xe6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
 
 .debug_aranges  0x00000000      0x330
  .debug_aranges
@@ -6735,11 +6691,11 @@ LOAD linker stubs
  .debug_aranges
                 0x00000028       0x20 Build/obj/main.o
  .debug_aranges
-                0x00000048       0x40 Build/obj/ints.o
+                0x00000048       0xb0 Build/obj/Gpio.o
  .debug_aranges
-                0x00000088       0x90 Build/obj/gd32f4xx_gpio.o
+                0x000000f8      0x190 Build/obj/gd32f4xx_rcu.o
  .debug_aranges
-                0x00000118      0x190 Build/obj/gd32f4xx_rcu.o
+                0x00000288       0x20 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
  .debug_aranges
                 0x000002a8       0x20 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
  .debug_aranges
@@ -6750,115 +6706,139 @@ LOAD linker stubs
                 0x00000310       0x20 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
 
 .debug_rnglists
-                0x00000000      0x23e
+                0x00000000      0x212
  .debug_rnglists
                 0x00000000       0x1b Build/obj/system_gd32f4xx.o
  .debug_rnglists
-                0x0000001b       0x2b Build/obj/main.o
+                0x0000001b       0x13 Build/obj/main.o
  .debug_rnglists
-                0x00000046       0x2b Build/obj/ints.o
+                0x0000002e       0x7f Build/obj/Gpio.o
  .debug_rnglists
-                0x00000071       0x68 Build/obj/gd32f4xx_gpio.o
+                0x000000ad      0x12b Build/obj/gd32f4xx_rcu.o
  .debug_rnglists
-                0x000000d9      0x12b Build/obj/gd32f4xx_rcu.o
- .debug_rnglists
-                0x00000204       0x3a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+                0x000001d8       0x3a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
 
-.debug_macro    0x00000000     0xcb49
+.debug_macro    0x00000000     0xed89
  .debug_macro   0x00000000      0x2b0 Build/obj/system_gd32f4xx.o
- .debug_macro   0x000002b0      0xac6 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00000d76       0x6a Build/obj/system_gd32f4xx.o
- .debug_macro   0x00000de0      0x34e Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000112e       0x2e Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000115c       0x10 Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000116c       0x34 Build/obj/system_gd32f4xx.o
- .debug_macro   0x000011a0      0x26d Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000140d       0x28 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00001435     0x11ae Build/obj/system_gd32f4xx.o
- .debug_macro   0x000025e3      0x11f Build/obj/system_gd32f4xx.o
- .debug_macro   0x00002702      0x154 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00002856      0xe8a Build/obj/system_gd32f4xx.o
- .debug_macro   0x000036e0      0x73e Build/obj/system_gd32f4xx.o
- .debug_macro   0x00003e1e      0x8ed Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000470b       0x34 Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000473f      0x194 Build/obj/system_gd32f4xx.o
- .debug_macro   0x000048d3      0x2df Build/obj/system_gd32f4xx.o
- .debug_macro   0x00004bb2       0xee Build/obj/system_gd32f4xx.o
- .debug_macro   0x00004ca0      0x25b Build/obj/system_gd32f4xx.o
- .debug_macro   0x00004efb      0x49e Build/obj/system_gd32f4xx.o
- .debug_macro   0x00005399      0x3b4 Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000574d      0x561 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00005cae       0xac Build/obj/system_gd32f4xx.o
- .debug_macro   0x00005d5a      0x74a Build/obj/system_gd32f4xx.o
- .debug_macro   0x000064a4      0x1e1 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00006685      0x333 Build/obj/system_gd32f4xx.o
- .debug_macro   0x000069b8      0x2c6 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00006c7e      0x1c0 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00006e3e      0x8da Build/obj/system_gd32f4xx.o
- .debug_macro   0x00007718      0x609 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00007d21      0x424 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00008145      0xa3e Build/obj/system_gd32f4xx.o
- .debug_macro   0x00008b83       0x52 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00008bd5      0x44e Build/obj/system_gd32f4xx.o
- .debug_macro   0x00009023       0x70 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00009093       0x70 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00009103       0x2a Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000912d       0x22 Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000914f       0x60 Build/obj/system_gd32f4xx.o
- .debug_macro   0x000091af       0x94 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00009243       0x3c Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000927f       0x34 Build/obj/system_gd32f4xx.o
- .debug_macro   0x000092b3       0x16 Build/obj/system_gd32f4xx.o
- .debug_macro   0x000092c9      0x11c Build/obj/system_gd32f4xx.o
- .debug_macro   0x000093e5       0x94 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00009479       0x57 Build/obj/system_gd32f4xx.o
- .debug_macro   0x000094d0      0x38c Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000985c       0x16 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00009872       0x4a Build/obj/system_gd32f4xx.o
- .debug_macro   0x000098bc       0x34 Build/obj/system_gd32f4xx.o
- .debug_macro   0x000098f0       0x10 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00009900       0x52 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00009952      0x1de Build/obj/system_gd32f4xx.o
- .debug_macro   0x00009b30       0x16 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00009b46       0x29 Build/obj/system_gd32f4xx.o
- .debug_macro   0x00009b6f     0x135a Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000aec9      0xae2 Build/obj/system_gd32f4xx.o
- .debug_macro   0x0000b9ab      0x28e Build/obj/main.o
- .debug_macro   0x0000bc39      0x28e Build/obj/ints.o
- .debug_macro   0x0000bec7      0x28a Build/obj/gd32f4xx_gpio.o
- .debug_macro   0x0000c151      0x744 Build/obj/gd32f4xx_gpio.o
- .debug_macro   0x0000c895      0x2b4 Build/obj/gd32f4xx_rcu.o
+ .debug_macro   0x000002b0      0xacc Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00000d7c       0x6a Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00000de6      0x34e Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00001134       0x2e Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00001162       0x10 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00001172       0x34 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000011a6      0x26d Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00001413       0x28 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x0000143b     0x11ae Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000025e9      0x11f Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00002708      0x154 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x0000285c      0xe8a Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000036e6      0x73e Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00003e24      0x8ed Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00004711       0x34 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00004745      0x194 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000048d9      0x2df Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00004bb8       0xee Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00004ca6      0x25b Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00004f01      0x49e Build/obj/system_gd32f4xx.o
+ .debug_macro   0x0000539f      0x3b4 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00005753      0x561 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00005cb4       0xac Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00005d60      0x74a Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000064aa      0x1e1 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x0000668b      0x333 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000069be      0x2c6 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00006c84      0x1c0 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00006e44      0x8da Build/obj/system_gd32f4xx.o
+ .debug_macro   0x0000771e      0x609 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00007d27      0x424 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x0000814b      0xa3e Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00008b89       0x52 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00008bdb      0x44e Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009029       0x70 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009099       0x70 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009109       0x2a Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009133       0x22 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009155       0x60 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000091b5       0x94 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009249       0x3c Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009285       0x34 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000092b9       0x16 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000092cf      0x11c Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000093eb       0x94 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x0000947f       0x57 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000094d6      0x38c Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009862       0x16 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009878       0x4a Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000098c2       0x34 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x000098f6       0x10 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009906       0x52 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009958      0x1de Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009b36       0x16 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009b4c       0x29 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x00009b75     0x135a Build/obj/system_gd32f4xx.o
+ .debug_macro   0x0000aecf      0xae2 Build/obj/system_gd32f4xx.o
+ .debug_macro   0x0000b9b1      0x3f0 Build/obj/main.o
+ .debug_macro   0x0000bda1      0xba4 Build/obj/main.o
+ .debug_macro   0x0000c945      0x1f2 Build/obj/main.o
+ .debug_macro   0x0000cb37       0x10 Build/obj/main.o
+ .debug_macro   0x0000cb47      0x41e Build/obj/main.o
+ .debug_macro   0x0000cf65       0x2d Build/obj/main.o
+ .debug_macro   0x0000cf92     0x11ae Build/obj/main.o
+ .debug_macro   0x0000e140       0x10 Build/obj/main.o
+ .debug_macro   0x0000e150       0x5c Build/obj/main.o
+ .debug_macro   0x0000e1ac       0x34 Build/obj/main.o
+ .debug_macro   0x0000e1e0      0x11c Build/obj/main.o
+ .debug_macro   0x0000e2fc       0xa2 Build/obj/main.o
+ .debug_macro   0x0000e39e      0x38c Build/obj/main.o
+ .debug_macro   0x0000e72a       0x4a Build/obj/main.o
+ .debug_macro   0x0000e774       0x22 Build/obj/main.o
+ .debug_macro   0x0000e796       0x10 Build/obj/main.o
+ .debug_macro   0x0000e7a6       0x10 Build/obj/main.o
+ .debug_macro   0x0000e7b6       0xde Build/obj/main.o
+ .debug_macro   0x0000e894       0x1c Build/obj/main.o
+ .debug_macro   0x0000e8b0       0x18 Build/obj/main.o
+ .debug_macro   0x0000e8c8       0x4f Build/obj/main.o
+ .debug_macro   0x0000e917       0x1f Build/obj/main.o
+ .debug_macro   0x0000e936       0x18 Build/obj/main.o
+ .debug_macro   0x0000e94e       0x27 Build/obj/main.o
+ .debug_macro   0x0000e975       0x28 Build/obj/main.o
+ .debug_macro   0x0000e99d       0x2e Build/obj/main.o
+ .debug_macro   0x0000e9cb       0x19 Build/obj/main.o
+ .debug_macro   0x0000e9e4       0x88 Build/obj/main.o
+ .debug_macro   0x0000ea6c       0x19 Build/obj/main.o
+ .debug_macro   0x0000ea85       0x50 Build/obj/Gpio.o
+ .debug_macro   0x0000ead5      0x2b4 Build/obj/gd32f4xx_rcu.o
 
-.debug_line     0x00000000     0x2d90
- .debug_line    0x00000000      0x708 Build/obj/system_gd32f4xx.o
- .debug_line    0x00000708      0x4f5 Build/obj/main.o
- .debug_line    0x00000bfd      0x4c3 Build/obj/ints.o
- .debug_line    0x000010c0      0x845 Build/obj/gd32f4xx_gpio.o
- .debug_line    0x00001905      0xf28 Build/obj/gd32f4xx_rcu.o
- .debug_line    0x0000282d       0xc3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
- .debug_line    0x000028f0       0xd2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
- .debug_line    0x000029c2      0x27f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
- .debug_line    0x00002c41      0x14f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+.debug_line     0x00000000     0x28fa
+ .debug_line    0x00000000      0x65f Build/obj/system_gd32f4xx.o
+ .debug_line    0x0000065f      0x7fd Build/obj/main.o
+ .debug_line    0x00000e5c      0x4f5 Build/obj/Gpio.o
+ .debug_line    0x00001351      0xf28 Build/obj/gd32f4xx_rcu.o
+ .debug_line    0x00002279      0x11e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
+ .debug_line    0x00002397       0xc3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
+ .debug_line    0x0000245a       0xd2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
+ .debug_line    0x0000252c      0x27f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+ .debug_line    0x000027ab      0x14f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
 
-.debug_str      0x00000000    0x3c4c5
- .debug_str     0x00000000    0x3c4c5 Build/obj/system_gd32f4xx.o
-                              0x3a6ba (size before relaxing)
- .debug_str     0x0003c4c5    0x3ad99 Build/obj/main.o
- .debug_str     0x0003c4c5    0x3a41b Build/obj/ints.o
- .debug_str     0x0003c4c5    0x3a8a0 Build/obj/gd32f4xx_gpio.o
- .debug_str     0x0003c4c5    0x3b980 Build/obj/gd32f4xx_rcu.o
- .debug_str     0x0003c4c5      0x1d1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
- .debug_str     0x0003c4c5      0x1cb /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
- .debug_str     0x0003c4c5      0x25e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
- .debug_str     0x0003c4c5      0x23c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+.debug_str      0x00000000    0x3fafb
+ .debug_str     0x00000000    0x3fafb Build/obj/system_gd32f4xx.o
+                              0x3a6d0 (size before relaxing)
+ .debug_str     0x0003fafb    0x3df40 Build/obj/main.o
+ .debug_str     0x0003fafb     0x5fe7 Build/obj/Gpio.o
+ .debug_str     0x0003fafb    0x3b996 Build/obj/gd32f4xx_rcu.o
+ .debug_str     0x0003fafb      0x1f5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
+ .debug_str     0x0003fafb      0x1d1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
+ .debug_str     0x0003fafb      0x1cb /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
+ .debug_str     0x0003fafb      0x25e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+ .debug_str     0x0003fafb      0x23c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
 
-.debug_frame    0x00000000      0x630
- .debug_frame   0x00000000       0x4c Build/obj/system_gd32f4xx.o
- .debug_frame   0x0000004c       0x28 Build/obj/main.o
- .debug_frame   0x00000074       0x68 Build/obj/ints.o
- .debug_frame   0x000000dc      0x138 Build/obj/gd32f4xx_gpio.o
- .debug_frame   0x00000214      0x340 Build/obj/gd32f4xx_rcu.o
- .debug_frame   0x00000554       0x20 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
- .debug_frame   0x00000574       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
- .debug_frame   0x000005a8       0x54 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
- .debug_frame   0x000005fc       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+.debug_frame    0x00000000      0x624
+ .debug_frame   0x00000000       0x44 Build/obj/system_gd32f4xx.o
+ .debug_frame   0x00000044       0x28 Build/obj/main.o
+ .debug_frame   0x0000006c      0x170 Build/obj/Gpio.o
+ .debug_frame   0x000001dc      0x340 Build/obj/gd32f4xx_rcu.o
+ .debug_frame   0x0000051c       0x2c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
+ .debug_frame   0x00000548       0x20 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
+ .debug_frame   0x00000568       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
+ .debug_frame   0x0000059c       0x54 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+ .debug_frame   0x000005f0       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)

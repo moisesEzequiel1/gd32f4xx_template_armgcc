@@ -3,5 +3,8 @@
 
 #include "gd32f4xx.h"
 #include <stdint.h>
+#include "scheduler.hpp"
+#include "taskmanager.hpp"
+
 
 #endif

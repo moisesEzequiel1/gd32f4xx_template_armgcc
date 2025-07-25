@@ -133,33 +133,33 @@ void SystemInit (void)
 #if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
     SCB->CPACR |= ((3UL << 10*2)|(3UL << 11*2));  /* set CP10 and CP11 Full Access */
 #endif
-    /* Reset the RCU clock configuration to the default reset state */
-    /* Set IRC16MEN bit */
-    RCU_CTL |= RCU_CTL_IRC16MEN;
-    while(0U == (RCU_CTL & RCU_CTL_IRC16MSTB)){
-    }
-    RCU_MODIFY(0x50);
+    // /* Reset the RCU clock configuration to the default reset state */
+    // /* Set IRC16MEN bit */
+    // RCU_CTL |= RCU_CTL_IRC16MEN;
+    // while(0U == (RCU_CTL & RCU_CTL_IRC16MSTB)){
+    // }
+    // RCU_MODIFY(0x50);
     
-    RCU_CFG0 &= ~RCU_CFG0_SCS;
+    // RCU_CFG0 &= ~RCU_CFG0_SCS;
     
-    /* Reset HXTALEN, CKMEN and PLLEN bits */
-    RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN);
+    // /* Reset HXTALEN, CKMEN and PLLEN bits */
+    // RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN);
 
-    /* Reset HSEBYP bit */
-    RCU_CTL &= ~(RCU_CTL_HXTALBPS);
+    // /* Reset HSEBYP bit */
+    // RCU_CTL &= ~(RCU_CTL_HXTALBPS);
     
-    /* Reset CFG0 register */
-    RCU_CFG0 = 0x00000000U;
+    // /* Reset CFG0 register */
+    // RCU_CFG0 = 0x00000000U;
 
-    /* wait until IRC16M is selected as system clock */
-    while(0 != (RCU_CFG0 & RCU_SCSS_IRC16M)){
-    }
+    // /* wait until IRC16M is selected as system clock */
+    // while(0 != (RCU_CFG0 & RCU_SCSS_IRC16M)){
+    // }
 
-    /* Reset PLLCFGR register */
-    RCU_PLL = 0x24003010U;
+    // /* Reset PLLCFGR register */
+    // RCU_PLL = 0x24003010U;
 
-    /* Disable all interrupts */
-    RCU_INT = 0x00000000U;
+    // /* Disable all interrupts */
+    // RCU_INT = 0x00000000U;
          
     /* Configure the System clock source, PLL Multiplier and Divider factors, 
         AHB/APBx prescalers and Flash settings */
