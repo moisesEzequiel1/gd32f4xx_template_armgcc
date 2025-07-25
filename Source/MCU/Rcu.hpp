@@ -2,7 +2,6 @@
 
 #include <stdint.h>
 #include <type_traits>
-
 class Rcu {
 
 public:
@@ -148,6 +147,7 @@ public:
   void SetPllClockSource(PllClockSource source);
   void SetPllFactors(PLLFactors factors);
 
+  void UpdateSystemCoreClock(void);
 private:
   union CTL_register {
     struct CTL_bits {

@@ -1,4 +1,10 @@
 #include "Rcu.hpp"
+#include "gd32f4xx.h"
+
+template<typename E>
+constexpr auto etoi(E const value) {
+    return static_cast<std::underlying_type_t<E>>(value);
+}
 
 void Rcu::EnableInternal16MHzClock(void) {
   CTL.bits.IRC16MEN = 1; // Enable internal 16MHz RC oscillator
@@ -85,4 +91,45 @@ void Rcu::SetPllFactors(PLLFactors factors) {
   PLL.bits.PLLN = factors.n_;
   PLL.bits.PLLQ = factors.q_;
   PLL.bits.PLLPSC = factors.psc_;
+}
+
+
+void Rcu::UpdateSystemCoreClock() {
+    // constexpr uint32_t IRC16M_VALUE = 16000000U;
+
+    switch (CFG0.bits.SCSS) {
+    case SystemClockSource::IRC16M:
+        SystemCoreClock = IRC16M_VALUE;
+        break;
+
+    case SystemClockSource::HXTAL:
+        SystemCoreClock = HXTAL_VALUE;
+        break;
+
+    case SystemClockSource::PLLP: {
+        uint32_t pllpsc = etoi(PLL.bits.PLLPSC) + 1; // /PLLPSC prescaler
+        uint32_t plln = PLL.bits.PLLN;               // PLL multiplier
+        uint32_t pllp = (etoi(PLL.bits.PLLP) + 1U) * 2U; // PLLP: 00=2, 01=4, 10=6, 11=8
+        uint32_t pllsel = etoi(PLL.bits.PLLSEL);     // Clock source for PLL
+
+        uint32_t ck_src = (pllsel == etoi(PllClockSource::HXTAL)) ? HXTAL_VALUE : IRC16M_VALUE;
+
+        // Final PLL output frequency: ((source / PLLPSC) * PLLN) / PLLP
+        SystemCoreClock = ((ck_src / pllpsc) * plln) / pllp;
+        break;
+    }
+
+    default:
+        SystemCoreClock = IRC16M_VALUE;
+        break;
+    }
+
+    // AHB Prescaler
+    static constexpr uint8_t ahb_exp[16] = {
+        0, 0, 0, 0, 0, 0, 0, 0, // 0xxx: /1
+        1, 2, 3, 4, 6, 7, 8, 9  // 1000+: /2, /4, ..., /512
+    };
+    uint32_t prescaler_exp = ahb_exp[etoi(CFG0.bits.AHBPSC)];
+    // Apply AHB prescaler
+    SystemCoreClock >>= prescaler_exp;
 }

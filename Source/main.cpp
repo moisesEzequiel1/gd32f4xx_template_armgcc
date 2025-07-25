@@ -13,8 +13,10 @@
 #include "bsp.h"
 #include "Gpio.hpp"
 #include "Rcu.hpp"
+#include "Pmu.hpp"
 #include "gd32f4xx.h"
 #include "gd32f4xx_rcu.h"
+#include "system_gd32f4xx.h"
 
 int main() {
 
@@ -25,16 +27,22 @@ int main() {
     rcu.EnableGpioC();
     rcu.EnablePowerInterface(); 
 
+
     rcu.EnableExternalClock();
     /* Configure the main PLL, PSC = 25, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
-    rcu.ConfigurePll(Rcu::PllClockSource::HXTAL, Rcu::PLLFactors(Rcu::PllFactorP::DIV2, 9, 400, Rcu::PllVcoPrescaler::DIV25));
+    rcu.ConfigurePll(Rcu::PllClockSource::HXTAL, Rcu::PLLFactors(Rcu::PllFactorP::DIV2, 9, 400, Rcu::PllVcoPrescaler::DIV24));
     rcu.EnablePll();
     rcu.SetAhbPrescaler(Rcu::AhbPrescaler::DIV1);
-    rcu.SetApb1Prescaler(Rcu::Apb1Prescaler::DIV1);
+    rcu.SetApb1Prescaler(Rcu::Apb1Prescaler::DIV2);
     rcu.SetApb2Prescaler(Rcu::Apb2Prescaler::DIV4);
+    
+    Pmu& pmu = *reinterpret_cast<Pmu*>(PMU_BASE);
+    pmu.EnableHighDriverMode();
+    pmu.SetHighDriverMode();
+
     rcu.SetSystemClockSource(Rcu::SystemClockSource::PLLP);
 
-
+    rcu.UpdateSystemCoreClock();
     Gpio& gpioC = *reinterpret_cast<Gpio*>(GPIO_BASE + 0x00000800U);
     Gpio& gpioA= *reinterpret_cast<Gpio*>(GPIO_BASE + 0x00000000U);
 
@@ -54,6 +62,7 @@ int main() {
 
     // 6. Loop principal
     while (1) {
+        (void)SystemCoreClock;
         if (!button.GetState()) {
             // Botón presionado (estado bajo)
             led.Reset(); // Enciende el LED

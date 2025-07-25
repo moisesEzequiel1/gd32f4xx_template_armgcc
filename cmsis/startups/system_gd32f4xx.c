@@ -161,8 +161,8 @@ void SystemInit (void)
     // /* Disable all interrupts */
     // RCU_INT = 0x00000000U;
          
-    /* Configure the System clock source, PLL Multiplier and Divider factors, 
-        AHB/APBx prescalers and Flash settings */
+    // /* Configure the System clock source, PLL Multiplier and Divider factors, 
+    //     AHB/APBx prescalers and Flash settings */
     system_clock_config();
 }
 /*!
@@ -839,63 +839,63 @@ static void system_clock_200m_8m_hxtal(void)
 */
 static void system_clock_200m_25m_hxtal(void)
 {
-    uint32_t timeout = 0U;
-    uint32_t stab_flag = 0U;
+    // uint32_t timeout = 0U;
+    // uint32_t stab_flag = 0U;
     
-    /* enable HXTAL */
-    RCU_CTL |= RCU_CTL_HXTALEN;
+    // /* enable HXTAL */
+    // RCU_CTL |= RCU_CTL_HXTALEN;
 
-    /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
-    do{
-        timeout++;
-        stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
-    }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+    // /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+    // do{
+    //     timeout++;
+    //     stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+    // }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
 
-    /* if fail */
-    if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
-        while(1){
-        }
-    }
+    // /* if fail */
+    // if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+    //     while(1){
+    //     }
+    // }
          
-    RCU_APB1EN |= RCU_APB1EN_PMUEN;
-    PMU_CTL |= PMU_CTL_LDOVS;
+    // RCU_APB1EN |= RCU_APB1EN_PMUEN;
+    // PMU_CTL |= PMU_CTL_LDOVS;
 
-    /* HXTAL is stable */
-    /* AHB = SYSCLK */
-    RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
-    /* APB2 = AHB/2 */
-    RCU_CFG0 |= RCU_APB2_CKAHB_DIV2;
-    /* APB1 = AHB/4 */
-    RCU_CFG0 |= RCU_APB1_CKAHB_DIV4;
+    // /* HXTAL is stable */
+    // /* AHB = SYSCLK */
+    // RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+    // /* APB2 = AHB/2 */
+    // RCU_CFG0 |= RCU_APB2_CKAHB_DIV2;
+    // /* APB1 = AHB/4 */
+    // RCU_CFG0 |= RCU_APB1_CKAHB_DIV4;
 
-    /* Configure the main PLL, PSC = 25, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
-    RCU_PLL = (25U | (400U << 6U) | (((2U >> 1U) - 1U) << 16U) |
-                   (RCU_PLLSRC_HXTAL) | (9U << 24U));
+    // /* Configure the main PLL, PSC = 25, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
+    // RCU_PLL = (25U | (400U << 6U) | (((2U >> 1U) - 1U) << 16U) |
+    //                (RCU_PLLSRC_HXTAL) | (9U << 24U));
 
-    /* enable PLL */
-    RCU_CTL |= RCU_CTL_PLLEN;
+    // /* enable PLL */
+    // RCU_CTL |= RCU_CTL_PLLEN;
 
-    /* wait until PLL is stable */
-    while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
-    }
+    // /* wait until PLL is stable */
+    // while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+    // }
     
-    /* Enable the high-drive to extend the clock frequency to 200 Mhz */
-    PMU_CTL |= PMU_CTL_HDEN;
-    while(0U == (PMU_CS & PMU_CS_HDRF)){
-    }
+    // /* Enable the high-drive to extend the clock frequency to 200 Mhz */
+    // PMU_CTL |= PMU_CTL_HDEN;
+    // while(0U == (PMU_CS & PMU_CS_HDRF)){
+    // }
     
-    /* select the high-drive mode */
-    PMU_CTL |= PMU_CTL_HDS;
-    while(0U == (PMU_CS & PMU_CS_HDSRF)){
-    } 
+    // /* select the high-drive mode */
+    // PMU_CTL |= PMU_CTL_HDS;
+    // while(0U == (PMU_CS & PMU_CS_HDSRF)){
+    // } 
     
-    /* select PLL as system clock */
-    RCU_CFG0 &= ~RCU_CFG0_SCS;
-    RCU_CFG0 |= RCU_CKSYSSRC_PLLP;
+    // /* select PLL as system clock */
+    // RCU_CFG0 &= ~RCU_CFG0_SCS;
+    // RCU_CFG0 |= RCU_CKSYSSRC_PLLP;
 
-    /* wait until PLL is selected as system clock */
-    while(0U == (RCU_CFG0 & RCU_SCSS_PLLP)){
-    }
+    // /* wait until PLL is selected as system clock */
+    // while(0U == (RCU_CFG0 & RCU_SCSS_PLLP)){
+    // }
 }
 
 #elif defined (__SYSTEM_CLOCK_240M_PLL_IRC16M)

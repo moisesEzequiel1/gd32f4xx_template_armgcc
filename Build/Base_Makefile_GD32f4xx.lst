@@ -13,8 +13,8 @@ Disassembly of section .text:
  8000192:	b103      	cbz	r3, 8000196 <deregister_tm_clones+0xe>
  8000194:	4718      	bx	r3
  8000196:	4770      	bx	lr
- 8000198:	20000000 	.word	0x20000000
- 800019c:	20000000 	.word	0x20000000
+ 8000198:	20000004 	.word	0x20000004
+ 800019c:	20000004 	.word	0x20000004
  80001a0:	00000000 	.word	0x00000000
 
 080001a4 <register_tm_clones>:
@@ -29,8 +29,8 @@ Disassembly of section .text:
  80001b6:	b103      	cbz	r3, 80001ba <register_tm_clones+0x16>
  80001b8:	4718      	bx	r3
  80001ba:	4770      	bx	lr
- 80001bc:	20000000 	.word	0x20000000
- 80001c0:	20000000 	.word	0x20000000
+ 80001bc:	20000004 	.word	0x20000004
+ 80001c0:	20000004 	.word	0x20000004
  80001c4:	00000000 	.word	0x00000000
 
 080001c8 <__do_global_dtors_aux>:
@@ -46,9 +46,9 @@ Disassembly of section .text:
  80001de:	2301      	movs	r3, #1
  80001e0:	7023      	strb	r3, [r4, #0]
  80001e2:	bd10      	pop	{r4, pc}
- 80001e4:	20000000 	.word	0x20000000
+ 80001e4:	20000004 	.word	0x20000004
  80001e8:	00000000 	.word	0x00000000
- 80001ec:	080005b0 	.word	0x080005b0
+ 80001ec:	08000c78 	.word	0x08000c78
 
 080001f0 <frame_dummy>:
  80001f0:	b508      	push	{r3, lr}
@@ -60,8 +60,8 @@ Disassembly of section .text:
  80001fe:	e8bd 4008 	ldmia.w	sp!, {r3, lr}
  8000202:	e7cf      	b.n	80001a4 <register_tm_clones>
  8000204:	00000000 	.word	0x00000000
- 8000208:	20000004 	.word	0x20000004
- 800020c:	080005b0 	.word	0x080005b0
+ 8000208:	20000008 	.word	0x20000008
+ 800020c:	08000c78 	.word	0x08000c78
 
 08000210 <__libc_init_array>:
  8000210:	b570      	push	{r4, r5, r6, lr}
@@ -77,7 +77,7 @@ Disassembly of section .text:
  8000228:	4798      	blx	r3
  800022a:	42a6      	cmp	r6, r4
  800022c:	d8f9      	bhi.n	8000222 <__libc_init_array+0x12>
- 800022e:	f000 f9bf 	bl	80005b0 <_init>
+ 800022e:	f000 fd23 	bl	8000c78 <_init>
  8000232:	4d09      	ldr	r5, [pc, #36]	@ (8000258 <__libc_init_array+0x48>)
  8000234:	4b09      	ldr	r3, [pc, #36]	@ (800025c <__libc_init_array+0x4c>)
  8000236:	1b5e      	subs	r6, r3, r5
@@ -91,10 +91,10 @@ Disassembly of section .text:
  800024a:	42a6      	cmp	r6, r4
  800024c:	d8f9      	bhi.n	8000242 <__libc_init_array+0x32>
  800024e:	bd70      	pop	{r4, r5, r6, pc}
- 8000250:	080005c8 	.word	0x080005c8
- 8000254:	080005c8 	.word	0x080005c8
- 8000258:	080005c8 	.word	0x080005c8
- 800025c:	080005d0 	.word	0x080005d0
+ 8000250:	08000ca0 	.word	0x08000ca0
+ 8000254:	08000ca0 	.word	0x08000ca0
+ 8000258:	08000ca0 	.word	0x08000ca0
+ 800025c:	08000ca8 	.word	0x08000ca8
 
 08000260 <atexit>:
  8000260:	2300      	movs	r3, #0
@@ -116,9 +116,9 @@ Disassembly of section .text:
  8000280:	2c00      	cmp	r4, #0
  8000282:	d1f9      	bne.n	8000278 <__libc_fini_array+0xc>
  8000284:	e8bd 4038 	ldmia.w	sp!, {r3, r4, r5, lr}
- 8000288:	f000 b998 	b.w	80005bc <_fini>
- 800028c:	080005d4 	.word	0x080005d4
- 8000290:	080005d0 	.word	0x080005d0
+ 8000288:	f000 bcfc 	b.w	8000c84 <_fini>
+ 800028c:	08000cac 	.word	0x08000cac
+ 8000290:	08000ca8 	.word	0x08000ca8
 
 08000294 <__register_exitproc>:
  8000294:	b470      	push	{r4, r5, r6}
@@ -155,502 +155,1509 @@ Disassembly of section .text:
  80002e8:	e7d8      	b.n	800029c <__register_exitproc+0x8>
  80002ea:	f04f 30ff 	mov.w	r0, #4294967295	@ 0xffffffff
  80002ee:	e7df      	b.n	80002b0 <__register_exitproc+0x1c>
- 80002f0:	2000001c 	.word	0x2000001c
- 80002f4:	20000020 	.word	0x20000020
+ 80002f0:	20000020 	.word	0x20000020
+ 80002f4:	20000024 	.word	0x20000024
 
 080002f8 <SystemInit>:
+    \param[in]  none
+    \param[out] none
+    \retval     none
 */
 void SystemInit (void)
 {
+ 80002f8:	b508      	push	{r3, lr}
     /* FPU settings */
 #if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
     SCB->CPACR |= ((3UL << 10*2)|(3UL << 11*2));  /* set CP10 and CP11 Full Access */
- 80002f8:	4a37      	ldr	r2, [pc, #220]	@ (80003d8 <SystemInit+0xe0>)
- 80002fa:	f8d2 3088 	ldr.w	r3, [r2, #136]	@ 0x88
- 80002fe:	f443 0370 	orr.w	r3, r3, #15728640	@ 0xf00000
- 8000302:	f8c2 3088 	str.w	r3, [r2, #136]	@ 0x88
-{
-    uint32_t timeout = 0U;
-    uint32_t stab_flag = 0U;
-    
-    /* enable HXTAL */
-    RCU_CTL |= RCU_CTL_HXTALEN;
- 8000306:	4a35      	ldr	r2, [pc, #212]	@ (80003dc <SystemInit+0xe4>)
- 8000308:	f8d2 3800 	ldr.w	r3, [r2, #2048]	@ 0x800
- 800030c:	f443 3380 	orr.w	r3, r3, #65536	@ 0x10000
- 8000310:	f8c2 3800 	str.w	r3, [r2, #2048]	@ 0x800
- 8000314:	f64f 73ff 	movw	r3, #65535	@ 0xffff
-
-    /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
-    do{
-        timeout++;
-        stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
- 8000318:	4611      	mov	r1, r2
- 800031a:	f8d1 2800 	ldr.w	r2, [r1, #2048]	@ 0x800
-    }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
- 800031e:	f412 3f00 	tst.w	r2, #131072	@ 0x20000
- 8000322:	d101      	bne.n	8000328 <SystemInit+0x30>
- 8000324:	3b01      	subs	r3, #1
- 8000326:	d1f8      	bne.n	800031a <SystemInit+0x22>
-
-    /* if fail */
-    if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
- 8000328:	4b2c      	ldr	r3, [pc, #176]	@ (80003dc <SystemInit+0xe4>)
- 800032a:	f8d3 3800 	ldr.w	r3, [r3, #2048]	@ 0x800
- 800032e:	f413 3f00 	tst.w	r3, #131072	@ 0x20000
- 8000332:	d100      	bne.n	8000336 <SystemInit+0x3e>
-        while(1){
- 8000334:	e7fe      	b.n	8000334 <SystemInit+0x3c>
-        }
-    }
+ 80002fa:	4b06      	ldr	r3, [pc, #24]	@ (8000314 <SystemInit+0x1c>)
+ 80002fc:	f8d3 3088 	ldr.w	r3, [r3, #136]	@ 0x88
+ 8000300:	4a04      	ldr	r2, [pc, #16]	@ (8000314 <SystemInit+0x1c>)
+ 8000302:	f443 0370 	orr.w	r3, r3, #15728640	@ 0xf00000
+ 8000306:	f8c2 3088 	str.w	r3, [r2, #136]	@ 0x88
+    // /* Disable all interrupts */
+    // RCU_INT = 0x00000000U;
          
-    RCU_APB1EN |= RCU_APB1EN_PMUEN;
- 8000336:	4b29      	ldr	r3, [pc, #164]	@ (80003dc <SystemInit+0xe4>)
- 8000338:	f8d3 2840 	ldr.w	r2, [r3, #2112]	@ 0x840
- 800033c:	f042 5280 	orr.w	r2, r2, #268435456	@ 0x10000000
- 8000340:	f8c3 2840 	str.w	r2, [r3, #2112]	@ 0x840
-    PMU_CTL |= PMU_CTL_LDOVS;
- 8000344:	4926      	ldr	r1, [pc, #152]	@ (80003e0 <SystemInit+0xe8>)
- 8000346:	680a      	ldr	r2, [r1, #0]
- 8000348:	f442 4240 	orr.w	r2, r2, #49152	@ 0xc000
- 800034c:	600a      	str	r2, [r1, #0]
-
-    /* HXTAL is stable */
-    /* AHB = SYSCLK */
-    RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
- 800034e:	f8d3 2808 	ldr.w	r2, [r3, #2056]	@ 0x808
- 8000352:	f8c3 2808 	str.w	r2, [r3, #2056]	@ 0x808
-    /* APB2 = AHB/2 */
-    RCU_CFG0 |= RCU_APB2_CKAHB_DIV2;
- 8000356:	f8d3 2808 	ldr.w	r2, [r3, #2056]	@ 0x808
- 800035a:	f442 4200 	orr.w	r2, r2, #32768	@ 0x8000
- 800035e:	f8c3 2808 	str.w	r2, [r3, #2056]	@ 0x808
-    /* APB1 = AHB/4 */
-    RCU_CFG0 |= RCU_APB1_CKAHB_DIV4;
- 8000362:	f8d3 2808 	ldr.w	r2, [r3, #2056]	@ 0x808
- 8000366:	f442 52a0 	orr.w	r2, r2, #5120	@ 0x1400
- 800036a:	f8c3 2808 	str.w	r2, [r3, #2056]	@ 0x808
-
-    /* Configure the main PLL, PSC = 25, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
-    RCU_PLL = (25U | (400U << 6U) | (((2U >> 1U) - 1U) << 16U) |
- 800036e:	4a1d      	ldr	r2, [pc, #116]	@ (80003e4 <SystemInit+0xec>)
- 8000370:	f8c3 2804 	str.w	r2, [r3, #2052]	@ 0x804
-                   (RCU_PLLSRC_HXTAL) | (9U << 24U));
-
-    /* enable PLL */
-    RCU_CTL |= RCU_CTL_PLLEN;
- 8000374:	f8d3 2800 	ldr.w	r2, [r3, #2048]	@ 0x800
- 8000378:	f042 7280 	orr.w	r2, r2, #16777216	@ 0x1000000
- 800037c:	f8c3 2800 	str.w	r2, [r3, #2048]	@ 0x800
-
-    /* wait until PLL is stable */
-    while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
- 8000380:	461a      	mov	r2, r3
- 8000382:	f8d2 3800 	ldr.w	r3, [r2, #2048]	@ 0x800
- 8000386:	f013 7f00 	tst.w	r3, #33554432	@ 0x2000000
- 800038a:	d0fa      	beq.n	8000382 <SystemInit+0x8a>
-    }
-    
-    /* Enable the high-drive to extend the clock frequency to 200 Mhz */
-    PMU_CTL |= PMU_CTL_HDEN;
- 800038c:	4a14      	ldr	r2, [pc, #80]	@ (80003e0 <SystemInit+0xe8>)
- 800038e:	6813      	ldr	r3, [r2, #0]
- 8000390:	f443 3380 	orr.w	r3, r3, #65536	@ 0x10000
- 8000394:	6013      	str	r3, [r2, #0]
-    while(0U == (PMU_CS & PMU_CS_HDRF)){
- 8000396:	6853      	ldr	r3, [r2, #4]
- 8000398:	f413 3f80 	tst.w	r3, #65536	@ 0x10000
- 800039c:	d0fb      	beq.n	8000396 <SystemInit+0x9e>
-    }
-    
-    /* select the high-drive mode */
-    PMU_CTL |= PMU_CTL_HDS;
- 800039e:	4a10      	ldr	r2, [pc, #64]	@ (80003e0 <SystemInit+0xe8>)
- 80003a0:	6813      	ldr	r3, [r2, #0]
- 80003a2:	f443 3300 	orr.w	r3, r3, #131072	@ 0x20000
- 80003a6:	6013      	str	r3, [r2, #0]
-    while(0U == (PMU_CS & PMU_CS_HDSRF)){
- 80003a8:	6853      	ldr	r3, [r2, #4]
- 80003aa:	f413 3f00 	tst.w	r3, #131072	@ 0x20000
- 80003ae:	d0fb      	beq.n	80003a8 <SystemInit+0xb0>
-    } 
-    
-    /* select PLL as system clock */
-    RCU_CFG0 &= ~RCU_CFG0_SCS;
- 80003b0:	4b0a      	ldr	r3, [pc, #40]	@ (80003dc <SystemInit+0xe4>)
- 80003b2:	f8d3 2808 	ldr.w	r2, [r3, #2056]	@ 0x808
- 80003b6:	f022 0203 	bic.w	r2, r2, #3
- 80003ba:	f8c3 2808 	str.w	r2, [r3, #2056]	@ 0x808
-    RCU_CFG0 |= RCU_CKSYSSRC_PLLP;
- 80003be:	f8d3 2808 	ldr.w	r2, [r3, #2056]	@ 0x808
- 80003c2:	f042 0202 	orr.w	r2, r2, #2
- 80003c6:	f8c3 2808 	str.w	r2, [r3, #2056]	@ 0x808
-
-    /* wait until PLL is selected as system clock */
-    while(0U == (RCU_CFG0 & RCU_SCSS_PLLP)){
- 80003ca:	461a      	mov	r2, r3
- 80003cc:	f8d2 3808 	ldr.w	r3, [r2, #2056]	@ 0x808
- 80003d0:	f013 0f08 	tst.w	r3, #8
- 80003d4:	d0fa      	beq.n	80003cc <SystemInit+0xd4>
+    // /* Configure the System clock source, PLL Multiplier and Divider factors, 
+    //     AHB/APBx prescalers and Flash settings */
+    system_clock_config();
+ 800030a:	f000 f805 	bl	8000318 <system_clock_config>
 }
- 80003d6:	4770      	bx	lr
- 80003d8:	e000ed00 	.word	0xe000ed00
- 80003dc:	40023000 	.word	0x40023000
- 80003e0:	40007000 	.word	0x40007000
- 80003e4:	09406419 	.word	0x09406419
+ 800030e:	bf00      	nop
+ 8000310:	bd08      	pop	{r3, pc}
+ 8000312:	bf00      	nop
+ 8000314:	e000ed00 	.word	0xe000ed00
 
-080003e8 <Reset_Handler>:
- 80003e8:	2100      	movs	r1, #0
- 80003ea:	e003      	b.n	80003f4 <LoopCopyDataInit>
+08000318 <system_clock_config>:
+    \param[in]  none
+    \param[out] none
+    \retval     none
+*/
+static void system_clock_config(void)
+{
+ 8000318:	b508      	push	{r3, lr}
+#elif defined (__SYSTEM_CLOCK_200M_PLL_IRC16M)
+    system_clock_200m_irc16m();
+#elif defined (__SYSTEM_CLOCK_200M_PLL_8M_HXTAL)
+    system_clock_200m_8m_hxtal();
+#elif defined (__SYSTEM_CLOCK_200M_PLL_25M_HXTAL)
+    system_clock_200m_25m_hxtal();
+ 800031a:	f000 f802 	bl	8000322 <system_clock_200m_25m_hxtal>
+#elif defined (__SYSTEM_CLOCK_240M_PLL_8M_HXTAL)
+    system_clock_240m_8m_hxtal();
+#elif defined (__SYSTEM_CLOCK_240M_PLL_25M_HXTAL)
+    system_clock_240m_25m_hxtal();
+#endif /* __SYSTEM_CLOCK_IRC16M */   
+}
+ 800031e:	bf00      	nop
+ 8000320:	bd08      	pop	{r3, pc}
 
-080003ec <CopyDataInit>:
- 80003ec:	4b0b      	ldr	r3, [pc, #44]	@ (800041c <LoopFillZerobss+0x14>)
- 80003ee:	585b      	ldr	r3, [r3, r1]
- 80003f0:	5043      	str	r3, [r0, r1]
- 80003f2:	3104      	adds	r1, #4
+08000322 <system_clock_200m_25m_hxtal>:
+    // RCU_CFG0 |= RCU_CKSYSSRC_PLLP;
 
-080003f4 <LoopCopyDataInit>:
- 80003f4:	480a      	ldr	r0, [pc, #40]	@ (8000420 <LoopFillZerobss+0x18>)
- 80003f6:	4b0b      	ldr	r3, [pc, #44]	@ (8000424 <LoopFillZerobss+0x1c>)
- 80003f8:	1842      	adds	r2, r0, r1
- 80003fa:	429a      	cmp	r2, r3
- 80003fc:	d3f6      	bcc.n	80003ec <CopyDataInit>
- 80003fe:	4a0a      	ldr	r2, [pc, #40]	@ (8000428 <LoopFillZerobss+0x20>)
- 8000400:	e002      	b.n	8000408 <LoopFillZerobss>
-
-08000402 <FillZerobss>:
- 8000402:	2300      	movs	r3, #0
- 8000404:	6013      	str	r3, [r2, #0]
- 8000406:	3204      	adds	r2, #4
-
-08000408 <LoopFillZerobss>:
- 8000408:	4b08      	ldr	r3, [pc, #32]	@ (800042c <LoopFillZerobss+0x24>)
- 800040a:	429a      	cmp	r2, r3
- 800040c:	d3f9      	bcc.n	8000402 <FillZerobss>
- 800040e:	f7ff ff73 	bl	80002f8 <SystemInit>
- 8000412:	f7ff fefd 	bl	8000210 <__libc_init_array>
- 8000416:	f000 f80d 	bl	8000434 <main>
- 800041a:	4770      	bx	lr
- 800041c:	080005d4 	.word	0x080005d4
- 8000420:	20000000 	.word	0x20000000
- 8000424:	20000000 	.word	0x20000000
- 8000428:	20000000 	.word	0x20000000
- 800042c:	200001b0 	.word	0x200001b0
-
-08000430 <ADC_IRQHandler>:
- 8000430:	e7fe      	b.n	8000430 <ADC_IRQHandler>
+    // /* wait until PLL is selected as system clock */
+    // while(0U == (RCU_CFG0 & RCU_SCSS_PLLP)){
+    // }
+}
+ 8000322:	bf00      	nop
+ 8000324:	4770      	bx	lr
 	...
 
-08000434 <main>:
+08000328 <Reset_Handler>:
+ 8000328:	2100      	movs	r1, #0
+ 800032a:	e003      	b.n	8000334 <LoopCopyDataInit>
 
-#include "Gpio.hpp"
+0800032c <CopyDataInit>:
+ 800032c:	4b0b      	ldr	r3, [pc, #44]	@ (800035c <LoopFillZerobss+0x14>)
+ 800032e:	585b      	ldr	r3, [r3, r1]
+ 8000330:	5043      	str	r3, [r0, r1]
+ 8000332:	3104      	adds	r1, #4
+
+08000334 <LoopCopyDataInit>:
+ 8000334:	480a      	ldr	r0, [pc, #40]	@ (8000360 <LoopFillZerobss+0x18>)
+ 8000336:	4b0b      	ldr	r3, [pc, #44]	@ (8000364 <LoopFillZerobss+0x1c>)
+ 8000338:	1842      	adds	r2, r0, r1
+ 800033a:	429a      	cmp	r2, r3
+ 800033c:	d3f6      	bcc.n	800032c <CopyDataInit>
+ 800033e:	4a0a      	ldr	r2, [pc, #40]	@ (8000368 <LoopFillZerobss+0x20>)
+ 8000340:	e002      	b.n	8000348 <LoopFillZerobss>
+
+08000342 <FillZerobss>:
+ 8000342:	2300      	movs	r3, #0
+ 8000344:	6013      	str	r3, [r2, #0]
+ 8000346:	3204      	adds	r2, #4
+
+08000348 <LoopFillZerobss>:
+ 8000348:	4b08      	ldr	r3, [pc, #32]	@ (800036c <LoopFillZerobss+0x24>)
+ 800034a:	429a      	cmp	r2, r3
+ 800034c:	d3f9      	bcc.n	8000342 <FillZerobss>
+ 800034e:	f7ff ffd3 	bl	80002f8 <SystemInit>
+ 8000352:	f7ff ff5d 	bl	8000210 <__libc_init_array>
+ 8000356:	f000 f82d 	bl	80003b4 <main>
+ 800035a:	4770      	bx	lr
+ 800035c:	08000cac 	.word	0x08000cac
+ 8000360:	20000000 	.word	0x20000000
+ 8000364:	20000004 	.word	0x20000004
+ 8000368:	20000004 	.word	0x20000004
+ 800036c:	200001b4 	.word	0x200001b4
+
+08000370 <ADC_IRQHandler>:
+ 8000370:	e7fe      	b.n	8000370 <ADC_IRQHandler>
+
+08000372 <_ZN3Rcu10PLLFactorsC1ENS_10PllFactorPEhtNS_15PllVcoPrescalerE>:
+  {
+    PllFactorP p_;
+    uint8_t q_; // PLLQ output division factor
+    uint16_t n_; // PLLN output division factor
+    PllVcoPrescaler psc_; // PLL VCO source clock prescaler
+    PLLFactors(PllFactorP p, uint8_t q, uint16_t n, PllVcoPrescaler psc): p_(p), q_(q), n_(n), psc_(psc) {}
+ 8000372:	b480      	push	{r7}
+ 8000374:	b083      	sub	sp, #12
+ 8000376:	af00      	add	r7, sp, #0
+ 8000378:	6078      	str	r0, [r7, #4]
+ 800037a:	4608      	mov	r0, r1
+ 800037c:	4611      	mov	r1, r2
+ 800037e:	461a      	mov	r2, r3
+ 8000380:	4603      	mov	r3, r0
+ 8000382:	70fb      	strb	r3, [r7, #3]
+ 8000384:	460b      	mov	r3, r1
+ 8000386:	70bb      	strb	r3, [r7, #2]
+ 8000388:	4613      	mov	r3, r2
+ 800038a:	803b      	strh	r3, [r7, #0]
+ 800038c:	687b      	ldr	r3, [r7, #4]
+ 800038e:	78fa      	ldrb	r2, [r7, #3]
+ 8000390:	701a      	strb	r2, [r3, #0]
+ 8000392:	687b      	ldr	r3, [r7, #4]
+ 8000394:	78ba      	ldrb	r2, [r7, #2]
+ 8000396:	705a      	strb	r2, [r3, #1]
+ 8000398:	687b      	ldr	r3, [r7, #4]
+ 800039a:	883a      	ldrh	r2, [r7, #0]
+ 800039c:	805a      	strh	r2, [r3, #2]
+ 800039e:	687b      	ldr	r3, [r7, #4]
+ 80003a0:	7c3a      	ldrb	r2, [r7, #16]
+ 80003a2:	711a      	strb	r2, [r3, #4]
+ 80003a4:	687b      	ldr	r3, [r7, #4]
+ 80003a6:	4618      	mov	r0, r3
+ 80003a8:	370c      	adds	r7, #12
+ 80003aa:	46bd      	mov	sp, r7
+ 80003ac:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80003b0:	4770      	bx	lr
+	...
+
+080003b4 <main>:
+#include "Pmu.hpp"
 #include "gd32f4xx.h"
 #include "gd32f4xx_rcu.h"
+#include "system_gd32f4xx.h"
 
 int main() {
- 8000434:	b500      	push	{lr}
- 8000436:	b085      	sub	sp, #20
+ 80003b4:	b580      	push	{r7, lr}
+ 80003b6:	b08c      	sub	sp, #48	@ 0x30
+ 80003b8:	af02      	add	r7, sp, #8
 
-    rcu_periph_clock_enable(RCU_GPIOC);
- 8000438:	f640 4002 	movw	r0, #3074	@ 0xc02
- 800043c:	f000 f8a1 	bl	8000582 <rcu_periph_clock_enable>
-    rcu_periph_clock_enable(RCU_GPIOA);
- 8000440:	f44f 6040 	mov.w	r0, #3072	@ 0xc00
- 8000444:	f000 f89d 	bl	8000582 <rcu_periph_clock_enable>
+    // rcu_periph_clock_enable(RCU_GPIOC);
+    // rcu_periph_clock_enable(RCU_GPIOA);
+    Rcu& rcu = *reinterpret_cast<Rcu*>(RCU_BASE);
+ 80003ba:	4b40      	ldr	r3, [pc, #256]	@ (80004bc <main+0x108>)
+ 80003bc:	627b      	str	r3, [r7, #36]	@ 0x24
+    rcu.EnableGpioA();
+ 80003be:	6a78      	ldr	r0, [r7, #36]	@ 0x24
+ 80003c0:	f000 faf4 	bl	80009ac <_ZN3Rcu11EnableGpioAEv>
+    rcu.EnableGpioC();
+ 80003c4:	6a78      	ldr	r0, [r7, #36]	@ 0x24
+ 80003c6:	f000 fb02 	bl	80009ce <_ZN3Rcu11EnableGpioCEv>
+    rcu.EnablePowerInterface(); 
+ 80003ca:	6a78      	ldr	r0, [r7, #36]	@ 0x24
+ 80003cc:	f000 fb10 	bl	80009f0 <_ZN3Rcu20EnablePowerInterfaceEv>
+
+
+    rcu.EnableExternalClock();
+ 80003d0:	6a78      	ldr	r0, [r7, #36]	@ 0x24
+ 80003d2:	f000 fa38 	bl	8000846 <_ZN3Rcu19EnableExternalClockEv>
+    /* Configure the main PLL, PSC = 25, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
+    rcu.ConfigurePll(Rcu::PllClockSource::HXTAL, Rcu::PLLFactors(Rcu::PllFactorP::DIV2, 9, 400, Rcu::PllVcoPrescaler::DIV24));
+ 80003d6:	f107 0010 	add.w	r0, r7, #16
+ 80003da:	2318      	movs	r3, #24
+ 80003dc:	9300      	str	r3, [sp, #0]
+ 80003de:	f44f 73c8 	mov.w	r3, #400	@ 0x190
+ 80003e2:	2209      	movs	r2, #9
+ 80003e4:	2100      	movs	r1, #0
+ 80003e6:	f7ff ffc4 	bl	8000372 <_ZN3Rcu10PLLFactorsC1ENS_10PllFactorPEhtNS_15PllVcoPrescalerE>
+ 80003ea:	f107 0310 	add.w	r3, r7, #16
+ 80003ee:	cb0c      	ldmia	r3, {r2, r3}
+ 80003f0:	2101      	movs	r1, #1
+ 80003f2:	6a78      	ldr	r0, [r7, #36]	@ 0x24
+ 80003f4:	f000 fa5d 	bl	80008b2 <_ZN3Rcu12ConfigurePllENS_14PllClockSourceENS_10PLLFactorsE>
+    rcu.EnablePll();
+ 80003f8:	6a78      	ldr	r0, [r7, #36]	@ 0x24
+ 80003fa:	f000 fa3f 	bl	800087c <_ZN3Rcu9EnablePllEv>
+    rcu.SetAhbPrescaler(Rcu::AhbPrescaler::DIV1);
+ 80003fe:	2100      	movs	r1, #0
+ 8000400:	6a78      	ldr	r0, [r7, #36]	@ 0x24
+ 8000402:	f000 fa6f 	bl	80008e4 <_ZN3Rcu15SetAhbPrescalerENS_12AhbPrescalerE>
+    rcu.SetApb1Prescaler(Rcu::Apb1Prescaler::DIV2);
+ 8000406:	2104      	movs	r1, #4
+ 8000408:	6a78      	ldr	r0, [r7, #36]	@ 0x24
+ 800040a:	f000 fa80 	bl	800090e <_ZN3Rcu16SetApb1PrescalerENS_13Apb1PrescalerE>
+    rcu.SetApb2Prescaler(Rcu::Apb2Prescaler::DIV4);
+ 800040e:	2105      	movs	r1, #5
+ 8000410:	6a78      	ldr	r0, [r7, #36]	@ 0x24
+ 8000412:	f000 fa91 	bl	8000938 <_ZN3Rcu16SetApb2PrescalerENS_13Apb2PrescalerE>
+    
+    Pmu& pmu = *reinterpret_cast<Pmu*>(PMU_BASE);
+ 8000416:	4b2a      	ldr	r3, [pc, #168]	@ (80004c0 <main+0x10c>)
+ 8000418:	623b      	str	r3, [r7, #32]
+    pmu.EnableHighDriverMode();
+ 800041a:	6a38      	ldr	r0, [r7, #32]
+ 800041c:	f000 fbec 	bl	8000bf8 <_ZN3Pmu20EnableHighDriverModeEv>
+    pmu.SetHighDriverMode();
+ 8000420:	6a38      	ldr	r0, [r7, #32]
+ 8000422:	f000 fc04 	bl	8000c2e <_ZN3Pmu17SetHighDriverModeEv>
+
+    rcu.SetSystemClockSource(Rcu::SystemClockSource::PLLP);
+ 8000426:	2102      	movs	r1, #2
+ 8000428:	6a78      	ldr	r0, [r7, #36]	@ 0x24
+ 800042a:	f000 fa9a 	bl	8000962 <_ZN3Rcu20SetSystemClockSourceENS_17SystemClockSourceE>
+
+    rcu.UpdateSystemCoreClock();
+ 800042e:	6a78      	ldr	r0, [r7, #36]	@ 0x24
+ 8000430:	f000 fb64 	bl	8000afc <_ZN3Rcu21UpdateSystemCoreClockEv>
     Gpio& gpioC = *reinterpret_cast<Gpio*>(GPIO_BASE + 0x00000800U);
+ 8000434:	4b23      	ldr	r3, [pc, #140]	@ (80004c4 <main+0x110>)
+ 8000436:	61fb      	str	r3, [r7, #28]
     Gpio& gpioA= *reinterpret_cast<Gpio*>(GPIO_BASE + 0x00000000U);
+ 8000438:	4b23      	ldr	r3, [pc, #140]	@ (80004c8 <main+0x114>)
+ 800043a:	61bb      	str	r3, [r7, #24]
 
 
   // 3. Crear pines como objetos GpioPin
     GpioPin led(gpioC, Gpio::Pin::Pin6);      // LED en PC6
- 8000448:	2206      	movs	r2, #6
- 800044a:	4915      	ldr	r1, [pc, #84]	@ (80004a0 <main+0x6c>)
- 800044c:	a802      	add	r0, sp, #8
- 800044e:	f000 f861 	bl	8000514 <_ZN7GpioPinC1ER4GpioNS0_3PinE>
+ 800043c:	f107 0308 	add.w	r3, r7, #8
+ 8000440:	2206      	movs	r2, #6
+ 8000442:	69f9      	ldr	r1, [r7, #28]
+ 8000444:	4618      	mov	r0, r3
+ 8000446:	f000 f971 	bl	800072c <_ZN7GpioPinC1ER4GpioNS0_3PinE>
     GpioPin button(gpioA, Gpio::Pin::Pin0);   // Botón en PA0
- 8000452:	2200      	movs	r2, #0
- 8000454:	4913      	ldr	r1, [pc, #76]	@ (80004a4 <main+0x70>)
- 8000456:	4668      	mov	r0, sp
- 8000458:	f000 f85c 	bl	8000514 <_ZN7GpioPinC1ER4GpioNS0_3PinE>
+ 800044a:	463b      	mov	r3, r7
+ 800044c:	2200      	movs	r2, #0
+ 800044e:	69b9      	ldr	r1, [r7, #24]
+ 8000450:	4618      	mov	r0, r3
+ 8000452:	f000 f96b 	bl	800072c <_ZN7GpioPinC1ER4GpioNS0_3PinE>
 
     // 4. Configurar LED como salida push-pull
     led.SetMode(Gpio::Mode::Output);
- 800045c:	2101      	movs	r1, #1
- 800045e:	a802      	add	r0, sp, #8
- 8000460:	f000 f873 	bl	800054a <_ZNK7GpioPin7SetModeEN4Gpio4ModeE>
+ 8000456:	f107 0308 	add.w	r3, r7, #8
+ 800045a:	2101      	movs	r1, #1
+ 800045c:	4618      	mov	r0, r3
+ 800045e:	f000 f9aa 	bl	80007b6 <_ZNK7GpioPin7SetModeEN4Gpio4ModeE>
     led.SetOutputType(Gpio::OutputType::PushPull);
- 8000464:	2100      	movs	r1, #0
- 8000466:	a802      	add	r0, sp, #8
- 8000468:	f000 f876 	bl	8000558 <_ZNK7GpioPin13SetOutputTypeEN4Gpio10OutputTypeE>
+ 8000462:	f107 0308 	add.w	r3, r7, #8
+ 8000466:	2100      	movs	r1, #0
+ 8000468:	4618      	mov	r0, r3
+ 800046a:	f000 f9b6 	bl	80007da <_ZNK7GpioPin13SetOutputTypeEN4Gpio10OutputTypeE>
     led.SetOutputSpeed(Gpio::OutputSpeed::SpeedLevel0);
- 800046c:	2100      	movs	r1, #0
- 800046e:	a802      	add	r0, sp, #8
- 8000470:	f000 f879 	bl	8000566 <_ZNK7GpioPin14SetOutputSpeedEN4Gpio11OutputSpeedE>
+ 800046e:	f107 0308 	add.w	r3, r7, #8
+ 8000472:	2100      	movs	r1, #0
+ 8000474:	4618      	mov	r0, r3
+ 8000476:	f000 f9c2 	bl	80007fe <_ZNK7GpioPin14SetOutputSpeedEN4Gpio11OutputSpeedE>
 
     // 5. Configurar botón como entrada pull-up
     button.SetMode(Gpio::Mode::Input);
- 8000474:	2100      	movs	r1, #0
- 8000476:	4668      	mov	r0, sp
- 8000478:	f000 f867 	bl	800054a <_ZNK7GpioPin7SetModeEN4Gpio4ModeE>
+ 800047a:	463b      	mov	r3, r7
+ 800047c:	2100      	movs	r1, #0
+ 800047e:	4618      	mov	r0, r3
+ 8000480:	f000 f999 	bl	80007b6 <_ZNK7GpioPin7SetModeEN4Gpio4ModeE>
     button.SetPull(Gpio::Pull::PullUp);
- 800047c:	2101      	movs	r1, #1
- 800047e:	4668      	mov	r0, sp
- 8000480:	f000 f878 	bl	8000574 <_ZNK7GpioPin7SetPullEN4Gpio4PullE>
- 8000484:	e002      	b.n	800048c <main+0x58>
+ 8000484:	463b      	mov	r3, r7
+ 8000486:	2101      	movs	r1, #1
+ 8000488:	4618      	mov	r0, r3
+ 800048a:	f000 f9ca 	bl	8000822 <_ZNK7GpioPin7SetPullEN4Gpio4PullE>
 
     // 6. Loop principal
     while (1) {
+        (void)SystemCoreClock;
         if (!button.GetState()) {
+ 800048e:	463b      	mov	r3, r7
+ 8000490:	4618      	mov	r0, r3
+ 8000492:	f000 f97f 	bl	8000794 <_ZNK7GpioPin8GetStateEv>
+ 8000496:	4603      	mov	r3, r0
+ 8000498:	f083 0301 	eor.w	r3, r3, #1
+ 800049c:	b2db      	uxtb	r3, r3
+ 800049e:	2b00      	cmp	r3, #0
+ 80004a0:	d005      	beq.n	80004ae <main+0xfa>
             // Botón presionado (estado bajo)
             led.Reset(); // Enciende el LED
- 8000486:	a802      	add	r0, sp, #8
- 8000488:	f000 f84f 	bl	800052a <_ZNK7GpioPin5ResetEv>
-        if (!button.GetState()) {
- 800048c:	4668      	mov	r0, sp
- 800048e:	f000 f852 	bl	8000536 <_ZNK7GpioPin8GetStateEv>
- 8000492:	2800      	cmp	r0, #0
- 8000494:	d0f7      	beq.n	8000486 <main+0x52>
+ 80004a2:	f107 0308 	add.w	r3, r7, #8
+ 80004a6:	4618      	mov	r0, r3
+ 80004a8:	f000 f964 	bl	8000774 <_ZNK7GpioPin5ResetEv>
+ 80004ac:	e7ef      	b.n	800048e <main+0xda>
         } else {
             // Botón no presionado (estado alto)
             led.Set(); // Apaga el LED
- 8000496:	a802      	add	r0, sp, #8
- 8000498:	f000 f83f 	bl	800051a <_ZNK7GpioPin3SetEv>
- 800049c:	e7f6      	b.n	800048c <main+0x58>
- 800049e:	bf00      	nop
- 80004a0:	40020800 	.word	0x40020800
- 80004a4:	40020000 	.word	0x40020000
+ 80004ae:	f107 0308 	add.w	r3, r7, #8
+ 80004b2:	4618      	mov	r0, r3
+ 80004b4:	f000 f94e 	bl	8000754 <_ZNK7GpioPin3SetEv>
+        (void)SystemCoreClock;
+ 80004b8:	e7e9      	b.n	800048e <main+0xda>
+ 80004ba:	bf00      	nop
+ 80004bc:	40023800 	.word	0x40023800
+ 80004c0:	40007000 	.word	0x40007000
+ 80004c4:	40020800 	.word	0x40020800
+ 80004c8:	40020000 	.word	0x40020000
 
-080004a8 <_ZN4Gpio10SetPinModeENS_3PinENS_4ModeE>:
+080004cc <_Z4etoiIN4Gpio3PinEEDaT_>:
+#include "Gpio.hpp"
+
+
+template<typename E>
 constexpr auto etoi(E const value){
+ 80004cc:	b480      	push	{r7}
+ 80004ce:	b083      	sub	sp, #12
+ 80004d0:	af00      	add	r7, sp, #0
+ 80004d2:	4603      	mov	r3, r0
+ 80004d4:	71fb      	strb	r3, [r7, #7]
     return static_cast<std::underlying_type_t<E>>(value);
+ 80004d6:	79fb      	ldrb	r3, [r7, #7]
 }
+ 80004d8:	4618      	mov	r0, r3
+ 80004da:	370c      	adds	r7, #12
+ 80004dc:	46bd      	mov	sp, r7
+ 80004de:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80004e2:	4770      	bx	lr
+
+080004e4 <_Z4etoiIN4Gpio4ModeEEDaT_>:
+constexpr auto etoi(E const value){
+ 80004e4:	b480      	push	{r7}
+ 80004e6:	b083      	sub	sp, #12
+ 80004e8:	af00      	add	r7, sp, #0
+ 80004ea:	4603      	mov	r3, r0
+ 80004ec:	71fb      	strb	r3, [r7, #7]
+    return static_cast<std::underlying_type_t<E>>(value);
+ 80004ee:	79fb      	ldrb	r3, [r7, #7]
+}
+ 80004f0:	4618      	mov	r0, r3
+ 80004f2:	370c      	adds	r7, #12
+ 80004f4:	46bd      	mov	sp, r7
+ 80004f6:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80004fa:	4770      	bx	lr
+
+080004fc <_ZN4Gpio10SetPinModeENS_3PinENS_4ModeE>:
 
 void Gpio::SetPinMode(const Pin pin, const Mode mode) {
+ 80004fc:	b5b0      	push	{r4, r5, r7, lr}
+ 80004fe:	b082      	sub	sp, #8
+ 8000500:	af00      	add	r7, sp, #0
+ 8000502:	6078      	str	r0, [r7, #4]
+ 8000504:	460b      	mov	r3, r1
+ 8000506:	70fb      	strb	r3, [r7, #3]
+ 8000508:	4613      	mov	r3, r2
+ 800050a:	70bb      	strb	r3, [r7, #2]
     CTL = (CTL & ~(0b11 << etoi(pin) * 2)) | (etoi(mode) << etoi(pin) * 2);
- 80004a8:	6803      	ldr	r3, [r0, #0]
- 80004aa:	0049      	lsls	r1, r1, #1
- 80004ac:	f04f 0c03 	mov.w	ip, #3
- 80004b0:	fa0c fc01 	lsl.w	ip, ip, r1
- 80004b4:	ea23 030c 	bic.w	r3, r3, ip
- 80004b8:	408a      	lsls	r2, r1
- 80004ba:	4313      	orrs	r3, r2
- 80004bc:	6003      	str	r3, [r0, #0]
+ 800050c:	687b      	ldr	r3, [r7, #4]
+ 800050e:	681c      	ldr	r4, [r3, #0]
+ 8000510:	78fb      	ldrb	r3, [r7, #3]
+ 8000512:	4618      	mov	r0, r3
+ 8000514:	f7ff ffda 	bl	80004cc <_Z4etoiIN4Gpio3PinEEDaT_>
+ 8000518:	4603      	mov	r3, r0
+ 800051a:	005b      	lsls	r3, r3, #1
+ 800051c:	2203      	movs	r2, #3
+ 800051e:	fa02 f303 	lsl.w	r3, r2, r3
+ 8000522:	43db      	mvns	r3, r3
+ 8000524:	401c      	ands	r4, r3
+ 8000526:	78bb      	ldrb	r3, [r7, #2]
+ 8000528:	4618      	mov	r0, r3
+ 800052a:	f7ff ffdb 	bl	80004e4 <_Z4etoiIN4Gpio4ModeEEDaT_>
+ 800052e:	4603      	mov	r3, r0
+ 8000530:	461d      	mov	r5, r3
+ 8000532:	78fb      	ldrb	r3, [r7, #3]
+ 8000534:	4618      	mov	r0, r3
+ 8000536:	f7ff ffc9 	bl	80004cc <_Z4etoiIN4Gpio3PinEEDaT_>
+ 800053a:	4603      	mov	r3, r0
+ 800053c:	005b      	lsls	r3, r3, #1
+ 800053e:	fa05 f303 	lsl.w	r3, r5, r3
+ 8000542:	ea44 0203 	orr.w	r2, r4, r3
+ 8000546:	687b      	ldr	r3, [r7, #4]
+ 8000548:	601a      	str	r2, [r3, #0]
 
 }
- 80004be:	4770      	bx	lr
+ 800054a:	bf00      	nop
+ 800054c:	3708      	adds	r7, #8
+ 800054e:	46bd      	mov	sp, r7
+ 8000550:	bdb0      	pop	{r4, r5, r7, pc}
 
-080004c0 <_ZN4Gpio13SetOutputTypeENS_3PinENS_10OutputTypeE>:
+08000552 <_Z4etoiIN4Gpio10OutputTypeEEDaT_>:
+constexpr auto etoi(E const value){
+ 8000552:	b480      	push	{r7}
+ 8000554:	b083      	sub	sp, #12
+ 8000556:	af00      	add	r7, sp, #0
+ 8000558:	4603      	mov	r3, r0
+ 800055a:	71fb      	strb	r3, [r7, #7]
+    return static_cast<std::underlying_type_t<E>>(value);
+ 800055c:	79fb      	ldrb	r3, [r7, #7]
+}
+ 800055e:	4618      	mov	r0, r3
+ 8000560:	370c      	adds	r7, #12
+ 8000562:	46bd      	mov	sp, r7
+ 8000564:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000568:	4770      	bx	lr
+
+0800056a <_ZN4Gpio13SetOutputTypeENS_3PinENS_10OutputTypeE>:
 
 void Gpio::SetOutputType(const Pin pin, const OutputType type) {
+ 800056a:	b5b0      	push	{r4, r5, r7, lr}
+ 800056c:	b082      	sub	sp, #8
+ 800056e:	af00      	add	r7, sp, #0
+ 8000570:	6078      	str	r0, [r7, #4]
+ 8000572:	460b      	mov	r3, r1
+ 8000574:	70fb      	strb	r3, [r7, #3]
+ 8000576:	4613      	mov	r3, r2
+ 8000578:	70bb      	strb	r3, [r7, #2]
     OMODE = (OMODE & ~(0b1 << etoi(pin))) | (etoi(type) << etoi(pin));
- 80004c0:	6843      	ldr	r3, [r0, #4]
- 80004c2:	f04f 0c01 	mov.w	ip, #1
- 80004c6:	fa0c fc01 	lsl.w	ip, ip, r1
- 80004ca:	ea23 030c 	bic.w	r3, r3, ip
- 80004ce:	408a      	lsls	r2, r1
- 80004d0:	4313      	orrs	r3, r2
- 80004d2:	6043      	str	r3, [r0, #4]
+ 800057a:	687b      	ldr	r3, [r7, #4]
+ 800057c:	685c      	ldr	r4, [r3, #4]
+ 800057e:	78fb      	ldrb	r3, [r7, #3]
+ 8000580:	4618      	mov	r0, r3
+ 8000582:	f7ff ffa3 	bl	80004cc <_Z4etoiIN4Gpio3PinEEDaT_>
+ 8000586:	4603      	mov	r3, r0
+ 8000588:	461a      	mov	r2, r3
+ 800058a:	2301      	movs	r3, #1
+ 800058c:	4093      	lsls	r3, r2
+ 800058e:	43db      	mvns	r3, r3
+ 8000590:	401c      	ands	r4, r3
+ 8000592:	78bb      	ldrb	r3, [r7, #2]
+ 8000594:	4618      	mov	r0, r3
+ 8000596:	f7ff ffdc 	bl	8000552 <_Z4etoiIN4Gpio10OutputTypeEEDaT_>
+ 800059a:	4603      	mov	r3, r0
+ 800059c:	461d      	mov	r5, r3
+ 800059e:	78fb      	ldrb	r3, [r7, #3]
+ 80005a0:	4618      	mov	r0, r3
+ 80005a2:	f7ff ff93 	bl	80004cc <_Z4etoiIN4Gpio3PinEEDaT_>
+ 80005a6:	4603      	mov	r3, r0
+ 80005a8:	fa05 f303 	lsl.w	r3, r5, r3
+ 80005ac:	ea44 0203 	orr.w	r2, r4, r3
+ 80005b0:	687b      	ldr	r3, [r7, #4]
+ 80005b2:	605a      	str	r2, [r3, #4]
 }
- 80004d4:	4770      	bx	lr
+ 80005b4:	bf00      	nop
+ 80005b6:	3708      	adds	r7, #8
+ 80005b8:	46bd      	mov	sp, r7
+ 80005ba:	bdb0      	pop	{r4, r5, r7, pc}
 
-080004d6 <_ZN4Gpio18SetOutputTypeSpeedENS_3PinENS_11OutputSpeedE>:
+080005bc <_Z4etoiIN4Gpio11OutputSpeedEEDaT_>:
+constexpr auto etoi(E const value){
+ 80005bc:	b480      	push	{r7}
+ 80005be:	b083      	sub	sp, #12
+ 80005c0:	af00      	add	r7, sp, #0
+ 80005c2:	4603      	mov	r3, r0
+ 80005c4:	71fb      	strb	r3, [r7, #7]
+    return static_cast<std::underlying_type_t<E>>(value);
+ 80005c6:	79fb      	ldrb	r3, [r7, #7]
+}
+ 80005c8:	4618      	mov	r0, r3
+ 80005ca:	370c      	adds	r7, #12
+ 80005cc:	46bd      	mov	sp, r7
+ 80005ce:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80005d2:	4770      	bx	lr
+
+080005d4 <_ZN4Gpio18SetOutputTypeSpeedENS_3PinENS_11OutputSpeedE>:
 
 void Gpio::SetOutputTypeSpeed(const Pin pin, const OutputSpeed speed) {
+ 80005d4:	b5b0      	push	{r4, r5, r7, lr}
+ 80005d6:	b082      	sub	sp, #8
+ 80005d8:	af00      	add	r7, sp, #0
+ 80005da:	6078      	str	r0, [r7, #4]
+ 80005dc:	460b      	mov	r3, r1
+ 80005de:	70fb      	strb	r3, [r7, #3]
+ 80005e0:	4613      	mov	r3, r2
+ 80005e2:	70bb      	strb	r3, [r7, #2]
     OSPEED = (OSPEED & ~(0b11 << etoi(pin) * 2)) | (etoi(speed) << etoi(pin) * 2);
- 80004d6:	6883      	ldr	r3, [r0, #8]
- 80004d8:	0049      	lsls	r1, r1, #1
- 80004da:	f04f 0c03 	mov.w	ip, #3
- 80004de:	fa0c fc01 	lsl.w	ip, ip, r1
- 80004e2:	ea23 030c 	bic.w	r3, r3, ip
- 80004e6:	408a      	lsls	r2, r1
- 80004e8:	4313      	orrs	r3, r2
- 80004ea:	6083      	str	r3, [r0, #8]
+ 80005e4:	687b      	ldr	r3, [r7, #4]
+ 80005e6:	689c      	ldr	r4, [r3, #8]
+ 80005e8:	78fb      	ldrb	r3, [r7, #3]
+ 80005ea:	4618      	mov	r0, r3
+ 80005ec:	f7ff ff6e 	bl	80004cc <_Z4etoiIN4Gpio3PinEEDaT_>
+ 80005f0:	4603      	mov	r3, r0
+ 80005f2:	005b      	lsls	r3, r3, #1
+ 80005f4:	2203      	movs	r2, #3
+ 80005f6:	fa02 f303 	lsl.w	r3, r2, r3
+ 80005fa:	43db      	mvns	r3, r3
+ 80005fc:	401c      	ands	r4, r3
+ 80005fe:	78bb      	ldrb	r3, [r7, #2]
+ 8000600:	4618      	mov	r0, r3
+ 8000602:	f7ff ffdb 	bl	80005bc <_Z4etoiIN4Gpio11OutputSpeedEEDaT_>
+ 8000606:	4603      	mov	r3, r0
+ 8000608:	461d      	mov	r5, r3
+ 800060a:	78fb      	ldrb	r3, [r7, #3]
+ 800060c:	4618      	mov	r0, r3
+ 800060e:	f7ff ff5d 	bl	80004cc <_Z4etoiIN4Gpio3PinEEDaT_>
+ 8000612:	4603      	mov	r3, r0
+ 8000614:	005b      	lsls	r3, r3, #1
+ 8000616:	fa05 f303 	lsl.w	r3, r5, r3
+ 800061a:	ea44 0203 	orr.w	r2, r4, r3
+ 800061e:	687b      	ldr	r3, [r7, #4]
+ 8000620:	609a      	str	r2, [r3, #8]
 }
- 80004ec:	4770      	bx	lr
+ 8000622:	bf00      	nop
+ 8000624:	3708      	adds	r7, #8
+ 8000626:	46bd      	mov	sp, r7
+ 8000628:	bdb0      	pop	{r4, r5, r7, pc}
 
-080004ee <_ZN4Gpio10SetPinPullENS_3PinENS_4PullE>:
+0800062a <_Z4etoiIN4Gpio4PullEEDaT_>:
+constexpr auto etoi(E const value){
+ 800062a:	b480      	push	{r7}
+ 800062c:	b083      	sub	sp, #12
+ 800062e:	af00      	add	r7, sp, #0
+ 8000630:	4603      	mov	r3, r0
+ 8000632:	71fb      	strb	r3, [r7, #7]
+    return static_cast<std::underlying_type_t<E>>(value);
+ 8000634:	79fb      	ldrb	r3, [r7, #7]
+}
+ 8000636:	4618      	mov	r0, r3
+ 8000638:	370c      	adds	r7, #12
+ 800063a:	46bd      	mov	sp, r7
+ 800063c:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000640:	4770      	bx	lr
+
+08000642 <_ZN4Gpio10SetPinPullENS_3PinENS_4PullE>:
 void Gpio::SetPinPull(const Pin pin, const Pull pull) {
+ 8000642:	b5b0      	push	{r4, r5, r7, lr}
+ 8000644:	b082      	sub	sp, #8
+ 8000646:	af00      	add	r7, sp, #0
+ 8000648:	6078      	str	r0, [r7, #4]
+ 800064a:	460b      	mov	r3, r1
+ 800064c:	70fb      	strb	r3, [r7, #3]
+ 800064e:	4613      	mov	r3, r2
+ 8000650:	70bb      	strb	r3, [r7, #2]
     PUD = (PUD & ~(0b11 << etoi(pin) * 2)) | (etoi(pull) << etoi(pin) * 2);
- 80004ee:	68c3      	ldr	r3, [r0, #12]
- 80004f0:	0049      	lsls	r1, r1, #1
- 80004f2:	f04f 0c03 	mov.w	ip, #3
- 80004f6:	fa0c fc01 	lsl.w	ip, ip, r1
- 80004fa:	ea23 030c 	bic.w	r3, r3, ip
- 80004fe:	408a      	lsls	r2, r1
- 8000500:	4313      	orrs	r3, r2
- 8000502:	60c3      	str	r3, [r0, #12]
+ 8000652:	687b      	ldr	r3, [r7, #4]
+ 8000654:	68dc      	ldr	r4, [r3, #12]
+ 8000656:	78fb      	ldrb	r3, [r7, #3]
+ 8000658:	4618      	mov	r0, r3
+ 800065a:	f7ff ff37 	bl	80004cc <_Z4etoiIN4Gpio3PinEEDaT_>
+ 800065e:	4603      	mov	r3, r0
+ 8000660:	005b      	lsls	r3, r3, #1
+ 8000662:	2203      	movs	r2, #3
+ 8000664:	fa02 f303 	lsl.w	r3, r2, r3
+ 8000668:	43db      	mvns	r3, r3
+ 800066a:	401c      	ands	r4, r3
+ 800066c:	78bb      	ldrb	r3, [r7, #2]
+ 800066e:	4618      	mov	r0, r3
+ 8000670:	f7ff ffdb 	bl	800062a <_Z4etoiIN4Gpio4PullEEDaT_>
+ 8000674:	4603      	mov	r3, r0
+ 8000676:	461d      	mov	r5, r3
+ 8000678:	78fb      	ldrb	r3, [r7, #3]
+ 800067a:	4618      	mov	r0, r3
+ 800067c:	f7ff ff26 	bl	80004cc <_Z4etoiIN4Gpio3PinEEDaT_>
+ 8000680:	4603      	mov	r3, r0
+ 8000682:	005b      	lsls	r3, r3, #1
+ 8000684:	fa05 f303 	lsl.w	r3, r5, r3
+ 8000688:	ea44 0203 	orr.w	r2, r4, r3
+ 800068c:	687b      	ldr	r3, [r7, #4]
+ 800068e:	60da      	str	r2, [r3, #12]
 }
- 8000504:	4770      	bx	lr
+ 8000690:	bf00      	nop
+ 8000692:	3708      	adds	r7, #8
+ 8000694:	46bd      	mov	sp, r7
+ 8000696:	bdb0      	pop	{r4, r5, r7, pc}
 
-08000506 <_ZN4Gpio8ResetPinENS_3PinE>:
-void Gpio::SetPin(const Pin pin) {
-    BOP |= (1 << etoi(pin));
+08000698 <_ZN4Gpio7ReadPinENS_3PinE>:
+// Note: The above code assumes that the Pin enum values are sequential and start from 0
+//       If they are not, you may need to adjust the bit shifting logic accordingly.
+//       The `etoi` function converts the enum value to its underlying integer type for bit manipulation.
+
+bool Gpio::ReadPin(const Pin pin) {
+ 8000698:	b590      	push	{r4, r7, lr}
+ 800069a:	b083      	sub	sp, #12
+ 800069c:	af00      	add	r7, sp, #0
+ 800069e:	6078      	str	r0, [r7, #4]
+ 80006a0:	460b      	mov	r3, r1
+ 80006a2:	70fb      	strb	r3, [r7, #3]
+    return (ISTAT & (1 << etoi(pin))) != 0 ? false: true;
+ 80006a4:	687b      	ldr	r3, [r7, #4]
+ 80006a6:	691c      	ldr	r4, [r3, #16]
+ 80006a8:	78fb      	ldrb	r3, [r7, #3]
+ 80006aa:	4618      	mov	r0, r3
+ 80006ac:	f7ff ff0e 	bl	80004cc <_Z4etoiIN4Gpio3PinEEDaT_>
+ 80006b0:	4603      	mov	r3, r0
+ 80006b2:	461a      	mov	r2, r3
+ 80006b4:	2301      	movs	r3, #1
+ 80006b6:	4093      	lsls	r3, r2
+ 80006b8:	4023      	ands	r3, r4
+ 80006ba:	2b00      	cmp	r3, #0
+ 80006bc:	bf0c      	ite	eq
+ 80006be:	2301      	moveq	r3, #1
+ 80006c0:	2300      	movne	r3, #0
+ 80006c2:	b2db      	uxtb	r3, r3
 }
+ 80006c4:	4618      	mov	r0, r3
+ 80006c6:	370c      	adds	r7, #12
+ 80006c8:	46bd      	mov	sp, r7
+ 80006ca:	bd90      	pop	{r4, r7, pc}
+
+080006cc <_ZN4Gpio6SetPinENS_3PinE>:
+
+void Gpio::SetPin(const Pin pin) {
+ 80006cc:	b580      	push	{r7, lr}
+ 80006ce:	b082      	sub	sp, #8
+ 80006d0:	af00      	add	r7, sp, #0
+ 80006d2:	6078      	str	r0, [r7, #4]
+ 80006d4:	460b      	mov	r3, r1
+ 80006d6:	70fb      	strb	r3, [r7, #3]
+    BOP |= (1 << etoi(pin));
+ 80006d8:	78fb      	ldrb	r3, [r7, #3]
+ 80006da:	4618      	mov	r0, r3
+ 80006dc:	f7ff fef6 	bl	80004cc <_Z4etoiIN4Gpio3PinEEDaT_>
+ 80006e0:	4603      	mov	r3, r0
+ 80006e2:	461a      	mov	r2, r3
+ 80006e4:	2301      	movs	r3, #1
+ 80006e6:	fa03 f202 	lsl.w	r2, r3, r2
+ 80006ea:	687b      	ldr	r3, [r7, #4]
+ 80006ec:	699b      	ldr	r3, [r3, #24]
+ 80006ee:	431a      	orrs	r2, r3
+ 80006f0:	687b      	ldr	r3, [r7, #4]
+ 80006f2:	619a      	str	r2, [r3, #24]
+}
+ 80006f4:	bf00      	nop
+ 80006f6:	3708      	adds	r7, #8
+ 80006f8:	46bd      	mov	sp, r7
+ 80006fa:	bd80      	pop	{r7, pc}
+
+080006fc <_ZN4Gpio8ResetPinENS_3PinE>:
 
 void Gpio::ResetPin(const Pin pin) {
+ 80006fc:	b580      	push	{r7, lr}
+ 80006fe:	b082      	sub	sp, #8
+ 8000700:	af00      	add	r7, sp, #0
+ 8000702:	6078      	str	r0, [r7, #4]
+ 8000704:	460b      	mov	r3, r1
+ 8000706:	70fb      	strb	r3, [r7, #3]
     BOP |= (1 << etoi(pin)) << 16;
- 8000506:	6982      	ldr	r2, [r0, #24]
- 8000508:	f44f 3380 	mov.w	r3, #65536	@ 0x10000
- 800050c:	408b      	lsls	r3, r1
- 800050e:	4313      	orrs	r3, r2
- 8000510:	6183      	str	r3, [r0, #24]
+ 8000708:	78fb      	ldrb	r3, [r7, #3]
+ 800070a:	4618      	mov	r0, r3
+ 800070c:	f7ff fede 	bl	80004cc <_Z4etoiIN4Gpio3PinEEDaT_>
+ 8000710:	4603      	mov	r3, r0
+ 8000712:	461a      	mov	r2, r3
+ 8000714:	2301      	movs	r3, #1
+ 8000716:	4093      	lsls	r3, r2
+ 8000718:	041a      	lsls	r2, r3, #16
+ 800071a:	687b      	ldr	r3, [r7, #4]
+ 800071c:	699b      	ldr	r3, [r3, #24]
+ 800071e:	431a      	orrs	r2, r3
+ 8000720:	687b      	ldr	r3, [r7, #4]
+ 8000722:	619a      	str	r2, [r3, #24]
 }
- 8000512:	4770      	bx	lr
+ 8000724:	bf00      	nop
+ 8000726:	3708      	adds	r7, #8
+ 8000728:	46bd      	mov	sp, r7
+ 800072a:	bd80      	pop	{r7, pc}
 
-08000514 <_ZN7GpioPinC1ER4GpioNS0_3PinE>:
+0800072c <_ZN7GpioPinC1ER4GpioNS0_3PinE>:
+    {
         AFSEL1 = ((AFSEL1 & ~(0xF << ((etoi(pin)-etoi(Pin::Pin8)) * 4))) | (etoi(function) << ((etoi(pin)-etoi(Pin::Pin8)) * 4)));
     }
 }
 
 GpioPin::GpioPin(Gpio& gpio, const Gpio::Pin pin)
+ 800072c:	b480      	push	{r7}
+ 800072e:	b085      	sub	sp, #20
+ 8000730:	af00      	add	r7, sp, #0
+ 8000732:	60f8      	str	r0, [r7, #12]
+ 8000734:	60b9      	str	r1, [r7, #8]
+ 8000736:	4613      	mov	r3, r2
+ 8000738:	71fb      	strb	r3, [r7, #7]
     :gpio(gpio), pin(pin)
- 8000514:	6001      	str	r1, [r0, #0]
- 8000516:	7102      	strb	r2, [r0, #4]
+ 800073a:	68fb      	ldr	r3, [r7, #12]
+ 800073c:	68ba      	ldr	r2, [r7, #8]
+ 800073e:	601a      	str	r2, [r3, #0]
+ 8000740:	68fb      	ldr	r3, [r7, #12]
+ 8000742:	79fa      	ldrb	r2, [r7, #7]
+ 8000744:	711a      	strb	r2, [r3, #4]
 {
 
 }
- 8000518:	4770      	bx	lr
+ 8000746:	68fb      	ldr	r3, [r7, #12]
+ 8000748:	4618      	mov	r0, r3
+ 800074a:	3714      	adds	r7, #20
+ 800074c:	46bd      	mov	sp, r7
+ 800074e:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000752:	4770      	bx	lr
 
-0800051a <_ZNK7GpioPin3SetEv>:
+08000754 <_ZNK7GpioPin3SetEv>:
 
 void GpioPin::Set(void) const
 {
+ 8000754:	b580      	push	{r7, lr}
+ 8000756:	b082      	sub	sp, #8
+ 8000758:	af00      	add	r7, sp, #0
+ 800075a:	6078      	str	r0, [r7, #4]
     gpio.SetPin(pin);
- 800051a:	6802      	ldr	r2, [r0, #0]
-    BOP |= (1 << etoi(pin));
- 800051c:	6991      	ldr	r1, [r2, #24]
- 800051e:	7900      	ldrb	r0, [r0, #4]
- 8000520:	2301      	movs	r3, #1
- 8000522:	4083      	lsls	r3, r0
- 8000524:	430b      	orrs	r3, r1
- 8000526:	6193      	str	r3, [r2, #24]
+ 800075c:	687b      	ldr	r3, [r7, #4]
+ 800075e:	681a      	ldr	r2, [r3, #0]
+ 8000760:	687b      	ldr	r3, [r7, #4]
+ 8000762:	791b      	ldrb	r3, [r3, #4]
+ 8000764:	4619      	mov	r1, r3
+ 8000766:	4610      	mov	r0, r2
+ 8000768:	f7ff ffb0 	bl	80006cc <_ZN4Gpio6SetPinENS_3PinE>
 }
- 8000528:	4770      	bx	lr
+ 800076c:	bf00      	nop
+ 800076e:	3708      	adds	r7, #8
+ 8000770:	46bd      	mov	sp, r7
+ 8000772:	bd80      	pop	{r7, pc}
 
-0800052a <_ZNK7GpioPin5ResetEv>:
+08000774 <_ZNK7GpioPin5ResetEv>:
 
 void GpioPin::Reset(void) const
 {
- 800052a:	b508      	push	{r3, lr}
+ 8000774:	b580      	push	{r7, lr}
+ 8000776:	b082      	sub	sp, #8
+ 8000778:	af00      	add	r7, sp, #0
+ 800077a:	6078      	str	r0, [r7, #4]
     gpio.ResetPin(pin);
- 800052c:	7901      	ldrb	r1, [r0, #4]
- 800052e:	6800      	ldr	r0, [r0, #0]
- 8000530:	f7ff ffe9 	bl	8000506 <_ZN4Gpio8ResetPinENS_3PinE>
+ 800077c:	687b      	ldr	r3, [r7, #4]
+ 800077e:	681a      	ldr	r2, [r3, #0]
+ 8000780:	687b      	ldr	r3, [r7, #4]
+ 8000782:	791b      	ldrb	r3, [r3, #4]
+ 8000784:	4619      	mov	r1, r3
+ 8000786:	4610      	mov	r0, r2
+ 8000788:	f7ff ffb8 	bl	80006fc <_ZN4Gpio8ResetPinENS_3PinE>
 }
- 8000534:	bd08      	pop	{r3, pc}
+ 800078c:	bf00      	nop
+ 800078e:	3708      	adds	r7, #8
+ 8000790:	46bd      	mov	sp, r7
+ 8000792:	bd80      	pop	{r7, pc}
 
-08000536 <_ZNK7GpioPin8GetStateEv>:
+08000794 <_ZNK7GpioPin8GetStateEv>:
+{
     gpio.TogglePin(pin);
 }
 
 bool GpioPin::GetState(void) const
 {
+ 8000794:	b580      	push	{r7, lr}
+ 8000796:	b082      	sub	sp, #8
+ 8000798:	af00      	add	r7, sp, #0
+ 800079a:	6078      	str	r0, [r7, #4]
     return gpio.ReadPin(pin);
- 8000536:	6803      	ldr	r3, [r0, #0]
-    return (ISTAT & (1 << etoi(pin))) != 0 ? false: true;
- 8000538:	691a      	ldr	r2, [r3, #16]
- 800053a:	7901      	ldrb	r1, [r0, #4]
- 800053c:	2301      	movs	r3, #1
- 800053e:	408b      	lsls	r3, r1
- 8000540:	4213      	tst	r3, r2
+ 800079c:	687b      	ldr	r3, [r7, #4]
+ 800079e:	681a      	ldr	r2, [r3, #0]
+ 80007a0:	687b      	ldr	r3, [r7, #4]
+ 80007a2:	791b      	ldrb	r3, [r3, #4]
+ 80007a4:	4619      	mov	r1, r3
+ 80007a6:	4610      	mov	r0, r2
+ 80007a8:	f7ff ff76 	bl	8000698 <_ZN4Gpio7ReadPinENS_3PinE>
+ 80007ac:	4603      	mov	r3, r0
 }
- 8000542:	bf0c      	ite	eq
- 8000544:	2001      	moveq	r0, #1
- 8000546:	2000      	movne	r0, #0
- 8000548:	4770      	bx	lr
+ 80007ae:	4618      	mov	r0, r3
+ 80007b0:	3708      	adds	r7, #8
+ 80007b2:	46bd      	mov	sp, r7
+ 80007b4:	bd80      	pop	{r7, pc}
 
-0800054a <_ZNK7GpioPin7SetModeEN4Gpio4ModeE>:
+080007b6 <_ZNK7GpioPin7SetModeEN4Gpio4ModeE>:
 
 void GpioPin::SetMode(const Gpio::Mode mode) const
 {
- 800054a:	b508      	push	{r3, lr}
- 800054c:	460a      	mov	r2, r1
+ 80007b6:	b580      	push	{r7, lr}
+ 80007b8:	b082      	sub	sp, #8
+ 80007ba:	af00      	add	r7, sp, #0
+ 80007bc:	6078      	str	r0, [r7, #4]
+ 80007be:	460b      	mov	r3, r1
+ 80007c0:	70fb      	strb	r3, [r7, #3]
     gpio.SetPinMode(pin, mode);
- 800054e:	7901      	ldrb	r1, [r0, #4]
- 8000550:	6800      	ldr	r0, [r0, #0]
- 8000552:	f7ff ffa9 	bl	80004a8 <_ZN4Gpio10SetPinModeENS_3PinENS_4ModeE>
+ 80007c2:	687b      	ldr	r3, [r7, #4]
+ 80007c4:	6818      	ldr	r0, [r3, #0]
+ 80007c6:	687b      	ldr	r3, [r7, #4]
+ 80007c8:	791b      	ldrb	r3, [r3, #4]
+ 80007ca:	78fa      	ldrb	r2, [r7, #3]
+ 80007cc:	4619      	mov	r1, r3
+ 80007ce:	f7ff fe95 	bl	80004fc <_ZN4Gpio10SetPinModeENS_3PinENS_4ModeE>
 }
- 8000556:	bd08      	pop	{r3, pc}
+ 80007d2:	bf00      	nop
+ 80007d4:	3708      	adds	r7, #8
+ 80007d6:	46bd      	mov	sp, r7
+ 80007d8:	bd80      	pop	{r7, pc}
 
-08000558 <_ZNK7GpioPin13SetOutputTypeEN4Gpio10OutputTypeE>:
+080007da <_ZNK7GpioPin13SetOutputTypeEN4Gpio10OutputTypeE>:
 
 void GpioPin::SetOutputType(const Gpio::OutputType type) const
 {
- 8000558:	b508      	push	{r3, lr}
- 800055a:	460a      	mov	r2, r1
+ 80007da:	b580      	push	{r7, lr}
+ 80007dc:	b082      	sub	sp, #8
+ 80007de:	af00      	add	r7, sp, #0
+ 80007e0:	6078      	str	r0, [r7, #4]
+ 80007e2:	460b      	mov	r3, r1
+ 80007e4:	70fb      	strb	r3, [r7, #3]
     gpio.SetOutputType(pin, type);
- 800055c:	7901      	ldrb	r1, [r0, #4]
- 800055e:	6800      	ldr	r0, [r0, #0]
- 8000560:	f7ff ffae 	bl	80004c0 <_ZN4Gpio13SetOutputTypeENS_3PinENS_10OutputTypeE>
+ 80007e6:	687b      	ldr	r3, [r7, #4]
+ 80007e8:	6818      	ldr	r0, [r3, #0]
+ 80007ea:	687b      	ldr	r3, [r7, #4]
+ 80007ec:	791b      	ldrb	r3, [r3, #4]
+ 80007ee:	78fa      	ldrb	r2, [r7, #3]
+ 80007f0:	4619      	mov	r1, r3
+ 80007f2:	f7ff feba 	bl	800056a <_ZN4Gpio13SetOutputTypeENS_3PinENS_10OutputTypeE>
 }
- 8000564:	bd08      	pop	{r3, pc}
+ 80007f6:	bf00      	nop
+ 80007f8:	3708      	adds	r7, #8
+ 80007fa:	46bd      	mov	sp, r7
+ 80007fc:	bd80      	pop	{r7, pc}
 
-08000566 <_ZNK7GpioPin14SetOutputSpeedEN4Gpio11OutputSpeedE>:
+080007fe <_ZNK7GpioPin14SetOutputSpeedEN4Gpio11OutputSpeedE>:
 
 void GpioPin::SetOutputSpeed(const Gpio::OutputSpeed speed) const
 {
- 8000566:	b508      	push	{r3, lr}
- 8000568:	460a      	mov	r2, r1
+ 80007fe:	b580      	push	{r7, lr}
+ 8000800:	b082      	sub	sp, #8
+ 8000802:	af00      	add	r7, sp, #0
+ 8000804:	6078      	str	r0, [r7, #4]
+ 8000806:	460b      	mov	r3, r1
+ 8000808:	70fb      	strb	r3, [r7, #3]
     gpio.SetOutputTypeSpeed(pin, speed);
- 800056a:	7901      	ldrb	r1, [r0, #4]
- 800056c:	6800      	ldr	r0, [r0, #0]
- 800056e:	f7ff ffb2 	bl	80004d6 <_ZN4Gpio18SetOutputTypeSpeedENS_3PinENS_11OutputSpeedE>
+ 800080a:	687b      	ldr	r3, [r7, #4]
+ 800080c:	6818      	ldr	r0, [r3, #0]
+ 800080e:	687b      	ldr	r3, [r7, #4]
+ 8000810:	791b      	ldrb	r3, [r3, #4]
+ 8000812:	78fa      	ldrb	r2, [r7, #3]
+ 8000814:	4619      	mov	r1, r3
+ 8000816:	f7ff fedd 	bl	80005d4 <_ZN4Gpio18SetOutputTypeSpeedENS_3PinENS_11OutputSpeedE>
 }
- 8000572:	bd08      	pop	{r3, pc}
+ 800081a:	bf00      	nop
+ 800081c:	3708      	adds	r7, #8
+ 800081e:	46bd      	mov	sp, r7
+ 8000820:	bd80      	pop	{r7, pc}
 
-08000574 <_ZNK7GpioPin7SetPullEN4Gpio4PullE>:
+08000822 <_ZNK7GpioPin7SetPullEN4Gpio4PullE>:
 
 void GpioPin::SetPull(const Gpio::Pull pull) const
 {
- 8000574:	b508      	push	{r3, lr}
- 8000576:	460a      	mov	r2, r1
+ 8000822:	b580      	push	{r7, lr}
+ 8000824:	b082      	sub	sp, #8
+ 8000826:	af00      	add	r7, sp, #0
+ 8000828:	6078      	str	r0, [r7, #4]
+ 800082a:	460b      	mov	r3, r1
+ 800082c:	70fb      	strb	r3, [r7, #3]
     gpio.SetPinPull(pin, pull);
- 8000578:	7901      	ldrb	r1, [r0, #4]
- 800057a:	6800      	ldr	r0, [r0, #0]
- 800057c:	f7ff ffb7 	bl	80004ee <_ZN4Gpio10SetPinPullENS_3PinENS_4PullE>
+ 800082e:	687b      	ldr	r3, [r7, #4]
+ 8000830:	6818      	ldr	r0, [r3, #0]
+ 8000832:	687b      	ldr	r3, [r7, #4]
+ 8000834:	791b      	ldrb	r3, [r3, #4]
+ 8000836:	78fa      	ldrb	r2, [r7, #3]
+ 8000838:	4619      	mov	r1, r3
+ 800083a:	f7ff ff02 	bl	8000642 <_ZN4Gpio10SetPinPullENS_3PinENS_4PullE>
 }
- 8000580:	bd08      	pop	{r3, pc}
+ 800083e:	bf00      	nop
+ 8000840:	3708      	adds	r7, #8
+ 8000842:	46bd      	mov	sp, r7
+ 8000844:	bd80      	pop	{r7, pc}
 
-08000582 <rcu_periph_clock_enable>:
-    \param[out] none
-    \retval     none
-*/
-void rcu_periph_clock_enable(rcu_periph_enum periph)
-{
-    RCU_REG_VAL(periph) |= BIT(RCU_BIT_POS(periph));
- 8000582:	0983      	lsrs	r3, r0, #6
- 8000584:	f103 4380 	add.w	r3, r3, #1073741824	@ 0x40000000
- 8000588:	f503 330e 	add.w	r3, r3, #145408	@ 0x23800
- 800058c:	6819      	ldr	r1, [r3, #0]
- 800058e:	f000 001f 	and.w	r0, r0, #31
- 8000592:	2201      	movs	r2, #1
- 8000594:	4082      	lsls	r2, r0
- 8000596:	430a      	orrs	r2, r1
- 8000598:	601a      	str	r2, [r3, #0]
+08000846 <_ZN3Rcu19EnableExternalClockEv>:
+
+void Rcu::SetInternal16MHzClockTrimming(uint8_t trimming) {
+  CTL.bits.IRC16MADJ = trimming; // Set the trimming value for IRC16M
 }
- 800059a:	4770      	bx	lr
 
-0800059c <register_fini>:
- 800059c:	4b02      	ldr	r3, [pc, #8]	@ (80005a8 <register_fini+0xc>)
- 800059e:	b113      	cbz	r3, 80005a6 <register_fini+0xa>
- 80005a0:	4802      	ldr	r0, [pc, #8]	@ (80005ac <register_fini+0x10>)
- 80005a2:	f7ff be5d 	b.w	8000260 <atexit>
- 80005a6:	4770      	bx	lr
- 80005a8:	00000000 	.word	0x00000000
- 80005ac:	0800026d 	.word	0x0800026d
+void Rcu::EnableExternalClock(void) {
+ 8000846:	b480      	push	{r7}
+ 8000848:	b083      	sub	sp, #12
+ 800084a:	af00      	add	r7, sp, #0
+ 800084c:	6078      	str	r0, [r7, #4]
+  CTL.bits.HXTALEN = 1; // Enable external high-speed oscillator (HXTAL)
+ 800084e:	687a      	ldr	r2, [r7, #4]
+ 8000850:	7893      	ldrb	r3, [r2, #2]
+ 8000852:	f043 0301 	orr.w	r3, r3, #1
+ 8000856:	7093      	strb	r3, [r2, #2]
+  // Wait for the HXTAL to be stable
+  while (CTL.bits.HXTALSTB == 0) {
+ 8000858:	bf00      	nop
+ 800085a:	687b      	ldr	r3, [r7, #4]
+ 800085c:	789b      	ldrb	r3, [r3, #2]
+ 800085e:	f3c3 0340 	ubfx	r3, r3, #1, #1
+ 8000862:	b2db      	uxtb	r3, r3
+ 8000864:	f083 0301 	eor.w	r3, r3, #1
+ 8000868:	b2db      	uxtb	r3, r3
+ 800086a:	2b00      	cmp	r3, #0
+ 800086c:	d1f5      	bne.n	800085a <_ZN3Rcu19EnableExternalClockEv+0x14>
+  }
+}
+ 800086e:	bf00      	nop
+ 8000870:	bf00      	nop
+ 8000872:	370c      	adds	r7, #12
+ 8000874:	46bd      	mov	sp, r7
+ 8000876:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 800087a:	4770      	bx	lr
 
-080005b0 <_init>:
- 80005b0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 80005b2:	bf00      	nop
- 80005b4:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 80005b6:	bc08      	pop	{r3}
- 80005b8:	469e      	mov	lr, r3
- 80005ba:	4770      	bx	lr
+0800087c <_ZN3Rcu9EnablePllEv>:
 
-080005bc <_fini>:
- 80005bc:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 80005be:	bf00      	nop
- 80005c0:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 80005c2:	bc08      	pop	{r3}
- 80005c4:	469e      	mov	lr, r3
- 80005c6:	4770      	bx	lr
+void Rcu::EnablePll(void) {
+ 800087c:	b480      	push	{r7}
+ 800087e:	b083      	sub	sp, #12
+ 8000880:	af00      	add	r7, sp, #0
+ 8000882:	6078      	str	r0, [r7, #4]
+  CTL.bits.PLLEN = 1; // Enable PLL
+ 8000884:	687a      	ldr	r2, [r7, #4]
+ 8000886:	78d3      	ldrb	r3, [r2, #3]
+ 8000888:	f043 0301 	orr.w	r3, r3, #1
+ 800088c:	70d3      	strb	r3, [r2, #3]
+  // Wait for the PLL to be stable
+  while (CTL.bits.PLLSTB == 0) {
+ 800088e:	bf00      	nop
+ 8000890:	687b      	ldr	r3, [r7, #4]
+ 8000892:	78db      	ldrb	r3, [r3, #3]
+ 8000894:	f3c3 0340 	ubfx	r3, r3, #1, #1
+ 8000898:	b2db      	uxtb	r3, r3
+ 800089a:	f083 0301 	eor.w	r3, r3, #1
+ 800089e:	b2db      	uxtb	r3, r3
+ 80008a0:	2b00      	cmp	r3, #0
+ 80008a2:	d1f5      	bne.n	8000890 <_ZN3Rcu9EnablePllEv+0x14>
+  }
+}
+ 80008a4:	bf00      	nop
+ 80008a6:	bf00      	nop
+ 80008a8:	370c      	adds	r7, #12
+ 80008aa:	46bd      	mov	sp, r7
+ 80008ac:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80008b0:	4770      	bx	lr
+
+080008b2 <_ZN3Rcu12ConfigurePllENS_14PllClockSourceENS_10PLLFactorsE>:
+void Rcu::ConfigurePll(PllClockSource source, PLLFactors factors) {
+ 80008b2:	b580      	push	{r7, lr}
+ 80008b4:	b084      	sub	sp, #16
+ 80008b6:	af00      	add	r7, sp, #0
+ 80008b8:	60f8      	str	r0, [r7, #12]
+ 80008ba:	4608      	mov	r0, r1
+ 80008bc:	4639      	mov	r1, r7
+ 80008be:	e881 000c 	stmia.w	r1, {r2, r3}
+ 80008c2:	4603      	mov	r3, r0
+ 80008c4:	72fb      	strb	r3, [r7, #11]
+  // Set the PLL clock source and factors
+  SetPllClockSource(source);
+ 80008c6:	7afb      	ldrb	r3, [r7, #11]
+ 80008c8:	4619      	mov	r1, r3
+ 80008ca:	68f8      	ldr	r0, [r7, #12]
+ 80008cc:	f000 f89f 	bl	8000a0e <_ZN3Rcu17SetPllClockSourceENS_14PllClockSourceE>
+  SetPllFactors(factors);
+ 80008d0:	463b      	mov	r3, r7
+ 80008d2:	e893 0006 	ldmia.w	r3, {r1, r2}
+ 80008d6:	68f8      	ldr	r0, [r7, #12]
+ 80008d8:	f000 f8ae 	bl	8000a38 <_ZN3Rcu13SetPllFactorsENS_10PLLFactorsE>
+}
+ 80008dc:	bf00      	nop
+ 80008de:	3710      	adds	r7, #16
+ 80008e0:	46bd      	mov	sp, r7
+ 80008e2:	bd80      	pop	{r7, pc}
+
+080008e4 <_ZN3Rcu15SetAhbPrescalerENS_12AhbPrescalerE>:
+
+void Rcu::SetAhbPrescaler(AhbPrescaler prescaler) {
+ 80008e4:	b480      	push	{r7}
+ 80008e6:	b083      	sub	sp, #12
+ 80008e8:	af00      	add	r7, sp, #0
+ 80008ea:	6078      	str	r0, [r7, #4]
+ 80008ec:	460b      	mov	r3, r1
+ 80008ee:	70fb      	strb	r3, [r7, #3]
+  // Set the AHB prescaler in the configuration register
+  CFG0.bits.AHBPSC = prescaler;
+ 80008f0:	78fb      	ldrb	r3, [r7, #3]
+ 80008f2:	f003 030f 	and.w	r3, r3, #15
+ 80008f6:	b2d9      	uxtb	r1, r3
+ 80008f8:	687a      	ldr	r2, [r7, #4]
+ 80008fa:	7a13      	ldrb	r3, [r2, #8]
+ 80008fc:	f361 1307 	bfi	r3, r1, #4, #4
+ 8000900:	7213      	strb	r3, [r2, #8]
+}
+ 8000902:	bf00      	nop
+ 8000904:	370c      	adds	r7, #12
+ 8000906:	46bd      	mov	sp, r7
+ 8000908:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 800090c:	4770      	bx	lr
+
+0800090e <_ZN3Rcu16SetApb1PrescalerENS_13Apb1PrescalerE>:
+
+void Rcu::SetApb1Prescaler(Apb1Prescaler prescaler) {
+ 800090e:	b480      	push	{r7}
+ 8000910:	b083      	sub	sp, #12
+ 8000912:	af00      	add	r7, sp, #0
+ 8000914:	6078      	str	r0, [r7, #4]
+ 8000916:	460b      	mov	r3, r1
+ 8000918:	70fb      	strb	r3, [r7, #3]
+  // Set the APB1 prescaler in the configuration register
+  CFG0.bits.APB1PSC = prescaler;
+ 800091a:	78fb      	ldrb	r3, [r7, #3]
+ 800091c:	f003 0307 	and.w	r3, r3, #7
+ 8000920:	b2d9      	uxtb	r1, r3
+ 8000922:	687a      	ldr	r2, [r7, #4]
+ 8000924:	7a53      	ldrb	r3, [r2, #9]
+ 8000926:	f361 0384 	bfi	r3, r1, #2, #3
+ 800092a:	7253      	strb	r3, [r2, #9]
+}
+ 800092c:	bf00      	nop
+ 800092e:	370c      	adds	r7, #12
+ 8000930:	46bd      	mov	sp, r7
+ 8000932:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000936:	4770      	bx	lr
+
+08000938 <_ZN3Rcu16SetApb2PrescalerENS_13Apb2PrescalerE>:
+
+void Rcu::SetApb2Prescaler(Apb2Prescaler prescaler) {
+ 8000938:	b480      	push	{r7}
+ 800093a:	b083      	sub	sp, #12
+ 800093c:	af00      	add	r7, sp, #0
+ 800093e:	6078      	str	r0, [r7, #4]
+ 8000940:	460b      	mov	r3, r1
+ 8000942:	70fb      	strb	r3, [r7, #3]
+  // Set the APB2 prescaler in the configuration register
+  CFG0.bits.APB2PSC = prescaler;
+ 8000944:	78fb      	ldrb	r3, [r7, #3]
+ 8000946:	f003 0307 	and.w	r3, r3, #7
+ 800094a:	b2d9      	uxtb	r1, r3
+ 800094c:	687a      	ldr	r2, [r7, #4]
+ 800094e:	7a53      	ldrb	r3, [r2, #9]
+ 8000950:	f361 1347 	bfi	r3, r1, #5, #3
+ 8000954:	7253      	strb	r3, [r2, #9]
+}
+ 8000956:	bf00      	nop
+ 8000958:	370c      	adds	r7, #12
+ 800095a:	46bd      	mov	sp, r7
+ 800095c:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000960:	4770      	bx	lr
+
+08000962 <_ZN3Rcu20SetSystemClockSourceENS_17SystemClockSourceE>:
+void Rcu::SetSystemClockSource(SystemClockSource source) {
+ 8000962:	b480      	push	{r7}
+ 8000964:	b083      	sub	sp, #12
+ 8000966:	af00      	add	r7, sp, #0
+ 8000968:	6078      	str	r0, [r7, #4]
+ 800096a:	460b      	mov	r3, r1
+ 800096c:	70fb      	strb	r3, [r7, #3]
+  // Set the system clock source in the configuration register
+  CFG0.bits.SCS = source;
+ 800096e:	78fb      	ldrb	r3, [r7, #3]
+ 8000970:	f003 0303 	and.w	r3, r3, #3
+ 8000974:	b2d9      	uxtb	r1, r3
+ 8000976:	687a      	ldr	r2, [r7, #4]
+ 8000978:	7a13      	ldrb	r3, [r2, #8]
+ 800097a:	f361 0301 	bfi	r3, r1, #0, #2
+ 800097e:	7213      	strb	r3, [r2, #8]
+  // Wait until the system clock source is switched
+  while ((CFG0.bits.SCSS) != source) {
+ 8000980:	bf00      	nop
+ 8000982:	687b      	ldr	r3, [r7, #4]
+ 8000984:	7a1b      	ldrb	r3, [r3, #8]
+ 8000986:	f3c3 0381 	ubfx	r3, r3, #2, #2
+ 800098a:	b2db      	uxtb	r3, r3
+ 800098c:	461a      	mov	r2, r3
+ 800098e:	78fb      	ldrb	r3, [r7, #3]
+ 8000990:	4293      	cmp	r3, r2
+ 8000992:	bf14      	ite	ne
+ 8000994:	2301      	movne	r3, #1
+ 8000996:	2300      	moveq	r3, #0
+ 8000998:	b2db      	uxtb	r3, r3
+ 800099a:	2b00      	cmp	r3, #0
+ 800099c:	d1f1      	bne.n	8000982 <_ZN3Rcu20SetSystemClockSourceENS_17SystemClockSourceE+0x20>
+    // Optionally, add a timeout to avoid infinite loops
+  }
+}
+ 800099e:	bf00      	nop
+ 80009a0:	bf00      	nop
+ 80009a2:	370c      	adds	r7, #12
+ 80009a4:	46bd      	mov	sp, r7
+ 80009a6:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80009aa:	4770      	bx	lr
+
+080009ac <_ZN3Rcu11EnableGpioAEv>:
+
+void Rcu::EnableGpioA(void) {
+ 80009ac:	b480      	push	{r7}
+ 80009ae:	b083      	sub	sp, #12
+ 80009b0:	af00      	add	r7, sp, #0
+ 80009b2:	6078      	str	r0, [r7, #4]
+  AHB1EN.bits.PAEN = 1; // Enable GPIOA clock
+ 80009b4:	687a      	ldr	r2, [r7, #4]
+ 80009b6:	f892 3030 	ldrb.w	r3, [r2, #48]	@ 0x30
+ 80009ba:	f043 0301 	orr.w	r3, r3, #1
+ 80009be:	f882 3030 	strb.w	r3, [r2, #48]	@ 0x30
+}
+ 80009c2:	bf00      	nop
+ 80009c4:	370c      	adds	r7, #12
+ 80009c6:	46bd      	mov	sp, r7
+ 80009c8:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80009cc:	4770      	bx	lr
+
+080009ce <_ZN3Rcu11EnableGpioCEv>:
+
+void Rcu::EnableGpioB(void) {
+  AHB1EN.bits.PBEN = 1; // Enable GPIOB clock
+}
+void Rcu::EnableGpioC(void) {
+ 80009ce:	b480      	push	{r7}
+ 80009d0:	b083      	sub	sp, #12
+ 80009d2:	af00      	add	r7, sp, #0
+ 80009d4:	6078      	str	r0, [r7, #4]
+  AHB1EN.bits.PCEN = 1; // Enable GPIOC clock
+ 80009d6:	687a      	ldr	r2, [r7, #4]
+ 80009d8:	f892 3030 	ldrb.w	r3, [r2, #48]	@ 0x30
+ 80009dc:	f043 0304 	orr.w	r3, r3, #4
+ 80009e0:	f882 3030 	strb.w	r3, [r2, #48]	@ 0x30
+}
+ 80009e4:	bf00      	nop
+ 80009e6:	370c      	adds	r7, #12
+ 80009e8:	46bd      	mov	sp, r7
+ 80009ea:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80009ee:	4770      	bx	lr
+
+080009f0 <_ZN3Rcu20EnablePowerInterfaceEv>:
+void Rcu::EnableI2c0(void) {
+  APB1EN.bits.I2C0EN = 1; // Enable I2C0 clock
+}
+void Rcu::EnablePowerInterface(void) {
+ 80009f0:	b480      	push	{r7}
+ 80009f2:	b083      	sub	sp, #12
+ 80009f4:	af00      	add	r7, sp, #0
+ 80009f6:	6078      	str	r0, [r7, #4]
+  APB1EN.bits.PMUEN = 1; // Enable Power Management Unit clock
+ 80009f8:	687a      	ldr	r2, [r7, #4]
+ 80009fa:	6c13      	ldr	r3, [r2, #64]	@ 0x40
+ 80009fc:	f043 5380 	orr.w	r3, r3, #268435456	@ 0x10000000
+ 8000a00:	6413      	str	r3, [r2, #64]	@ 0x40
+}
+ 8000a02:	bf00      	nop
+ 8000a04:	370c      	adds	r7, #12
+ 8000a06:	46bd      	mov	sp, r7
+ 8000a08:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000a0c:	4770      	bx	lr
+
+08000a0e <_ZN3Rcu17SetPllClockSourceENS_14PllClockSourceE>:
+void Rcu::EnableSpi0(void) {
+  APB2EN.bits.SPI0EN = 1; // Enable SPI0 clock
+}
+
+void Rcu::SetPllClockSource(PllClockSource source) {
+ 8000a0e:	b480      	push	{r7}
+ 8000a10:	b083      	sub	sp, #12
+ 8000a12:	af00      	add	r7, sp, #0
+ 8000a14:	6078      	str	r0, [r7, #4]
+ 8000a16:	460b      	mov	r3, r1
+ 8000a18:	70fb      	strb	r3, [r7, #3]
+  // Set the PLL clock source in the register
+  PLL.bits.PLLSEL = source;
+ 8000a1a:	78fb      	ldrb	r3, [r7, #3]
+ 8000a1c:	f003 0301 	and.w	r3, r3, #1
+ 8000a20:	b2d9      	uxtb	r1, r3
+ 8000a22:	687a      	ldr	r2, [r7, #4]
+ 8000a24:	7993      	ldrb	r3, [r2, #6]
+ 8000a26:	f361 1386 	bfi	r3, r1, #6, #1
+ 8000a2a:	7193      	strb	r3, [r2, #6]
+  // Ensure the change is applied immediately
+  // This might require additional steps depending on the hardware specifics
+}
+ 8000a2c:	bf00      	nop
+ 8000a2e:	370c      	adds	r7, #12
+ 8000a30:	46bd      	mov	sp, r7
+ 8000a32:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000a36:	4770      	bx	lr
+
+08000a38 <_ZN3Rcu13SetPllFactorsENS_10PLLFactorsE>:
+
+void Rcu::SetPllFactors(PLLFactors factors) {
+ 8000a38:	b480      	push	{r7}
+ 8000a3a:	b085      	sub	sp, #20
+ 8000a3c:	af00      	add	r7, sp, #0
+ 8000a3e:	60f8      	str	r0, [r7, #12]
+ 8000a40:	1d3b      	adds	r3, r7, #4
+ 8000a42:	e883 0006 	stmia.w	r3, {r1, r2}
+  PLL.bits.PLLP = factors.p_;
+ 8000a46:	793b      	ldrb	r3, [r7, #4]
+ 8000a48:	f003 0303 	and.w	r3, r3, #3
+ 8000a4c:	b2d9      	uxtb	r1, r3
+ 8000a4e:	68fa      	ldr	r2, [r7, #12]
+ 8000a50:	7993      	ldrb	r3, [r2, #6]
+ 8000a52:	f361 0301 	bfi	r3, r1, #0, #2
+ 8000a56:	7193      	strb	r3, [r2, #6]
+  PLL.bits.PLLN = factors.n_;
+ 8000a58:	88fb      	ldrh	r3, [r7, #6]
+ 8000a5a:	f3c3 0308 	ubfx	r3, r3, #0, #9
+ 8000a5e:	b299      	uxth	r1, r3
+ 8000a60:	68fa      	ldr	r2, [r7, #12]
+ 8000a62:	8893      	ldrh	r3, [r2, #4]
+ 8000a64:	f361 138e 	bfi	r3, r1, #6, #9
+ 8000a68:	8093      	strh	r3, [r2, #4]
+  PLL.bits.PLLQ = factors.q_;
+ 8000a6a:	797b      	ldrb	r3, [r7, #5]
+ 8000a6c:	f003 030f 	and.w	r3, r3, #15
+ 8000a70:	b2d9      	uxtb	r1, r3
+ 8000a72:	68fa      	ldr	r2, [r7, #12]
+ 8000a74:	79d3      	ldrb	r3, [r2, #7]
+ 8000a76:	f361 0303 	bfi	r3, r1, #0, #4
+ 8000a7a:	71d3      	strb	r3, [r2, #7]
+  PLL.bits.PLLPSC = factors.psc_;
+ 8000a7c:	7a3b      	ldrb	r3, [r7, #8]
+ 8000a7e:	f003 033f 	and.w	r3, r3, #63	@ 0x3f
+ 8000a82:	b2d9      	uxtb	r1, r3
+ 8000a84:	68fa      	ldr	r2, [r7, #12]
+ 8000a86:	7913      	ldrb	r3, [r2, #4]
+ 8000a88:	f361 0305 	bfi	r3, r1, #0, #6
+ 8000a8c:	7113      	strb	r3, [r2, #4]
+}
+ 8000a8e:	bf00      	nop
+ 8000a90:	3714      	adds	r7, #20
+ 8000a92:	46bd      	mov	sp, r7
+ 8000a94:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000a98:	4770      	bx	lr
+
+08000a9a <_Z4etoiIN3Rcu15PllVcoPrescalerEEDaT_>:
+constexpr auto etoi(E const value) {
+ 8000a9a:	b480      	push	{r7}
+ 8000a9c:	b083      	sub	sp, #12
+ 8000a9e:	af00      	add	r7, sp, #0
+ 8000aa0:	4603      	mov	r3, r0
+ 8000aa2:	71fb      	strb	r3, [r7, #7]
+    return static_cast<std::underlying_type_t<E>>(value);
+ 8000aa4:	79fb      	ldrb	r3, [r7, #7]
+}
+ 8000aa6:	4618      	mov	r0, r3
+ 8000aa8:	370c      	adds	r7, #12
+ 8000aaa:	46bd      	mov	sp, r7
+ 8000aac:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000ab0:	4770      	bx	lr
+
+08000ab2 <_Z4etoiIN3Rcu10PllFactorPEEDaT_>:
+constexpr auto etoi(E const value) {
+ 8000ab2:	b480      	push	{r7}
+ 8000ab4:	b083      	sub	sp, #12
+ 8000ab6:	af00      	add	r7, sp, #0
+ 8000ab8:	4603      	mov	r3, r0
+ 8000aba:	71fb      	strb	r3, [r7, #7]
+    return static_cast<std::underlying_type_t<E>>(value);
+ 8000abc:	79fb      	ldrb	r3, [r7, #7]
+}
+ 8000abe:	4618      	mov	r0, r3
+ 8000ac0:	370c      	adds	r7, #12
+ 8000ac2:	46bd      	mov	sp, r7
+ 8000ac4:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000ac8:	4770      	bx	lr
+
+08000aca <_Z4etoiIN3Rcu14PllClockSourceEEDaT_>:
+constexpr auto etoi(E const value) {
+ 8000aca:	b480      	push	{r7}
+ 8000acc:	b083      	sub	sp, #12
+ 8000ace:	af00      	add	r7, sp, #0
+ 8000ad0:	4603      	mov	r3, r0
+ 8000ad2:	71fb      	strb	r3, [r7, #7]
+    return static_cast<std::underlying_type_t<E>>(value);
+ 8000ad4:	79fb      	ldrb	r3, [r7, #7]
+}
+ 8000ad6:	4618      	mov	r0, r3
+ 8000ad8:	370c      	adds	r7, #12
+ 8000ada:	46bd      	mov	sp, r7
+ 8000adc:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000ae0:	4770      	bx	lr
+
+08000ae2 <_Z4etoiIN3Rcu12AhbPrescalerEEDaT_>:
+constexpr auto etoi(E const value) {
+ 8000ae2:	b480      	push	{r7}
+ 8000ae4:	b083      	sub	sp, #12
+ 8000ae6:	af00      	add	r7, sp, #0
+ 8000ae8:	4603      	mov	r3, r0
+ 8000aea:	71fb      	strb	r3, [r7, #7]
+    return static_cast<std::underlying_type_t<E>>(value);
+ 8000aec:	79fb      	ldrb	r3, [r7, #7]
+}
+ 8000aee:	4618      	mov	r0, r3
+ 8000af0:	370c      	adds	r7, #12
+ 8000af2:	46bd      	mov	sp, r7
+ 8000af4:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000af8:	4770      	bx	lr
+	...
+
+08000afc <_ZN3Rcu21UpdateSystemCoreClockEv>:
+
+
+void Rcu::UpdateSystemCoreClock() {
+ 8000afc:	b580      	push	{r7, lr}
+ 8000afe:	b088      	sub	sp, #32
+ 8000b00:	af00      	add	r7, sp, #0
+ 8000b02:	6078      	str	r0, [r7, #4]
+    // constexpr uint32_t IRC16M_VALUE = 16000000U;
+
+    switch (CFG0.bits.SCSS) {
+ 8000b04:	687b      	ldr	r3, [r7, #4]
+ 8000b06:	7a1b      	ldrb	r3, [r3, #8]
+ 8000b08:	f3c3 0381 	ubfx	r3, r3, #2, #2
+ 8000b0c:	b2db      	uxtb	r3, r3
+ 8000b0e:	2b02      	cmp	r3, #2
+ 8000b10:	d00e      	beq.n	8000b30 <_ZN3Rcu21UpdateSystemCoreClockEv+0x34>
+ 8000b12:	2b02      	cmp	r3, #2
+ 8000b14:	d84c      	bhi.n	8000bb0 <_ZN3Rcu21UpdateSystemCoreClockEv+0xb4>
+ 8000b16:	2b00      	cmp	r3, #0
+ 8000b18:	d002      	beq.n	8000b20 <_ZN3Rcu21UpdateSystemCoreClockEv+0x24>
+ 8000b1a:	2b01      	cmp	r3, #1
+ 8000b1c:	d004      	beq.n	8000b28 <_ZN3Rcu21UpdateSystemCoreClockEv+0x2c>
+ 8000b1e:	e047      	b.n	8000bb0 <_ZN3Rcu21UpdateSystemCoreClockEv+0xb4>
+    case SystemClockSource::IRC16M:
+        SystemCoreClock = IRC16M_VALUE;
+ 8000b20:	4b31      	ldr	r3, [pc, #196]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
+ 8000b22:	4a32      	ldr	r2, [pc, #200]	@ (8000bec <_ZN3Rcu21UpdateSystemCoreClockEv+0xf0>)
+ 8000b24:	601a      	str	r2, [r3, #0]
+        break;
+ 8000b26:	e047      	b.n	8000bb8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xbc>
+
+    case SystemClockSource::HXTAL:
+        SystemCoreClock = HXTAL_VALUE;
+ 8000b28:	4b2f      	ldr	r3, [pc, #188]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
+ 8000b2a:	4a31      	ldr	r2, [pc, #196]	@ (8000bf0 <_ZN3Rcu21UpdateSystemCoreClockEv+0xf4>)
+ 8000b2c:	601a      	str	r2, [r3, #0]
+        break;
+ 8000b2e:	e043      	b.n	8000bb8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xbc>
+
+    case SystemClockSource::PLLP: {
+        uint32_t pllpsc = etoi(PLL.bits.PLLPSC) + 1; // /PLLPSC prescaler
+ 8000b30:	687b      	ldr	r3, [r7, #4]
+ 8000b32:	791b      	ldrb	r3, [r3, #4]
+ 8000b34:	f3c3 0305 	ubfx	r3, r3, #0, #6
+ 8000b38:	b2db      	uxtb	r3, r3
+ 8000b3a:	4618      	mov	r0, r3
+ 8000b3c:	f7ff ffad 	bl	8000a9a <_Z4etoiIN3Rcu15PllVcoPrescalerEEDaT_>
+ 8000b40:	4603      	mov	r3, r0
+ 8000b42:	3301      	adds	r3, #1
+ 8000b44:	61fb      	str	r3, [r7, #28]
+        uint32_t plln = PLL.bits.PLLN;               // PLL multiplier
+ 8000b46:	687b      	ldr	r3, [r7, #4]
+ 8000b48:	889b      	ldrh	r3, [r3, #4]
+ 8000b4a:	f3c3 1388 	ubfx	r3, r3, #6, #9
+ 8000b4e:	b29b      	uxth	r3, r3
+ 8000b50:	61bb      	str	r3, [r7, #24]
+        uint32_t pllp = (etoi(PLL.bits.PLLP) + 1U) * 2U; // PLLP: 00=2, 01=4, 10=6, 11=8
+ 8000b52:	687b      	ldr	r3, [r7, #4]
+ 8000b54:	799b      	ldrb	r3, [r3, #6]
+ 8000b56:	f3c3 0301 	ubfx	r3, r3, #0, #2
+ 8000b5a:	b2db      	uxtb	r3, r3
+ 8000b5c:	4618      	mov	r0, r3
+ 8000b5e:	f7ff ffa8 	bl	8000ab2 <_Z4etoiIN3Rcu10PllFactorPEEDaT_>
+ 8000b62:	4603      	mov	r3, r0
+ 8000b64:	3301      	adds	r3, #1
+ 8000b66:	005b      	lsls	r3, r3, #1
+ 8000b68:	617b      	str	r3, [r7, #20]
+        uint32_t pllsel = etoi(PLL.bits.PLLSEL);     // Clock source for PLL
+ 8000b6a:	687b      	ldr	r3, [r7, #4]
+ 8000b6c:	799b      	ldrb	r3, [r3, #6]
+ 8000b6e:	f3c3 1380 	ubfx	r3, r3, #6, #1
+ 8000b72:	b2db      	uxtb	r3, r3
+ 8000b74:	4618      	mov	r0, r3
+ 8000b76:	f7ff ffa8 	bl	8000aca <_Z4etoiIN3Rcu14PllClockSourceEEDaT_>
+ 8000b7a:	4603      	mov	r3, r0
+ 8000b7c:	613b      	str	r3, [r7, #16]
+
+        uint32_t ck_src = (pllsel == etoi(PllClockSource::HXTAL)) ? HXTAL_VALUE : IRC16M_VALUE;
+ 8000b7e:	2001      	movs	r0, #1
+ 8000b80:	f7ff ffa3 	bl	8000aca <_Z4etoiIN3Rcu14PllClockSourceEEDaT_>
+ 8000b84:	4603      	mov	r3, r0
+ 8000b86:	461a      	mov	r2, r3
+ 8000b88:	693b      	ldr	r3, [r7, #16]
+ 8000b8a:	4293      	cmp	r3, r2
+ 8000b8c:	d101      	bne.n	8000b92 <_ZN3Rcu21UpdateSystemCoreClockEv+0x96>
+ 8000b8e:	4b18      	ldr	r3, [pc, #96]	@ (8000bf0 <_ZN3Rcu21UpdateSystemCoreClockEv+0xf4>)
+ 8000b90:	e000      	b.n	8000b94 <_ZN3Rcu21UpdateSystemCoreClockEv+0x98>
+ 8000b92:	4b16      	ldr	r3, [pc, #88]	@ (8000bec <_ZN3Rcu21UpdateSystemCoreClockEv+0xf0>)
+ 8000b94:	60fb      	str	r3, [r7, #12]
+
+        // Final PLL output frequency: ((source / PLLPSC) * PLLN) / PLLP
+        SystemCoreClock = ((ck_src / pllpsc) * plln) / pllp;
+ 8000b96:	68fa      	ldr	r2, [r7, #12]
+ 8000b98:	69fb      	ldr	r3, [r7, #28]
+ 8000b9a:	fbb2 f3f3 	udiv	r3, r2, r3
+ 8000b9e:	69ba      	ldr	r2, [r7, #24]
+ 8000ba0:	fb03 f202 	mul.w	r2, r3, r2
+ 8000ba4:	697b      	ldr	r3, [r7, #20]
+ 8000ba6:	fbb2 f3f3 	udiv	r3, r2, r3
+ 8000baa:	4a0f      	ldr	r2, [pc, #60]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
+ 8000bac:	6013      	str	r3, [r2, #0]
+        break;
+ 8000bae:	e003      	b.n	8000bb8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xbc>
+    }
+
+    default:
+        SystemCoreClock = IRC16M_VALUE;
+ 8000bb0:	4b0d      	ldr	r3, [pc, #52]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
+ 8000bb2:	4a0e      	ldr	r2, [pc, #56]	@ (8000bec <_ZN3Rcu21UpdateSystemCoreClockEv+0xf0>)
+ 8000bb4:	601a      	str	r2, [r3, #0]
+        break;
+ 8000bb6:	bf00      	nop
+    // AHB Prescaler
+    static constexpr uint8_t ahb_exp[16] = {
+        0, 0, 0, 0, 0, 0, 0, 0, // 0xxx: /1
+        1, 2, 3, 4, 6, 7, 8, 9  // 1000+: /2, /4, ..., /512
+    };
+    uint32_t prescaler_exp = ahb_exp[etoi(CFG0.bits.AHBPSC)];
+ 8000bb8:	687b      	ldr	r3, [r7, #4]
+ 8000bba:	7a1b      	ldrb	r3, [r3, #8]
+ 8000bbc:	f3c3 1303 	ubfx	r3, r3, #4, #4
+ 8000bc0:	b2db      	uxtb	r3, r3
+ 8000bc2:	4618      	mov	r0, r3
+ 8000bc4:	f7ff ff8d 	bl	8000ae2 <_Z4etoiIN3Rcu12AhbPrescalerEEDaT_>
+ 8000bc8:	4603      	mov	r3, r0
+ 8000bca:	461a      	mov	r2, r3
+ 8000bcc:	4b09      	ldr	r3, [pc, #36]	@ (8000bf4 <_ZN3Rcu21UpdateSystemCoreClockEv+0xf8>)
+ 8000bce:	5c9b      	ldrb	r3, [r3, r2]
+ 8000bd0:	60bb      	str	r3, [r7, #8]
+    // Apply AHB prescaler
+    SystemCoreClock >>= prescaler_exp;
+ 8000bd2:	4b05      	ldr	r3, [pc, #20]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
+ 8000bd4:	681a      	ldr	r2, [r3, #0]
+ 8000bd6:	68bb      	ldr	r3, [r7, #8]
+ 8000bd8:	fa22 f303 	lsr.w	r3, r2, r3
+ 8000bdc:	4a02      	ldr	r2, [pc, #8]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
+ 8000bde:	6013      	str	r3, [r2, #0]
+ 8000be0:	bf00      	nop
+ 8000be2:	3720      	adds	r7, #32
+ 8000be4:	46bd      	mov	sp, r7
+ 8000be6:	bd80      	pop	{r7, pc}
+ 8000be8:	20000000 	.word	0x20000000
+ 8000bec:	00f42400 	.word	0x00f42400
+ 8000bf0:	017d7840 	.word	0x017d7840
+ 8000bf4:	08000c90 	.word	0x08000c90
+
+08000bf8 <_ZN3Pmu20EnableHighDriverModeEv>:
+#include "Pmu.hpp"
+
+void Pmu::EnableHighDriverMode() {
+ 8000bf8:	b480      	push	{r7}
+ 8000bfa:	b083      	sub	sp, #12
+ 8000bfc:	af00      	add	r7, sp, #0
+ 8000bfe:	6078      	str	r0, [r7, #4]
+  CTL.bits.HDEN = 1; // Enable high-drive mode
+ 8000c00:	687a      	ldr	r2, [r7, #4]
+ 8000c02:	6813      	ldr	r3, [r2, #0]
+ 8000c04:	f443 3380 	orr.w	r3, r3, #65536	@ 0x10000
+ 8000c08:	6013      	str	r3, [r2, #0]
+  while (CS.bits.HDRF != HighDriverReadyFlag::READY) {
+ 8000c0a:	bf00      	nop
+ 8000c0c:	687b      	ldr	r3, [r7, #4]
+ 8000c0e:	799b      	ldrb	r3, [r3, #6]
+ 8000c10:	f3c3 0300 	ubfx	r3, r3, #0, #1
+ 8000c14:	b2db      	uxtb	r3, r3
+ 8000c16:	f083 0301 	eor.w	r3, r3, #1
+ 8000c1a:	b2db      	uxtb	r3, r3
+ 8000c1c:	2b00      	cmp	r3, #0
+ 8000c1e:	d1f5      	bne.n	8000c0c <_ZN3Pmu20EnableHighDriverModeEv+0x14>
+  }
+  // Wait until high-drive mode is ready
+}
+ 8000c20:	bf00      	nop
+ 8000c22:	bf00      	nop
+ 8000c24:	370c      	adds	r7, #12
+ 8000c26:	46bd      	mov	sp, r7
+ 8000c28:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000c2c:	4770      	bx	lr
+
+08000c2e <_ZN3Pmu17SetHighDriverModeEv>:
+
+void Pmu::SetHighDriverMode() {
+ 8000c2e:	b480      	push	{r7}
+ 8000c30:	b083      	sub	sp, #12
+ 8000c32:	af00      	add	r7, sp, #0
+ 8000c34:	6078      	str	r0, [r7, #4]
+    CTL.bits.HDS = 1; // Set high-drive mode
+ 8000c36:	687a      	ldr	r2, [r7, #4]
+ 8000c38:	6813      	ldr	r3, [r2, #0]
+ 8000c3a:	f443 3300 	orr.w	r3, r3, #131072	@ 0x20000
+ 8000c3e:	6013      	str	r3, [r2, #0]
+    while (CS.bits.HDSRF != HighDriverSwitchReadyFlag::READY) {
+ 8000c40:	bf00      	nop
+ 8000c42:	687b      	ldr	r3, [r7, #4]
+ 8000c44:	799b      	ldrb	r3, [r3, #6]
+ 8000c46:	f3c3 0340 	ubfx	r3, r3, #1, #1
+ 8000c4a:	b2db      	uxtb	r3, r3
+ 8000c4c:	f083 0301 	eor.w	r3, r3, #1
+ 8000c50:	b2db      	uxtb	r3, r3
+ 8000c52:	2b00      	cmp	r3, #0
+ 8000c54:	d1f5      	bne.n	8000c42 <_ZN3Pmu17SetHighDriverModeEv+0x14>
+    }
+    // Wait until high-drive mode is set
+ 8000c56:	bf00      	nop
+ 8000c58:	bf00      	nop
+ 8000c5a:	370c      	adds	r7, #12
+ 8000c5c:	46bd      	mov	sp, r7
+ 8000c5e:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000c62:	4770      	bx	lr
+
+08000c64 <register_fini>:
+ 8000c64:	4b02      	ldr	r3, [pc, #8]	@ (8000c70 <register_fini+0xc>)
+ 8000c66:	b113      	cbz	r3, 8000c6e <register_fini+0xa>
+ 8000c68:	4802      	ldr	r0, [pc, #8]	@ (8000c74 <register_fini+0x10>)
+ 8000c6a:	f7ff baf9 	b.w	8000260 <atexit>
+ 8000c6e:	4770      	bx	lr
+ 8000c70:	00000000 	.word	0x00000000
+ 8000c74:	0800026d 	.word	0x0800026d
+
+08000c78 <_init>:
+ 8000c78:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 8000c7a:	bf00      	nop
+ 8000c7c:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 8000c7e:	bc08      	pop	{r3}
+ 8000c80:	469e      	mov	lr, r3
+ 8000c82:	4770      	bx	lr
+
+08000c84 <_fini>:
+ 8000c84:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 8000c86:	bf00      	nop
+ 8000c88:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 8000c8a:	bc08      	pop	{r3}
+ 8000c8c:	469e      	mov	lr, r3
+ 8000c8e:	4770      	bx	lr

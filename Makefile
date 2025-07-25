@@ -57,7 +57,7 @@ HEX_PATH ?= $(WORKSPACE)/Build/$(TARGET).hex
 
 SRCS += system_gd32f4xx.c startup_gd32f407_427.S main.cpp _syscalls.c
 
-SRCS += Gpio.cpp
+SRCS += Gpio.cpp Rcu.cpp Pmu.cpp
 SRCS += $(wildcard hal/src/*.c)
 # library files
 LIBF = 
@@ -92,7 +92,7 @@ CPU = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard
 
 # compiler flags
 CFLAGS  = $(CPU)
-CFLAGS += -O1                      # Compile with Size Optimizations (O0, O1, O2, O3, Os)
+CFLAGS += -O0                      # Compile with Size Optimizations (O0, O1, O2, O3, Os)
 CFLAGS += -g3                        # Debugging information level (g1, g2, g3)
 CFLAGS += -fno-builtin               # Don't recognize built-in functions that do not begin with ‘__builtin_’ as prefix
 # CFLAGS += -std=c11                   # Comply with C11
@@ -108,7 +108,7 @@ CFLAGS += -MMD -MP					 # flags to enable recompilation of dependencies
 CFLAGS += -ffunction-sections -fdata-sections
 # CFLAGS += -DOS_USE_SEMIHOSTING
 CXXFLAGS = $(CPU)
-CXXFLAGS += -O1 -g3 -std=c++14 -Wall -pedantic -fno-exceptions -fno-rtti
+CXXFLAGS += -O0 -g3 -std=c++14 -Wall -pedantic -fno-exceptions -fno-rtti
 CXXFLAGS += -fdiagnostics-color=always
 CXXFLAGS += -MMD -MP -ffunction-sections -fdata-sections
 # CXXFLAGS += -DOS_USE_SEMIHOSTING
