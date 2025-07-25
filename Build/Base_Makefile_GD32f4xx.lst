@@ -48,7 +48,7 @@ Disassembly of section .text:
  80001e2:	bd10      	pop	{r4, pc}
  80001e4:	20000004 	.word	0x20000004
  80001e8:	00000000 	.word	0x00000000
- 80001ec:	08000c78 	.word	0x08000c78
+ 80001ec:	08000c74 	.word	0x08000c74
 
 080001f0 <frame_dummy>:
  80001f0:	b508      	push	{r3, lr}
@@ -61,7 +61,7 @@ Disassembly of section .text:
  8000202:	e7cf      	b.n	80001a4 <register_tm_clones>
  8000204:	00000000 	.word	0x00000000
  8000208:	20000008 	.word	0x20000008
- 800020c:	08000c78 	.word	0x08000c78
+ 800020c:	08000c74 	.word	0x08000c74
 
 08000210 <__libc_init_array>:
  8000210:	b570      	push	{r4, r5, r6, lr}
@@ -77,7 +77,7 @@ Disassembly of section .text:
  8000228:	4798      	blx	r3
  800022a:	42a6      	cmp	r6, r4
  800022c:	d8f9      	bhi.n	8000222 <__libc_init_array+0x12>
- 800022e:	f000 fd23 	bl	8000c78 <_init>
+ 800022e:	f000 fd21 	bl	8000c74 <_init>
  8000232:	4d09      	ldr	r5, [pc, #36]	@ (8000258 <__libc_init_array+0x48>)
  8000234:	4b09      	ldr	r3, [pc, #36]	@ (800025c <__libc_init_array+0x4c>)
  8000236:	1b5e      	subs	r6, r3, r5
@@ -91,10 +91,10 @@ Disassembly of section .text:
  800024a:	42a6      	cmp	r6, r4
  800024c:	d8f9      	bhi.n	8000242 <__libc_init_array+0x32>
  800024e:	bd70      	pop	{r4, r5, r6, pc}
- 8000250:	08000ca0 	.word	0x08000ca0
- 8000254:	08000ca0 	.word	0x08000ca0
- 8000258:	08000ca0 	.word	0x08000ca0
- 800025c:	08000ca8 	.word	0x08000ca8
+ 8000250:	08000c9c 	.word	0x08000c9c
+ 8000254:	08000c9c 	.word	0x08000c9c
+ 8000258:	08000c9c 	.word	0x08000c9c
+ 800025c:	08000ca4 	.word	0x08000ca4
 
 08000260 <atexit>:
  8000260:	2300      	movs	r3, #0
@@ -116,9 +116,9 @@ Disassembly of section .text:
  8000280:	2c00      	cmp	r4, #0
  8000282:	d1f9      	bne.n	8000278 <__libc_fini_array+0xc>
  8000284:	e8bd 4038 	ldmia.w	sp!, {r3, r4, r5, lr}
- 8000288:	f000 bcfc 	b.w	8000c84 <_fini>
- 800028c:	08000cac 	.word	0x08000cac
- 8000290:	08000ca8 	.word	0x08000ca8
+ 8000288:	f000 bcfa 	b.w	8000c80 <_fini>
+ 800028c:	08000ca8 	.word	0x08000ca8
+ 8000290:	08000ca4 	.word	0x08000ca4
 
 08000294 <__register_exitproc>:
  8000294:	b470      	push	{r4, r5, r6}
@@ -254,7 +254,7 @@ static void system_clock_config(void)
  8000352:	f7ff ff5d 	bl	8000210 <__libc_init_array>
  8000356:	f000 f82d 	bl	80003b4 <main>
  800035a:	4770      	bx	lr
- 800035c:	08000cac 	.word	0x08000cac
+ 800035c:	08000ca8 	.word	0x08000ca8
  8000360:	20000000 	.word	0x20000000
  8000364:	20000004 	.word	0x20000004
  8000368:	20000004 	.word	0x20000004
@@ -369,10 +369,10 @@ int main() {
  8000418:	623b      	str	r3, [r7, #32]
     pmu.EnableHighDriverMode();
  800041a:	6a38      	ldr	r0, [r7, #32]
- 800041c:	f000 fbec 	bl	8000bf8 <_ZN3Pmu20EnableHighDriverModeEv>
+ 800041c:	f000 fbea 	bl	8000bf4 <_ZN3Pmu20EnableHighDriverModeEv>
     pmu.SetHighDriverMode();
  8000420:	6a38      	ldr	r0, [r7, #32]
- 8000422:	f000 fc04 	bl	8000c2e <_ZN3Pmu17SetHighDriverModeEv>
+ 8000422:	f000 fc02 	bl	8000c2a <_ZN3Pmu17SetHighDriverModeEv>
 
     rcu.SetSystemClockSource(Rcu::SystemClockSource::PLLP);
  8000426:	2102      	movs	r1, #2
@@ -1431,8 +1431,8 @@ constexpr auto etoi(E const value) {
 
 
 void Rcu::UpdateSystemCoreClock() {
- 8000afc:	b580      	push	{r7, lr}
- 8000afe:	b088      	sub	sp, #32
+ 8000afc:	b590      	push	{r4, r7, lr}
+ 8000afe:	b089      	sub	sp, #36	@ 0x24
  8000b00:	af00      	add	r7, sp, #0
  8000b02:	6078      	str	r0, [r7, #4]
     // constexpr uint32_t IRC16M_VALUE = 16000000U;
@@ -1445,27 +1445,27 @@ void Rcu::UpdateSystemCoreClock() {
  8000b0e:	2b02      	cmp	r3, #2
  8000b10:	d00e      	beq.n	8000b30 <_ZN3Rcu21UpdateSystemCoreClockEv+0x34>
  8000b12:	2b02      	cmp	r3, #2
- 8000b14:	d84c      	bhi.n	8000bb0 <_ZN3Rcu21UpdateSystemCoreClockEv+0xb4>
+ 8000b14:	d84a      	bhi.n	8000bac <_ZN3Rcu21UpdateSystemCoreClockEv+0xb0>
  8000b16:	2b00      	cmp	r3, #0
  8000b18:	d002      	beq.n	8000b20 <_ZN3Rcu21UpdateSystemCoreClockEv+0x24>
  8000b1a:	2b01      	cmp	r3, #1
  8000b1c:	d004      	beq.n	8000b28 <_ZN3Rcu21UpdateSystemCoreClockEv+0x2c>
- 8000b1e:	e047      	b.n	8000bb0 <_ZN3Rcu21UpdateSystemCoreClockEv+0xb4>
+ 8000b1e:	e045      	b.n	8000bac <_ZN3Rcu21UpdateSystemCoreClockEv+0xb0>
     case SystemClockSource::IRC16M:
         SystemCoreClock = IRC16M_VALUE;
- 8000b20:	4b31      	ldr	r3, [pc, #196]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
- 8000b22:	4a32      	ldr	r2, [pc, #200]	@ (8000bec <_ZN3Rcu21UpdateSystemCoreClockEv+0xf0>)
+ 8000b20:	4b30      	ldr	r3, [pc, #192]	@ (8000be4 <_ZN3Rcu21UpdateSystemCoreClockEv+0xe8>)
+ 8000b22:	4a31      	ldr	r2, [pc, #196]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
  8000b24:	601a      	str	r2, [r3, #0]
         break;
- 8000b26:	e047      	b.n	8000bb8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xbc>
+ 8000b26:	e045      	b.n	8000bb4 <_ZN3Rcu21UpdateSystemCoreClockEv+0xb8>
 
     case SystemClockSource::HXTAL:
         SystemCoreClock = HXTAL_VALUE;
- 8000b28:	4b2f      	ldr	r3, [pc, #188]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
- 8000b2a:	4a31      	ldr	r2, [pc, #196]	@ (8000bf0 <_ZN3Rcu21UpdateSystemCoreClockEv+0xf4>)
+ 8000b28:	4b2e      	ldr	r3, [pc, #184]	@ (8000be4 <_ZN3Rcu21UpdateSystemCoreClockEv+0xe8>)
+ 8000b2a:	4a30      	ldr	r2, [pc, #192]	@ (8000bec <_ZN3Rcu21UpdateSystemCoreClockEv+0xf0>)
  8000b2c:	601a      	str	r2, [r3, #0]
         break;
- 8000b2e:	e043      	b.n	8000bb8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xbc>
+ 8000b2e:	e041      	b.n	8000bb4 <_ZN3Rcu21UpdateSystemCoreClockEv+0xb8>
 
     case SystemClockSource::PLLP: {
         uint32_t pllpsc = etoi(PLL.bits.PLLPSC) + 1; // /PLLPSC prescaler
@@ -1495,7 +1495,7 @@ void Rcu::UpdateSystemCoreClock() {
  8000b64:	3301      	adds	r3, #1
  8000b66:	005b      	lsls	r3, r3, #1
  8000b68:	617b      	str	r3, [r7, #20]
-        uint32_t pllsel = etoi(PLL.bits.PLLSEL);     // Clock source for PLL
+        uint32_t ck_src = (etoi(PLL.bits.PLLSEL) == etoi(PllClockSource::HXTAL)) ? HXTAL_VALUE : IRC16M_VALUE;
  8000b6a:	687b      	ldr	r3, [r7, #4]
  8000b6c:	799b      	ldrb	r3, [r3, #6]
  8000b6e:	f3c3 1380 	ubfx	r3, r3, #6, #1
@@ -1503,162 +1503,158 @@ void Rcu::UpdateSystemCoreClock() {
  8000b74:	4618      	mov	r0, r3
  8000b76:	f7ff ffa8 	bl	8000aca <_Z4etoiIN3Rcu14PllClockSourceEEDaT_>
  8000b7a:	4603      	mov	r3, r0
- 8000b7c:	613b      	str	r3, [r7, #16]
-
-        uint32_t ck_src = (pllsel == etoi(PllClockSource::HXTAL)) ? HXTAL_VALUE : IRC16M_VALUE;
+ 8000b7c:	461c      	mov	r4, r3
  8000b7e:	2001      	movs	r0, #1
  8000b80:	f7ff ffa3 	bl	8000aca <_Z4etoiIN3Rcu14PllClockSourceEEDaT_>
  8000b84:	4603      	mov	r3, r0
- 8000b86:	461a      	mov	r2, r3
- 8000b88:	693b      	ldr	r3, [r7, #16]
- 8000b8a:	4293      	cmp	r3, r2
- 8000b8c:	d101      	bne.n	8000b92 <_ZN3Rcu21UpdateSystemCoreClockEv+0x96>
- 8000b8e:	4b18      	ldr	r3, [pc, #96]	@ (8000bf0 <_ZN3Rcu21UpdateSystemCoreClockEv+0xf4>)
- 8000b90:	e000      	b.n	8000b94 <_ZN3Rcu21UpdateSystemCoreClockEv+0x98>
- 8000b92:	4b16      	ldr	r3, [pc, #88]	@ (8000bec <_ZN3Rcu21UpdateSystemCoreClockEv+0xf0>)
- 8000b94:	60fb      	str	r3, [r7, #12]
+ 8000b86:	429c      	cmp	r4, r3
+ 8000b88:	d101      	bne.n	8000b8e <_ZN3Rcu21UpdateSystemCoreClockEv+0x92>
+ 8000b8a:	4b18      	ldr	r3, [pc, #96]	@ (8000bec <_ZN3Rcu21UpdateSystemCoreClockEv+0xf0>)
+ 8000b8c:	e000      	b.n	8000b90 <_ZN3Rcu21UpdateSystemCoreClockEv+0x94>
+ 8000b8e:	4b16      	ldr	r3, [pc, #88]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
+ 8000b90:	613b      	str	r3, [r7, #16]
 
         // Final PLL output frequency: ((source / PLLPSC) * PLLN) / PLLP
         SystemCoreClock = ((ck_src / pllpsc) * plln) / pllp;
- 8000b96:	68fa      	ldr	r2, [r7, #12]
- 8000b98:	69fb      	ldr	r3, [r7, #28]
- 8000b9a:	fbb2 f3f3 	udiv	r3, r2, r3
- 8000b9e:	69ba      	ldr	r2, [r7, #24]
- 8000ba0:	fb03 f202 	mul.w	r2, r3, r2
- 8000ba4:	697b      	ldr	r3, [r7, #20]
- 8000ba6:	fbb2 f3f3 	udiv	r3, r2, r3
- 8000baa:	4a0f      	ldr	r2, [pc, #60]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
- 8000bac:	6013      	str	r3, [r2, #0]
+ 8000b92:	693a      	ldr	r2, [r7, #16]
+ 8000b94:	69fb      	ldr	r3, [r7, #28]
+ 8000b96:	fbb2 f3f3 	udiv	r3, r2, r3
+ 8000b9a:	69ba      	ldr	r2, [r7, #24]
+ 8000b9c:	fb03 f202 	mul.w	r2, r3, r2
+ 8000ba0:	697b      	ldr	r3, [r7, #20]
+ 8000ba2:	fbb2 f3f3 	udiv	r3, r2, r3
+ 8000ba6:	4a0f      	ldr	r2, [pc, #60]	@ (8000be4 <_ZN3Rcu21UpdateSystemCoreClockEv+0xe8>)
+ 8000ba8:	6013      	str	r3, [r2, #0]
         break;
- 8000bae:	e003      	b.n	8000bb8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xbc>
+ 8000baa:	e003      	b.n	8000bb4 <_ZN3Rcu21UpdateSystemCoreClockEv+0xb8>
     }
 
     default:
         SystemCoreClock = IRC16M_VALUE;
- 8000bb0:	4b0d      	ldr	r3, [pc, #52]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
- 8000bb2:	4a0e      	ldr	r2, [pc, #56]	@ (8000bec <_ZN3Rcu21UpdateSystemCoreClockEv+0xf0>)
- 8000bb4:	601a      	str	r2, [r3, #0]
+ 8000bac:	4b0d      	ldr	r3, [pc, #52]	@ (8000be4 <_ZN3Rcu21UpdateSystemCoreClockEv+0xe8>)
+ 8000bae:	4a0e      	ldr	r2, [pc, #56]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
+ 8000bb0:	601a      	str	r2, [r3, #0]
         break;
- 8000bb6:	bf00      	nop
+ 8000bb2:	bf00      	nop
     // AHB Prescaler
     static constexpr uint8_t ahb_exp[16] = {
         0, 0, 0, 0, 0, 0, 0, 0, // 0xxx: /1
         1, 2, 3, 4, 6, 7, 8, 9  // 1000+: /2, /4, ..., /512
     };
     uint32_t prescaler_exp = ahb_exp[etoi(CFG0.bits.AHBPSC)];
- 8000bb8:	687b      	ldr	r3, [r7, #4]
- 8000bba:	7a1b      	ldrb	r3, [r3, #8]
- 8000bbc:	f3c3 1303 	ubfx	r3, r3, #4, #4
- 8000bc0:	b2db      	uxtb	r3, r3
- 8000bc2:	4618      	mov	r0, r3
- 8000bc4:	f7ff ff8d 	bl	8000ae2 <_Z4etoiIN3Rcu12AhbPrescalerEEDaT_>
- 8000bc8:	4603      	mov	r3, r0
- 8000bca:	461a      	mov	r2, r3
- 8000bcc:	4b09      	ldr	r3, [pc, #36]	@ (8000bf4 <_ZN3Rcu21UpdateSystemCoreClockEv+0xf8>)
- 8000bce:	5c9b      	ldrb	r3, [r3, r2]
- 8000bd0:	60bb      	str	r3, [r7, #8]
+ 8000bb4:	687b      	ldr	r3, [r7, #4]
+ 8000bb6:	7a1b      	ldrb	r3, [r3, #8]
+ 8000bb8:	f3c3 1303 	ubfx	r3, r3, #4, #4
+ 8000bbc:	b2db      	uxtb	r3, r3
+ 8000bbe:	4618      	mov	r0, r3
+ 8000bc0:	f7ff ff8f 	bl	8000ae2 <_Z4etoiIN3Rcu12AhbPrescalerEEDaT_>
+ 8000bc4:	4603      	mov	r3, r0
+ 8000bc6:	461a      	mov	r2, r3
+ 8000bc8:	4b09      	ldr	r3, [pc, #36]	@ (8000bf0 <_ZN3Rcu21UpdateSystemCoreClockEv+0xf4>)
+ 8000bca:	5c9b      	ldrb	r3, [r3, r2]
+ 8000bcc:	60fb      	str	r3, [r7, #12]
     // Apply AHB prescaler
     SystemCoreClock >>= prescaler_exp;
- 8000bd2:	4b05      	ldr	r3, [pc, #20]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
- 8000bd4:	681a      	ldr	r2, [r3, #0]
- 8000bd6:	68bb      	ldr	r3, [r7, #8]
- 8000bd8:	fa22 f303 	lsr.w	r3, r2, r3
- 8000bdc:	4a02      	ldr	r2, [pc, #8]	@ (8000be8 <_ZN3Rcu21UpdateSystemCoreClockEv+0xec>)
- 8000bde:	6013      	str	r3, [r2, #0]
- 8000be0:	bf00      	nop
- 8000be2:	3720      	adds	r7, #32
- 8000be4:	46bd      	mov	sp, r7
- 8000be6:	bd80      	pop	{r7, pc}
- 8000be8:	20000000 	.word	0x20000000
- 8000bec:	00f42400 	.word	0x00f42400
- 8000bf0:	017d7840 	.word	0x017d7840
- 8000bf4:	08000c90 	.word	0x08000c90
+ 8000bce:	4b05      	ldr	r3, [pc, #20]	@ (8000be4 <_ZN3Rcu21UpdateSystemCoreClockEv+0xe8>)
+ 8000bd0:	681a      	ldr	r2, [r3, #0]
+ 8000bd2:	68fb      	ldr	r3, [r7, #12]
+ 8000bd4:	fa22 f303 	lsr.w	r3, r2, r3
+ 8000bd8:	4a02      	ldr	r2, [pc, #8]	@ (8000be4 <_ZN3Rcu21UpdateSystemCoreClockEv+0xe8>)
+ 8000bda:	6013      	str	r3, [r2, #0]
+ 8000bdc:	bf00      	nop
+ 8000bde:	3724      	adds	r7, #36	@ 0x24
+ 8000be0:	46bd      	mov	sp, r7
+ 8000be2:	bd90      	pop	{r4, r7, pc}
+ 8000be4:	20000000 	.word	0x20000000
+ 8000be8:	00f42400 	.word	0x00f42400
+ 8000bec:	017d7840 	.word	0x017d7840
+ 8000bf0:	08000c8c 	.word	0x08000c8c
 
-08000bf8 <_ZN3Pmu20EnableHighDriverModeEv>:
+08000bf4 <_ZN3Pmu20EnableHighDriverModeEv>:
 #include "Pmu.hpp"
 
 void Pmu::EnableHighDriverMode() {
- 8000bf8:	b480      	push	{r7}
- 8000bfa:	b083      	sub	sp, #12
- 8000bfc:	af00      	add	r7, sp, #0
- 8000bfe:	6078      	str	r0, [r7, #4]
+ 8000bf4:	b480      	push	{r7}
+ 8000bf6:	b083      	sub	sp, #12
+ 8000bf8:	af00      	add	r7, sp, #0
+ 8000bfa:	6078      	str	r0, [r7, #4]
   CTL.bits.HDEN = 1; // Enable high-drive mode
- 8000c00:	687a      	ldr	r2, [r7, #4]
- 8000c02:	6813      	ldr	r3, [r2, #0]
- 8000c04:	f443 3380 	orr.w	r3, r3, #65536	@ 0x10000
- 8000c08:	6013      	str	r3, [r2, #0]
+ 8000bfc:	687a      	ldr	r2, [r7, #4]
+ 8000bfe:	6813      	ldr	r3, [r2, #0]
+ 8000c00:	f443 3380 	orr.w	r3, r3, #65536	@ 0x10000
+ 8000c04:	6013      	str	r3, [r2, #0]
   while (CS.bits.HDRF != HighDriverReadyFlag::READY) {
- 8000c0a:	bf00      	nop
- 8000c0c:	687b      	ldr	r3, [r7, #4]
- 8000c0e:	799b      	ldrb	r3, [r3, #6]
- 8000c10:	f3c3 0300 	ubfx	r3, r3, #0, #1
- 8000c14:	b2db      	uxtb	r3, r3
- 8000c16:	f083 0301 	eor.w	r3, r3, #1
- 8000c1a:	b2db      	uxtb	r3, r3
- 8000c1c:	2b00      	cmp	r3, #0
- 8000c1e:	d1f5      	bne.n	8000c0c <_ZN3Pmu20EnableHighDriverModeEv+0x14>
+ 8000c06:	bf00      	nop
+ 8000c08:	687b      	ldr	r3, [r7, #4]
+ 8000c0a:	799b      	ldrb	r3, [r3, #6]
+ 8000c0c:	f3c3 0300 	ubfx	r3, r3, #0, #1
+ 8000c10:	b2db      	uxtb	r3, r3
+ 8000c12:	f083 0301 	eor.w	r3, r3, #1
+ 8000c16:	b2db      	uxtb	r3, r3
+ 8000c18:	2b00      	cmp	r3, #0
+ 8000c1a:	d1f5      	bne.n	8000c08 <_ZN3Pmu20EnableHighDriverModeEv+0x14>
   }
   // Wait until high-drive mode is ready
 }
- 8000c20:	bf00      	nop
- 8000c22:	bf00      	nop
- 8000c24:	370c      	adds	r7, #12
- 8000c26:	46bd      	mov	sp, r7
- 8000c28:	f85d 7b04 	ldr.w	r7, [sp], #4
- 8000c2c:	4770      	bx	lr
+ 8000c1c:	bf00      	nop
+ 8000c1e:	bf00      	nop
+ 8000c20:	370c      	adds	r7, #12
+ 8000c22:	46bd      	mov	sp, r7
+ 8000c24:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000c28:	4770      	bx	lr
 
-08000c2e <_ZN3Pmu17SetHighDriverModeEv>:
+08000c2a <_ZN3Pmu17SetHighDriverModeEv>:
 
 void Pmu::SetHighDriverMode() {
- 8000c2e:	b480      	push	{r7}
- 8000c30:	b083      	sub	sp, #12
- 8000c32:	af00      	add	r7, sp, #0
- 8000c34:	6078      	str	r0, [r7, #4]
+ 8000c2a:	b480      	push	{r7}
+ 8000c2c:	b083      	sub	sp, #12
+ 8000c2e:	af00      	add	r7, sp, #0
+ 8000c30:	6078      	str	r0, [r7, #4]
     CTL.bits.HDS = 1; // Set high-drive mode
- 8000c36:	687a      	ldr	r2, [r7, #4]
- 8000c38:	6813      	ldr	r3, [r2, #0]
- 8000c3a:	f443 3300 	orr.w	r3, r3, #131072	@ 0x20000
- 8000c3e:	6013      	str	r3, [r2, #0]
+ 8000c32:	687a      	ldr	r2, [r7, #4]
+ 8000c34:	6813      	ldr	r3, [r2, #0]
+ 8000c36:	f443 3300 	orr.w	r3, r3, #131072	@ 0x20000
+ 8000c3a:	6013      	str	r3, [r2, #0]
     while (CS.bits.HDSRF != HighDriverSwitchReadyFlag::READY) {
- 8000c40:	bf00      	nop
- 8000c42:	687b      	ldr	r3, [r7, #4]
- 8000c44:	799b      	ldrb	r3, [r3, #6]
- 8000c46:	f3c3 0340 	ubfx	r3, r3, #1, #1
- 8000c4a:	b2db      	uxtb	r3, r3
- 8000c4c:	f083 0301 	eor.w	r3, r3, #1
- 8000c50:	b2db      	uxtb	r3, r3
- 8000c52:	2b00      	cmp	r3, #0
- 8000c54:	d1f5      	bne.n	8000c42 <_ZN3Pmu17SetHighDriverModeEv+0x14>
+ 8000c3c:	bf00      	nop
+ 8000c3e:	687b      	ldr	r3, [r7, #4]
+ 8000c40:	799b      	ldrb	r3, [r3, #6]
+ 8000c42:	f3c3 0340 	ubfx	r3, r3, #1, #1
+ 8000c46:	b2db      	uxtb	r3, r3
+ 8000c48:	f083 0301 	eor.w	r3, r3, #1
+ 8000c4c:	b2db      	uxtb	r3, r3
+ 8000c4e:	2b00      	cmp	r3, #0
+ 8000c50:	d1f5      	bne.n	8000c3e <_ZN3Pmu17SetHighDriverModeEv+0x14>
     }
     // Wait until high-drive mode is set
- 8000c56:	bf00      	nop
- 8000c58:	bf00      	nop
- 8000c5a:	370c      	adds	r7, #12
- 8000c5c:	46bd      	mov	sp, r7
- 8000c5e:	f85d 7b04 	ldr.w	r7, [sp], #4
- 8000c62:	4770      	bx	lr
+ 8000c52:	bf00      	nop
+ 8000c54:	bf00      	nop
+ 8000c56:	370c      	adds	r7, #12
+ 8000c58:	46bd      	mov	sp, r7
+ 8000c5a:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000c5e:	4770      	bx	lr
 
-08000c64 <register_fini>:
- 8000c64:	4b02      	ldr	r3, [pc, #8]	@ (8000c70 <register_fini+0xc>)
- 8000c66:	b113      	cbz	r3, 8000c6e <register_fini+0xa>
- 8000c68:	4802      	ldr	r0, [pc, #8]	@ (8000c74 <register_fini+0x10>)
- 8000c6a:	f7ff baf9 	b.w	8000260 <atexit>
- 8000c6e:	4770      	bx	lr
- 8000c70:	00000000 	.word	0x00000000
- 8000c74:	0800026d 	.word	0x0800026d
+08000c60 <register_fini>:
+ 8000c60:	4b02      	ldr	r3, [pc, #8]	@ (8000c6c <register_fini+0xc>)
+ 8000c62:	b113      	cbz	r3, 8000c6a <register_fini+0xa>
+ 8000c64:	4802      	ldr	r0, [pc, #8]	@ (8000c70 <register_fini+0x10>)
+ 8000c66:	f7ff bafb 	b.w	8000260 <atexit>
+ 8000c6a:	4770      	bx	lr
+ 8000c6c:	00000000 	.word	0x00000000
+ 8000c70:	0800026d 	.word	0x0800026d
 
-08000c78 <_init>:
- 8000c78:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8000c7a:	bf00      	nop
- 8000c7c:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 8000c7e:	bc08      	pop	{r3}
- 8000c80:	469e      	mov	lr, r3
- 8000c82:	4770      	bx	lr
+08000c74 <_init>:
+ 8000c74:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 8000c76:	bf00      	nop
+ 8000c78:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 8000c7a:	bc08      	pop	{r3}
+ 8000c7c:	469e      	mov	lr, r3
+ 8000c7e:	4770      	bx	lr
 
-08000c84 <_fini>:
- 8000c84:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8000c86:	bf00      	nop
- 8000c88:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 8000c8a:	bc08      	pop	{r3}
- 8000c8c:	469e      	mov	lr, r3
- 8000c8e:	4770      	bx	lr
+08000c80 <_fini>:
+ 8000c80:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 8000c82:	bf00      	nop
+ 8000c84:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 8000c86:	bc08      	pop	{r3}
+ 8000c88:	469e      	mov	lr, r3
+ 8000c8a:	4770      	bx	lr

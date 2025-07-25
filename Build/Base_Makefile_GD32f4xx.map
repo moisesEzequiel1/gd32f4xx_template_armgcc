@@ -6430,7 +6430,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
                 0x08000000                g_pfnVectors
                 0x08000188                        . = ALIGN (0x4)
 
-.text           0x08000188      0xb08
+.text           0x08000188      0xb04
                 0x08000188                        . = ALIGN (0x4)
  *(.text)
  .text          0x08000188       0x88 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -6665,83 +6665,83 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
                 0x08000ae2                auto etoi<Rcu::AhbPrescaler>(Rcu::AhbPrescaler)
  *fill*         0x08000afa        0x2 
  .text._ZN3Rcu21UpdateSystemCoreClockEv
-                0x08000afc       0xfc Build/obj/Rcu.o
+                0x08000afc       0xf8 Build/obj/Rcu.o
                 0x08000afc                Rcu::UpdateSystemCoreClock()
  .text._ZN3Pmu20EnableHighDriverModeEv
-                0x08000bf8       0x36 Build/obj/Pmu.o
-                0x08000bf8                Pmu::EnableHighDriverMode()
+                0x08000bf4       0x36 Build/obj/Pmu.o
+                0x08000bf4                Pmu::EnableHighDriverMode()
  .text._ZN3Pmu17SetHighDriverModeEv
-                0x08000c2e       0x36 Build/obj/Pmu.o
-                0x08000c2e                Pmu::SetHighDriverMode()
- .text.startup  0x08000c64       0x14 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+                0x08000c2a       0x36 Build/obj/Pmu.o
+                0x08000c2a                Pmu::SetHighDriverMode()
+ .text.startup  0x08000c60       0x14 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
  *(.glue_7)
- .glue_7        0x08000c78        0x0 linker stubs
+ .glue_7        0x08000c74        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08000c78        0x0 linker stubs
+ .glue_7t       0x08000c74        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08000c78        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08000c74        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08000c78        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crti.o
-                0x08000c78                _init
- .init          0x08000c7c        0x8 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08000c74        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x08000c74                _init
+ .init          0x08000c78        0x8 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08000c84        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crti.o
-                0x08000c84                _fini
- .fini          0x08000c88        0x8 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08000c90                        . = ALIGN (0x4)
-                0x08000c90                        _etext = .
+ .fini          0x08000c80        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x08000c80                _fini
+ .fini          0x08000c84        0x8 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08000c8c                        . = ALIGN (0x4)
+                0x08000c8c                        _etext = .
 
-.vfp11_veneer   0x08000c90        0x0
- .vfp11_veneer  0x08000c90        0x0 linker stubs
+.vfp11_veneer   0x08000c8c        0x0
+ .vfp11_veneer  0x08000c8c        0x0 linker stubs
 
-.v4_bx          0x08000c90        0x0
- .v4_bx         0x08000c90        0x0 linker stubs
+.v4_bx          0x08000c8c        0x0
+ .v4_bx         0x08000c8c        0x0 linker stubs
 
-.iplt           0x08000c90        0x0
- .iplt          0x08000c90        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08000c8c        0x0
+ .iplt          0x08000c8c        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08000c90       0x10
-                0x08000c90                        . = ALIGN (0x4)
+.rodata         0x08000c8c       0x10
+                0x08000c8c                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata._ZZN3Rcu21UpdateSystemCoreClockEvE7ahb_exp
-                0x08000c90       0x10 Build/obj/Rcu.o
-                0x08000ca0                        . = ALIGN (0x4)
+                0x08000c8c       0x10 Build/obj/Rcu.o
+                0x08000c9c                        . = ALIGN (0x4)
 
-.rel.dyn        0x08000ca0        0x0
- .rel.iplt      0x08000ca0        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08000c9c        0x0
+ .rel.iplt      0x08000c9c        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08000ca0        0x0
-                0x08000ca0                        __exidx_start = .
+.ARM            0x08000c9c        0x0
+                0x08000c9c                        __exidx_start = .
  *(.ARM.exidx*)
-                0x08000ca0                        __exidx_end = .
+                0x08000c9c                        __exidx_end = .
 
-.preinit_array  0x08000ca0        0x0
-                0x08000ca0                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08000c9c        0x0
+                0x08000c9c                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08000ca0                        PROVIDE (__preinit_array_end = .)
+                0x08000c9c                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x08000ca0        0x8
-                0x08000ca0                        PROVIDE (__init_array_start = .)
+.init_array     0x08000c9c        0x8
+                0x08000c9c                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x08000ca0        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+                0x08000c9c        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x08000ca4        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08000ca8                        PROVIDE (__init_array_end = .)
+ .init_array    0x08000ca0        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08000ca4                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x08000ca8        0x4
-                0x08000ca8                        PROVIDE (__fini_array_start = .)
+.fini_array     0x08000ca4        0x4
+                0x08000ca4                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08000ca8        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08000cac                        PROVIDE (__fini_array_end = .)
-                0x08000cac                        _sidata = LOADADDR (.data)
+ .fini_array    0x08000ca4        0x4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08000ca8                        PROVIDE (__fini_array_end = .)
+                0x08000ca8                        _sidata = LOADADDR (.data)
 
-.data           0x20000000        0x4 load address 0x08000cac
+.data           0x20000000        0x4 load address 0x08000ca8
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -6753,17 +6753,17 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
                 0x20000004                        _edata = .
 
 .tm_clone_table
-                0x20000004        0x0 load address 0x08000cb0
+                0x20000004        0x0 load address 0x08000cac
  .tm_clone_table
                 0x20000004        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  .tm_clone_table
                 0x20000004        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
 
-.igot.plt       0x20000004        0x0 load address 0x08000cb0
+.igot.plt       0x20000004        0x0 load address 0x08000cac
  .igot.plt      0x20000004        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x20000004                        . = ALIGN (0x4)
 
-.bss            0x20000004      0x1b0 load address 0x08000cb0
+.bss            0x20000004      0x1b0 load address 0x08000cac
                 0x20000004                        _sbss = .
                 0x20000004                        __bss_start__ = _sbss
  *(.bss)
@@ -6777,9 +6777,9 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtn.o
                 0x200001b4                        . = ALIGN (0x4)
                 0x200001b4                        _ebss = .
                 0x200001b4                        __bss_end__ = _ebss
-                0x08000cb0                        _sitcmram = LOADADDR (.tcmram)
+                0x08000cac                        _sitcmram = LOADADDR (.tcmram)
 
-.tcmram         0x10000000        0x0 load address 0x08000cb0
+.tcmram         0x10000000        0x0 load address 0x08000cac
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _stcmram = .
  *(.tcmram)
@@ -6858,17 +6858,17 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/libgcc.a
  .comment       0x00000026       0x27 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
  .comment       0x00000026       0x27 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtend.o
 
-.debug_info     0x00000000     0x82d3
+.debug_info     0x00000000     0x82c5
  .debug_info    0x00000000      0x390 Build/obj/system_gd32f4xx.o
  .debug_info    0x00000390     0x3782 Build/obj/main.o
  .debug_info    0x00003b12      0xaac Build/obj/Gpio.o
- .debug_info    0x000045be     0x308a Build/obj/Rcu.o
- .debug_info    0x00007648      0x4ea Build/obj/Pmu.o
- .debug_info    0x00007b32      0x10b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
- .debug_info    0x00007c3d      0x11e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
- .debug_info    0x00007d5b       0xf7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
- .debug_info    0x00007e52      0x284 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
- .debug_info    0x000080d6      0x1fd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+ .debug_info    0x000045be     0x307c Build/obj/Rcu.o
+ .debug_info    0x0000763a      0x4ea Build/obj/Pmu.o
+ .debug_info    0x00007b24      0x10b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
+ .debug_info    0x00007c2f      0x11e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
+ .debug_info    0x00007d4d       0xf7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
+ .debug_info    0x00007e44      0x284 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+ .debug_info    0x000080c8      0x1fd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
 
 .debug_abbrev   0x00000000     0x134d
  .debug_abbrev  0x00000000      0x177 Build/obj/system_gd32f4xx.o
@@ -7001,24 +7001,24 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/libgcc.a
  .debug_macro   0x0000e82c      0x2e1 Build/obj/Rcu.o
  .debug_macro   0x0000eb0d       0x50 Build/obj/Pmu.o
 
-.debug_line     0x00000000     0x219a
+.debug_line     0x00000000     0x2195
  .debug_line    0x00000000      0x533 Build/obj/system_gd32f4xx.o
  .debug_line    0x00000533      0x629 Build/obj/main.o
  .debug_line    0x00000b5c      0x612 Build/obj/Gpio.o
- .debug_line    0x0000116e      0x845 Build/obj/Rcu.o
- .debug_line    0x000019b3      0x166 Build/obj/Pmu.o
- .debug_line    0x00001b19      0x11e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
- .debug_line    0x00001c37       0xc3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
- .debug_line    0x00001cfa       0xd2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
- .debug_line    0x00001dcc      0x27f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
- .debug_line    0x0000204b      0x14f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+ .debug_line    0x0000116e      0x840 Build/obj/Rcu.o
+ .debug_line    0x000019ae      0x166 Build/obj/Pmu.o
+ .debug_line    0x00001b14      0x11e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
+ .debug_line    0x00001c32       0xc3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
+ .debug_line    0x00001cf5       0xd2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
+ .debug_line    0x00001dc7      0x27f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+ .debug_line    0x00002046      0x14f /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
 
 .debug_str      0x00000000    0x3ef47
  .debug_str     0x00000000    0x3ef47 Build/obj/system_gd32f4xx.o
                               0x3a6bf (size before relaxing)
  .debug_str     0x0003ef47    0x3e64c Build/obj/main.o
  .debug_str     0x0003ef47     0x5fe8 Build/obj/Gpio.o
- .debug_str     0x0003ef47    0x3de90 Build/obj/Rcu.o
+ .debug_str     0x0003ef47    0x3de89 Build/obj/Rcu.o
  .debug_str     0x0003ef47     0x5cff Build/obj/Pmu.o
  .debug_str     0x0003ef47      0x1f5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
  .debug_str     0x0003ef47      0x1d1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
@@ -7026,17 +7026,17 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/libgcc.a
  .debug_str     0x0003ef47      0x25e /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
  .debug_str     0x0003ef47      0x23c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
 
-.debug_frame    0x00000000      0x974
+.debug_frame    0x00000000      0x978
  .debug_frame   0x00000000       0x70 Build/obj/system_gd32f4xx.o
  .debug_frame   0x00000070       0x58 Build/obj/main.o
  .debug_frame   0x000000c8      0x3cc Build/obj/Gpio.o
- .debug_frame   0x00000494      0x378 Build/obj/Rcu.o
- .debug_frame   0x0000080c       0x60 Build/obj/Pmu.o
- .debug_frame   0x0000086c       0x2c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
- .debug_frame   0x00000898       0x20 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
- .debug_frame   0x000008b8       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
- .debug_frame   0x000008ec       0x54 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
- .debug_frame   0x00000940       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
+ .debug_frame   0x00000494      0x37c Build/obj/Rcu.o
+ .debug_frame   0x00000810       0x60 Build/obj/Pmu.o
+ .debug_frame   0x00000870       0x2c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-init.o)
+ .debug_frame   0x0000089c       0x20 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-atexit.o)
+ .debug_frame   0x000008bc       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-fini.o)
+ .debug_frame   0x000008f0       0x54 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__call_atexit.o)
+ .debug_frame   0x00000944       0x34 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(libc_a-__atexit.o)
 
 .debug_loclists
                 0x00000000      0x2ba

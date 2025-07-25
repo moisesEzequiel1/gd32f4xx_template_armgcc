@@ -110,9 +110,7 @@ void Rcu::UpdateSystemCoreClock() {
         uint32_t pllpsc = etoi(PLL.bits.PLLPSC) + 1; // /PLLPSC prescaler
         uint32_t plln = PLL.bits.PLLN;               // PLL multiplier
         uint32_t pllp = (etoi(PLL.bits.PLLP) + 1U) * 2U; // PLLP: 00=2, 01=4, 10=6, 11=8
-        uint32_t pllsel = etoi(PLL.bits.PLLSEL);     // Clock source for PLL
-
-        uint32_t ck_src = (pllsel == etoi(PllClockSource::HXTAL)) ? HXTAL_VALUE : IRC16M_VALUE;
+        uint32_t ck_src = (etoi(PLL.bits.PLLSEL) == etoi(PllClockSource::HXTAL)) ? HXTAL_VALUE : IRC16M_VALUE;
 
         // Final PLL output frequency: ((source / PLLPSC) * PLLN) / PLLP
         SystemCoreClock = ((ck_src / pllpsc) * plln) / pllp;
