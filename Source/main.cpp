@@ -15,8 +15,6 @@
 #include "Rcu.hpp"
 #include "Pmu.hpp"
 #include "gd32f4xx.h"
-#include "gd32f4xx_rcu.h"
-#include "system_gd32f4xx.h"
 
 int main() {
 
