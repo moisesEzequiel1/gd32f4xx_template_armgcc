@@ -110,3 +110,6 @@ private:
   volatile union CTL_register CTL;
   volatile union CS_register CS;
 };
+
+
+static_assert(std::is_standard_layout<Pmu>::value, "Pmu class is NOT standard layout");
