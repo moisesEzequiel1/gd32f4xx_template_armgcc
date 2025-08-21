@@ -18,7 +18,7 @@ public:
 
   enum class Priority : uint8_t { Low, Medium, High, VeryHigh };
 
-  enum class TransferWidth : uint8_t { Bit8, Bit16, Bit32 };
+  enum class TransferWidth : uint8_t { Bit8 = 0b00, Bit16 = 0b01, Bit32 = 0b10 };
   enum class DataSize : uint8_t { Byte, HalfWord, Word };
 
   enum class InterruptFlag : uint8_t {
@@ -203,8 +203,8 @@ private:
       uint32_t CMEN : 1;   // Circular mode enable
       uint32_t PNAGA : 1;  // Next address generation algorithm of peripheral
       uint32_t MNAGA : 1;  // Next address generation algorithm of memory
-      uint32_t PWIDTH : 2; // Transfer width of peripheral
-      uint32_t MWIDTH : 2; // Transfer width of memory
+      TransferWidth PWIDTH : 2; // Transfer width of peripheral
+      TransferWidth MWIDTH : 2; // Transfer width of memory
       uint32_t PAIF : 1;   // Peripheral address increment fixed
       Priority PRIO : 2;   // Priority level
       uint32_t SBMEN : 1;  // Switch-buffer mode enable

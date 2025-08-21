@@ -20,12 +20,6 @@ void Dma::setPeripheralAddress(Channel ch, uint32_t addr) {
 }
 
 void Dma::setMemoryAddress(Channel ch, uint32_t addr, bool useAlt) {
-  static volatile CHxM0ADDR_register *const m0Regs[] = {
-      &CH0M0ADDR, &CH1M0ADDR, &CH2M0ADDR, &CH3M0ADDR,
-      &CH4M0ADDR, &CH5M0ADDR, &CH6M0ADDR, &CH7M0ADDR};
-  static volatile CHxM1ADDR_register *const m1Regs[] = {
-      &CH0M1ADDR, &CH1M1ADDR, &CH2M1ADDR, &CH3M1ADDR,
-      &CH4M1ADDR, &CH5M1ADDR, &CH6M1ADDR, &CH7M1ADDR};
   if (useAlt)
     m1Regs[etoi(ch)]->value = addr;
   else
@@ -34,19 +28,7 @@ void Dma::setMemoryAddress(Channel ch, uint32_t addr, bool useAlt) {
 
 // === Set Transfer Width ===
 void Dma::setTransferWidth(Channel ch, TransferWidth width) {
-  static volatile CHxCTL_register *const channelRegs[] = {
-      &CH0CTL, &CH1CTL, &CH2CTL, &CH3CTL, &CH4CTL, &CH5CTL, &CH6CTL, &CH7CTL};
-  switch (width) {
-  case TransferWidth::Bit8:
-    channelRegs[etoi(ch)]->bits.MWIDTH = 0b00;
-    break;
-  case TransferWidth::Bit16:
-    channelRegs[etoi(ch)]->bits.MWIDTH = 0b01;
-    break;
-  case TransferWidth::Bit32:
-    channelRegs[etoi(ch)]->bits.MWIDTH = 0b10;
-    break;
-  }
+    ctlRegs[etoi(ch)]->bits.MWIDTH = width;
 }
 
 // === Set Priority ===

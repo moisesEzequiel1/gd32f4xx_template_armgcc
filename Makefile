@@ -57,7 +57,7 @@ HEX_PATH ?= $(WORKSPACE)/Build/$(TARGET).hex
 
 SRCS += system_gd32f4xx.c startup_gd32f407_427.S main.cpp _syscalls.c
 
-SRCS += Gpio.cpp Rcu.cpp Pmu.cpp
+SRCS += Gpio.cpp Rcu.cpp Pmu.cpp Dma.cpp
 SRCS += $(wildcard hal/src/*.c)
 # library files
 LIBF = 
